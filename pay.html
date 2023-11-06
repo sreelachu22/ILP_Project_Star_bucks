@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Star Bucks</title>
+    <link rel="stylesheet" href="pay.css" />
+    <!-- Link your CSS file here -->
+  </head>
+  <body>
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <button class="close" id="closeButton" onclick="closeLoginModal()">
+          SKIP
+        </button>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your email or mobile number"
+          />
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+          />
+          <p>
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+          </p>
+          <button id="loginButton" disabled>Login</button>
+        </form>
+        <p>Facing trouble logging in? Get Help</p>
+      </div>
+    </div>
+  </body>
+  <script src="js/pay.js"></script>
+</html>
