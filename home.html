@@ -3,19 +3,135 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Bucks</title>
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html">Gift</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li><a href="pay.html">Pay</a></li>
-          <li><a href="store.html">Store</a></li>
+          <li class="logo">
+            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Gift</a></li>
+          <li><a href="#">Order</a></li>
+          <li><a href="#">Pay</a></li>
+          <li><a href="#">Store</a></li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input type="text" placeholder="Looking for something specific?" />
+          </li>
+          <li class="profile-icon">
+            <a href=""
+              ><div class="user-icon">
+                <img
+                  src="images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                /></div
+            ></a>
+          </li>
         </ul>
       </nav>
     </header>
+    <main>
+      <section id="rewards" class="green-section">
+        <div class="left-content">
+          <a href=""><p>A world of rewards awaits you! Sign up now.</p></a>
+        </div>
+        <div class="right-content">
+          <a href="#" class="know-more-button">Know More</a>
+        </div>
+      </section>
+      <section id="curations">
+        <h2>Handcrafted Curations</h2>
+        <div class="dish-container">
+          <div class="dish">
+            <a href=""><img src="images/Bestseller.jpg" alt="Bestseller" /></a>
+            <p>Bestseller</p>
+          </div>
+          <div class="dish">
+            <a href=""><img src="images/Drinks.jpg" alt="Drinks" /></a>
+            <p>Drinks</p>
+          </div>
+          <div class="dish">
+            <a href=""><img src="images/Food.jpg" alt="Food" /></a>
+            <p>Food</p>
+          </div>
+          <div class="dish">
+            <a href=""
+              ><img src="images/Merchandise.jpg" alt="Merchandise"
+            /></a>
+            <p>Merchandise</p>
+          </div>
+          <div class="dish">
+            <a href=""
+              ><img src="images/CoffeeAtHome.jpg" alt="CoffeeAtHome"
+            /></a>
+            <p>Coffee At Home</p>
+          </div>
+          <div class="dish">
+            <a href=""
+              ><img src="images/ReadyToEat.jpg" alt="Ready To Eat"
+            /></a>
+            <p>Ready To Eat</p>
+          </div>
+        </div>
+      </section>
+      <section id="card-section">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Score Big Savings With</p>
+                <h3>STARBUCKS125</h3>
+                <p>
+                  Get your exclusive delivery discount - "STARBUCKS125" - for a
+                  FLAT ₹125 on Swiggy & <br />
+                  Zomato. <br /><br />Flat <br /><span id="rupees">₹125</span>
+                </p>
+              </div>
+              <div class="card-know-more">
+                <a href="#" class="know-more-button2">Know More</a>
+              </div>
+              <img
+                src="images/Worldcup_Banner_Icon_4_679f6ef3e8.png"
+                alt="flag"
+                id="flag"
+              />
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+        <button class="arrow left-arrow">
+          <img src="images/icons8-left-arrow-30.png" alt="" />
+        </button>
+        <button class="arrow right-arrow">
+          <img src="images/icons8-right-arrow-30.png" alt="" />
+        </button>
+      </section>
+
+      <section id="hero">
+        <h1>Welcome to Starbucks</h1>
+        <p>
+          Your day starts here. We have the perfect drinks, pastries, and
+          Frappuccinos to help you start your day with a smile. Experience it at
+          Starbucks.
+        </p>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2022 Starbucks. All rights reserved.</p>
+    </footer>
   </body>
+  <script src="mainHome.js"></script>
 </html>
