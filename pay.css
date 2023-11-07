@@ -1,24 +1,38 @@
-
+body{
+  font-family: sans-serif;
+}
+#payPage{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(172, 172, 172, 0.525);
+}
 .modal {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     position: fixed;
     z-index: 999;
-    left: 30%;
-    right: 30%;
-    top: 15%;
-    bottom: 15%;
-    width: 40%;
-    height: 70%;
+    left: 27%;
+    right: 25%;
+    top: 10%;
+    bottom: 7%;
+    width: 45%;
+    height: 80%;
     border-radius: 30px;
     padding: 2px;
-    text-align: center;
-    border: 1px solid gray;
   }
   
+  .modal h2{
+    padding-top: 10%;
+    font-size: 28px;
+    color: rgb(0, 53, 0);
+  }
   .modal-content {
-    margin: 15%;
-    padding: 20px;
-    width: 80%;
+    margin-left: 20px;
+    margin-right: 10px;
+    width: 92%;
   }
   
   .close {
@@ -28,6 +42,10 @@
     font-weight: bold;
     border: none;
     background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
   }
   
   .close:hover,
@@ -37,3 +55,58 @@
     cursor: pointer;
   }
   
+  #loginForm{
+    display: block;
+    position: relative;
+  }
+.loginForm p{
+  font-size: 10px;
+}
+  label{
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 5px;
+  }
+  #username, #password{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    padding: 5px;
+    margin-top: -20px;
+  }
+
+  input:active, input:hover{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }  
+
+  input:focus {
+    outline: none;
+  }
+
+  #togglePassword {
+    cursor: pointer;
+  }
+  
+  #loginButton {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: rgba(156, 156, 156, 0.943);
+    width: 60%;
+    border-radius: 30px;
+    height: 40px;
+    position: relative;
+    align-items: center;
+    margin-left: 20%;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .green{
+    color: green;
+  }
+
+

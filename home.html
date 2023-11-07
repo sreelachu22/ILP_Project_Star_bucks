@@ -13,11 +13,51 @@
           <li><a href="home.html">Home</a></li>
           <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
-          <li><a href="pay.html" id="payLink" onclick="payLogin()">Pay</a></li>
+          <li>
+            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
+          </li>
           <li><a href="store.html">Store</a></li>
         </ul>
       </nav>
     </header>
+    <div id="payPage" style="display: none">
+      <div id="loginModal" class="modal">
+        <div class="modal-content">
+          <button class="close" id="closeButton" onclick="closeLoginModal()">
+            SKIP
+          </button>
+          <h2>Login</h2>
+          <form id="loginForm">
+            <label for="username">USERNAME</label><br />
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter your email or mobile number*"
+              required
+            />
+            <label for="password">PASSWORD</label><br />
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password*"
+              required
+            />
+            <span
+              id="togglePassword"
+              onclick="togglePasswordVisibility()"
+            ></span>
+            <p>
+              Don't have an account?
+              <a class="green" href="signup.html">Sign Up</a>
+            </p>
+            <button id="loginButton" disabled>Login</button>
+          </form>
+          <p style="text-align: center">
+            Facing trouble logging in? <a class="green" href="">Get Help</a>
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="js/pay.js"></script>
 </html>
