@@ -27,6 +27,21 @@ nav ul li {
 nav ul li a {
   color: black;
   text-decoration: none;
+  position: relative;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+nav ul li a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color: #00704a; /* Green color */
 }
 nav ul li.logo {
   display: flex;
@@ -67,6 +82,7 @@ nav ul li.profile-icon {
 nav ul li.profile-icon .user-icon {
   font-size: 1.2em;
 }
+
 .green-section {
   background-color: #0b3f2d;
   color: #ffffff;
@@ -234,4 +250,93 @@ nav ul li.profile-icon .user-icon {
   width: 150px;
   height: 30px;
   padding-top: 15px;
+}
+#latest-offerings h2 {
+  text-align: left;
+  margin-left: 60px;
+}
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-box {
+  max-width: 300px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.img-box img {
+  width: 150px;
+  height: auto;
+  text-align: center;
+  /* border-style: groove; */
+  border-width: 70px;
+}
+
+#barista-recommends {
+  background-color: rgb(186, 185, 185);
+  height: auto;
+}
+#barista-recommends h2 {
+  padding-top: 15px;
+  margin-left: 60px;
+}
+.barista-container {
+  display: flex;
+  padding-bottom: 60px;
+}
+.barista-box {
+  background-color: #ffffff;
+  margin-left: 30px;
+  max-width: 300px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.barista-box img {
+  width: 50px;
+}
+
+#coffee-story {
+  background-image: url("images/coffee_culture_blog_web1_c6e691b286.jpg"); /* Add your background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+.coffee-story-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+.coffee-story-content h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.coffee-story-content p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.learn-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  background-color: #00704a; /* Green color */
+  border-radius: 5px;
 }
