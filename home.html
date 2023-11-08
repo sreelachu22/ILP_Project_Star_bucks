@@ -23,7 +23,9 @@
           <li><a href="#">Home</a></li>
           <li><a href="#">Gift</a></li>
           <li><a href="#">Order</a></li>
-          <li><a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a></li>
+          <li>
+            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
+          </li>
           <li><a href="#">Store</a></li>
           <li class="search-bar">
             <div class="search-icon">
@@ -45,44 +47,77 @@
       </nav>
     </header>
     <main>
+      <!-- pay - sreelakshmi - starts here -->
       <div id="payPage" style="display: none">
-      <div id="loginModal" class="modal">
-        <div class="modal-content">
-          <button class="close" id="closeButton" onclick="closeLoginModal()">
-            SKIP
-          </button>
-          <h2>Login</h2>
-          <form id="loginForm">
-            <label for="username">USERNAME</label><br />
-            <input
-              type="text"
-              id="username"
-              placeholder="Enter your email or mobile number*"
-              required
-            />
-            <label for="password">PASSWORD</label><br />
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password*"
-              required
-            />
-            <span
-              id="togglePassword"
-              onclick="togglePasswordVisibility()"
-            ></span>
-            <p>
-              Don't have an account?
-              <a class="green" href="signup.html">Sign Up</a>
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <button class="close" id="closeButton" onclick="closeLoginModal()">
+              SKIP
+            </button>
+            <h2>Login</h2>
+            <form id="loginForm">
+              <label for="username">USERNAME</label><br />
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your email or mobile number*"
+                required
+              />
+              <label for="password">PASSWORD</label><br />
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password*"
+                required
+              />
+              <span
+                id="togglePassword"
+                onclick="togglePasswordVisibility()"
+              ></span>
+              <p>
+                Don't have an account?
+                <a class="green" href="signup.html">Sign Up</a>
+              </p>
+              <button id="loginButton" disabled>Login</button>
+            </form>
+            <p style="text-align: center">
+              Facing trouble logging in?
+              <a class="green" href="#helpModal" onclick="getHelp()"
+                >Get Help</a
+              >
             </p>
-            <button id="loginButton" disabled>Login</button>
-          </form>
-          <p style="text-align: center">
-            Facing trouble logging in? <a class="green" href="">Get Help</a>
-          </p>
+          </div>
         </div>
       </div>
-    </div>
+      <div id="gettingHelp" style="display: none">
+        <div id="helpModal" class="modal">
+          <div class="modal-content">
+            <button class="close" id="closeButton" onclick="closeLoginModal()">
+              X
+            </button>
+            <h2>Get Help</h2>
+            <p style="font-size: large">
+              Please enter your registered details and we will send you an OTP
+              to reset your password.
+            </p>
+            <form id="loginForm">
+              <label for="username">USERNAME</label><br />
+              <input
+                type="text"
+                id="username-help"
+                placeholder="Enter your email or mobile number*"
+                required
+              />
+              <label for="password">DATE OF BIRTH</label><br />
+              <input type="date" id="dob" placeholder="DD/MM/YY" required />
+              <button id="resetButton" onclick="" disabled>
+                Reset Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- pay - sreelakshmi - ends here -->
       <section id="rewards" class="green-section">
         <div class="left-content">
           <a href=""><p>A world of rewards awaits you! Sign up now.</p></a>
@@ -173,5 +208,5 @@
     </footer>
   </body>
   <script src="mainHome.js"></script>
-<script src="js/pay.js"></script>
+  <script src="js/pay.js"></script>
 </html>
