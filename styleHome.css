@@ -49,6 +49,7 @@ nav ul li.search-bar {
 nav ul li.search-bar .search-icon {
   font-size: 1.2em;
   margin-right: 5px;
+  margin-top: 2px;
 }
 
 nav ul li.search-bar input {
@@ -60,11 +61,7 @@ nav ul li.search-bar input {
 }
 
 nav ul li.profile-icon {
-  display: flex;
-  align-items: center;
   margin-right: 60px;
-  border-style: groove;
-  border-radius: 50%;
 }
 
 nav ul li.profile-icon .user-icon {
