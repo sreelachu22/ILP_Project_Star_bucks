@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="pay.css" />
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="stylesheet" href="gift.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gift.html">Gift</a></li>
+          <li><a href="#">Order</a></li>
+          <li>
+            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
+          </li>
+          <li><a href="#">Store</a></li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input type="text" placeholder="Looking for something specific?" />
+          </li>
+          <li class="profile-icon">
+            <a href=""
+              ><div class="user-icon">
+                <img
+                  src="images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                /></div
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- pay - sreelakshmi - starts here -->
+      <div id="payPage" style="display: none">
+        <div id="loginModal" class="modal">
+          <div class="modal-content">
+            <button class="close" id="closeButton" onclick="closeLoginModal()">
+              SKIP
+            </button>
+            <h2>Login</h2>
+            <form id="loginForm">
+              <label for="username">USERNAME</label><br />
+              <input
+                type="text"
+                id="username"
+                placeholder="Enter your email or mobile number*"
+                required
+              />
+              <label for="password">PASSWORD</label><br />
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password*"
+                required
+              />
+              <span
+                id="togglePassword"
+                onclick="togglePasswordVisibility()"
+              ></span>
+              <p>
+                Don't have an account?
+                <a class="green" href="signup.html">Sign Up</a>
+              </p>
+              <button id="loginButton" disabled>Login</button>
+            </form>
+            <p style="text-align: center">
+              Facing trouble logging in?
+              <a class="green" href="#helpModal" onclick="getHelp()"
+                >Get Help</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="gettingHelp" style="display: none">
+        <div id="helpModal" class="modal">
+          <div class="modal-content">
+            <button class="close" id="closeButton" onclick="closeLoginModal()">
+              X
+            </button>
+            <h2>Get Help</h2>
+            <p style="font-size: large">
+              Please enter your registered details and we will send you an OTP
+              to reset your password.
+            </p>
+            <form id="loginForm">
+              <label for="username">USERNAME</label><br />
+              <input
+                type="text"
+                id="username-help"
+                placeholder="Enter your email or mobile number*"
+                required
+              />
+              <label for="password">DATE OF BIRTH</label><br />
+              <input type="date" id="dob" placeholder="DD/MM/YY" required />
+              <button id="resetButton" onclick="" disabled>
+                Reset Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- pay - sreelakshmi - ends here -->
+      <section class="secnavsec">
+        <p class="secnavhm"><a href="home.html">Home></a>Gift Cards</p>
+      </section>
+      <div class="banner">
+        <div class="card-container">
+          <div><img src="images/banner_icon_1_feafe78e1b.png" alt="" /></div>
+          <div class="cardtext">
+            <p>New Season, New Sips!</p>
+            <h3>Autumn Merchandise</h3>
+            <p>
+              Embrace the fall vibes as you sip in style with Autumn merchandise
+              featuring super moon and bunny.
+            </p>
+
+            <div class="prbtflx">
+              <p>Starting From <br />₹ 650</p>
+              <button class="mainbtn">Order Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="js/gift.js"></script>
+  <script src="js/pay.js"></script>
+</html>
