@@ -11,7 +11,7 @@ a {
   color: grey;
 }
 .banner {
-  background-color: #04442d;
+  background-color: #032e1e;
   width: 100%;
   height: 370px;
 }
@@ -24,6 +24,7 @@ a {
   align-items: center;
   margin-top: 70px;
   margin-left: 132px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .card-container img {
   margin-right: 1000px;
@@ -36,12 +37,18 @@ a {
 .cardtext {
   position: absolute;
   color: black;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .prbtflx {
   display: flex;
 }
 .mainbtn {
   margin-left: 730px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  background-color: #00754a;
+  border-radius: 25px;
+  height: 35px;
+  width: 100px;
+  color: white;
+  border-color: #00754a;
 }
