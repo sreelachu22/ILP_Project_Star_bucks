@@ -1,0 +1,149 @@
+.nav-p{
+    font-size: 15px;
+    color: gray;
+    margin-left: 65px;
+}
+
+.active{
+    border-bottom: 2px solid rgb(4, 34, 4);
+    padding-bottom: 5px;
+}
+
+.n-active{
+    color: gray;
+}
+
+.main-container{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container-left{
+    display: 1;
+    background-color: #1e3932;
+    width: 35%;
+    height: 500px;
+}
+
+.container-right{
+    display: 2;
+}
+
+.s-bar{
+    display: flex;
+    justify-content: center;
+}
+
+.search-store{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 25px;
+}
+
+.s-icon{
+    position: absolute;
+    left: 125px;
+    top: 175px;
+}
+
+.home-redirect{
+    text-decoration: none;
+    color: grey;
+}
+
+.nearby{
+    color: white;
+    margin-left: 35px;
+}
+
+.card-top{
+    display: flex;
+}
+
+.card-bottom{
+    display: flex;
+    margin-top: 25px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.store-img{
+    height: 80px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.store-card{
+    background-color: #f2f0eb;
+    margin-left: 35px;
+    margin-right: 35px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.distance-p{
+    font-size: 13px;
+    color: gray;
+}
+
+.time-p{
+    font-size: 13px;
+    margin-left: 5px;
+    color: gray;
+    margin-top: 5px;
+    margin-right: 90px;
+}
+
+.status-p{
+    font-size: 13px;
+    color: green;
+}
+
+.distance-status{
+    display: flex;
+}
+
+.store-name{
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.store-details{
+    margin-left: 15px;
+}
+
+.icons{
+    display: flex;
+}
+
+.dine-img{
+    height: 20px;
+}
+
+.wifi-img{
+    height: 20px;
+}
+
+.direction-btn{
+    text-decoration: none;
+    border: 1px solid #198754;
+    background-color: #198754;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: 15px;
+}
+
+.car-img{
+    height: 25px;
+}
+
