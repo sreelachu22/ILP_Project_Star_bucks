@@ -20,13 +20,13 @@
           <li class="logo">
             <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
           </li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Gift</a></li>
-          <li><a href="#">Order</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gift.html">Gift</a></li>
+          <li><a href="order.html">Order</a></li>
           <li>
             <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
           </li>
-          <li><a href="#">Store</a></li>
+          <li><a href="store.html">Store</a></li>
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
@@ -34,7 +34,7 @@
             <input type="text" placeholder="Looking for something specific?" />
           </li>
           <li class="profile-icon">
-            <a href=""
+            <a href="#loginModal" id="payLink" onclick="payLogin()"
               ><div class="user-icon">
                 <img
                   src="images/icons8-customer-80.png"
@@ -120,7 +120,9 @@
       <!-- pay - sreelakshmi - ends here -->
       <section id="rewards" class="green-section">
         <div class="left-content">
-          <a href=""><p>A world of rewards awaits you! Sign up now.</p></a>
+          <a href="signup.html"
+            ><p>A world of rewards awaits you! Sign up now.</p></a
+          >
         </div>
         <div class="right-content">
           <a href="#" class="know-more-button">Know More</a>
@@ -193,20 +195,31 @@
           <img src="images/icons8-right-arrow-30.png" alt="" />
         </button>
       </section>
+      <section id="latest-offerings">
+        <h2>Latest Offerings</h2>
+        <div class="item-container" id="item-container"></div>
+      </section>
 
-      <section id="hero">
-        <h1>Welcome to Starbucks</h1>
-        <p>
-          Your day starts here. We have the perfect drinks, pastries, and
-          Frappuccinos to help you start your day with a smile. Experience it at
-          Starbucks.
-        </p>
+      <section id="barista-recommends">
+        <h2>Barista Recommends</h2>
+        <div class="barista-container"></div>
+      </section>
+
+      <section id="coffee-story">
+        <div class="coffee-story-content">
+          <h1>How Coffee Stirred Revels & Rebels</h1>
+          <p>
+            Delighted by the jovial character of coffee, everyone was inspired
+            to bring it home - leading to some of the most crucial firsts.
+          </p>
+          <a href="information.html" class="learn-more-button">Learn More</a>
+        </div>
       </section>
     </main>
     <footer>
       <p>&copy; 2022 Starbucks. All rights reserved.</p>
     </footer>
   </body>
-  <script src="mainHome.js"></script>
+  <script src="js/mainHome.js"></script>
   <script src="js/pay.js"></script>
 </html>
