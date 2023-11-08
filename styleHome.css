@@ -308,27 +308,61 @@ nav ul li.profile-icon .user-icon {
 }
 
 #coffee-story {
+  position: relative;
   background-image: url("images/coffee_culture_blog_web1_c6e691b286.jpg"); /* Add your background image */
   background-size: cover;
   background-position: center;
   color: white;
   text-align: center;
   padding: 50px;
+  height: 300px;
+  width: 80%;
+  margin-left: 90px;
+  margin-top: 30px;
+  border-style: none;
+  border-radius: 10px;
+  transition: filter 0.3s;
+  overflow: hidden;
+}
+#coffee-story::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  opacity: 0;
+  transition: opacity 0.3s; /* Add transition for smooth effect */
+}
+
+#coffee-story:hover::before {
+  opacity: 1;
 }
 
 .coffee-story-content {
+  margin-top: 100px;
+  font-size: medium;
   max-width: 800px;
-  margin: auto;
+  /* margin: auto; */
+}
+.coffee-story-content h1,
+.coffee-story-content p {
+  position: absolute;
+  color: white !important;
+  z-index: 1;
 }
 
 .coffee-story-content h1 {
   font-size: 2em;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .coffee-story-content p {
+  text-align: left;
   font-size: 1.2em;
-  margin-bottom: 30px;
+  margin-top: 80px;
 }
 
 .learn-more-button {
@@ -336,7 +370,13 @@ nav ul li.profile-icon .user-icon {
   padding: 10px 20px;
   font-size: 1em;
   text-decoration: none;
-  color: white;
-  background-color: #00704a; /* Green color */
-  border-radius: 5px;
+  color: rgb(2, 2, 2);
+  background-color: #ffffff;
+  border-radius: 50px;
+  width: 100px;
+  text-align: left;
+  margin-left: -400px;
+  margin-top: 140px;
+  position: absolute;
+  z-index: 1;
 }
