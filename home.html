@@ -47,6 +47,7 @@
       </nav>
     </header>
     <main>
+      <!-- pay - sreelakshmi - starts here -->
       <div id="payPage" style="display: none">
         <div id="loginModal" class="modal">
           <div class="modal-content">
@@ -80,11 +81,43 @@
               <button id="loginButton" disabled>Login</button>
             </form>
             <p style="text-align: center">
-              Facing trouble logging in? <a class="green" href="">Get Help</a>
+              Facing trouble logging in?
+              <a class="green" href="#helpModal" onclick="getHelp()"
+                >Get Help</a
+              >
             </p>
           </div>
         </div>
       </div>
+      <div id="gettingHelp" style="display: none">
+        <div id="helpModal" class="modal">
+          <div class="modal-content">
+            <button class="close" id="closeButton" onclick="closeLoginModal()">
+              X
+            </button>
+            <h2>Get Help</h2>
+            <p style="font-size: large">
+              Please enter your registered details and we will send you an OTP
+              to reset your password.
+            </p>
+            <form id="loginForm">
+              <label for="username">USERNAME</label><br />
+              <input
+                type="text"
+                id="username-help"
+                placeholder="Enter your email or mobile number*"
+                required
+              />
+              <label for="password">DATE OF BIRTH</label><br />
+              <input type="date" id="dob" placeholder="DD/MM/YY" required />
+              <button id="resetButton" onclick="" disabled>
+                Reset Password
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- pay - sreelakshmi - ends here -->
       <section id="rewards" class="green-section">
         <div class="left-content">
           <a href="signup.html"
