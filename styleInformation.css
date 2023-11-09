@@ -1,0 +1,114 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: larger;
+}
+
+header {
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+nav {
+  height: 50px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+nav ul li {
+  margin: 0 5px;
+}
+nav ul li a {
+  color: black;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+nav ul li a:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 2px; /* Adjust the height of the underline as needed */
+  background-color: #00704a; /* Green color */
+}
+nav ul li.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 60px;
+}
+
+nav ul li.logo img {
+  height: 60px;
+}
+nav ul li.search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 50px;
+  padding: 5px;
+  width: 250px;
+}
+
+nav ul li.search-bar .search-icon {
+  font-size: 1.2em;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+
+nav ul li.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+nav ul li.profile-icon {
+  margin-right: 60px;
+}
+
+nav ul li.profile-icon .user-icon {
+  font-size: 1.2em;
+}
+.navigation a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: gray;
+}
+.navigation p {
+  color: gray;
+}
+#coffee-small {
+  border-style: none;
+  background-color: #e8f1ee;
+  color: #00704a;
+}
+#star1 {
+  font-weight: bold;
+}
+#star2 {
+  font-size: small;
+}
+#para {
+  width: 80%;
+  text-align: justify;
+  margin-left: 150px;
+  font-weight: 50%;
+  line-height: 30px;
+  color: rgb(99, 100, 100);
+}
+#coffee-heading {
+  margin-left: 150px;
+}
