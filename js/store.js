@@ -1,4 +1,4 @@
-const response=fetch('https://mocki.io/v1/c2922e78-d536-4a65-b1cd-4fe99a88ce0b')
+const response=fetch('https://mocki.io/v1/89f9fc1d-1d2f-436f-9082-06f7c0a5b70e')
   .then(response => response.json())
   .then(response => {
     const stores=[];
@@ -69,11 +69,11 @@ const response=fetch('https://mocki.io/v1/c2922e78-d536-4a65-b1cd-4fe99a88ce0b')
         name.textContent=`${stores[i].name}`;
         distance.textContent=`${stores[i].distance} kms away`;
         statusp.textContent=`${stores[i].status}`;
+        if(statusp.textContent==="Closed"){
+          statusp.style.color='red';
+        }
         time.textContent=`${stores[i].time} mins`;
         img.src=`${stores[i].image}`;
-    
-        // button.textContent="Apply Now";
-        // fee.textContent="Fee starting at ₹799 per subject";
 
         top.appendChild(img);
         status.appendChild(distance);
@@ -98,4 +98,33 @@ const response=fetch('https://mocki.io/v1/c2922e78-d536-4a65-b1cd-4fe99a88ce0b')
   .catch(error => {
     console.error('Error:', error);
   });
+
+
+function showMap() {
+  var location = document.getElementById('locationInput').value;
+  // var mapURL = `https://www.google.com/maps/embed/place/${location}`;
+  var iframe = document.createElement('iframe');
+  if(location==="kochi")
+  {
+    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d251482.68723557587!2d76.30093384999999!3d9.982372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1699515917342!5m2!1sen!2sin";
+  }
+  else if(location==="trivandrum"){
+    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252543.56612552222!2d76.75934905260668!3d8.500037894458885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1699516142388!5m2!1sen!2sin";
+  }
+  else{
+    let notice=document.createElement('p');
+    notice.classList.add('notice');
+    notice.textContent="No store available at that location";
+    mapContainer.appendChild(notice);
+    }  
+  iframe.style.border = '0';
+  document.getElementById('mapContainer').appendChild(iframe);
+}
+
+window.addEventListener('keyup', function(event) {
+  if (event.target.id === 'locationInput' && event.code === 'Enter') {
+    $('#mapContainer').empty();
+    showMap();
+  }
+});
 
