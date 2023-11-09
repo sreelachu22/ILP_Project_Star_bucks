@@ -84,19 +84,3 @@ function toggleResetButtonState() {
   }
 }
 
-// To ensure focus on the date input field
-const dateInput = document.getElementById('dobInput');
-
-dateInput.addEventListener('click', function() {
-  simulateClick();
-});
-
-function simulateClick() {
-  const event = new MouseEvent('click', {
-    view: window,
-    bubbles: true,
-    cancelable: true
-  });
-  dateInput.dispatchEvent(event);
-}
-

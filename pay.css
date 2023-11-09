@@ -5,8 +5,9 @@
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
   background-color: rgba(154, 154, 154, 0.628);
+  position: fixed;
 }
 
 #gettingHelp{
@@ -17,6 +18,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(172, 172, 172, 0.525);
+  position: fixed;
 }
 .modal {
     background-color: rgb(255, 255, 255);
@@ -69,7 +71,7 @@
     display: block;
     position: relative;
   }
-.loginForm p{
+#loginForm p{
   font-size: 10px;
 }
   label{
@@ -88,7 +90,7 @@
     margin-top: 5px;
   }
 
-  input:active, input:hover{
+   input:active, input:hover{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -180,3 +182,17 @@
     padding: 5px;
     margin-top: 5px;
   }
+
+  /* style for date input  */
+  .date-picker {
+    position: relative;
+  }
+  
+  #dateInput {
+    padding-right: 30px;
+  }
+  
+ i{
+  color: #115d42;
+ }
+  
