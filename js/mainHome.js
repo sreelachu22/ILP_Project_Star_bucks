@@ -1,22 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const navLinks = document.querySelectorAll("nav ul li a");
-
-//   navLinks.forEach(function (link) {
-//     link.addEventListener("click", function (event) {
-//       // Prevent the default behavior (following the link)
-//       event.preventDefault();
-
-//       // Remove the 'active' class from all links
-//       navLinks.forEach(function (link) {
-//         link.classList.remove("active");
-//       });
-
-//       // Add the 'active' class to the clicked link
-//       this.classList.add("active");
-//     });
-//   });
-// });
-
 //Coupon Card
 
 document.addEventListener("DOMContentLoaded", function () {
