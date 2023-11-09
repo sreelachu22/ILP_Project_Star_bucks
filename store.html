@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleHome.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="pay.css">
-    <link rel="stylesheet" href="store.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="pay.css" />
+    <link rel="stylesheet" href="store.css" />
     <script src="js/store.js"></script>
     <script src="js/pay.js"></script>
     <title>Store</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li class="logo">
-              <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
-            </li>
-            <li><a class="n-active" href="home.html">Home</a></li>
-            <li><a class="n-active" href="#">Gift</a></li>
-            <li><a class="n-active" href="#">Order</a></li>
-            <li><a class="n-active" href="#loginModal" id="payLink" onclick="payLogin()">Pay</a></li>
-            <li><a class="active" href="store.html">Store</a></li>
-            <li class="search-bar">
-              <div class="search-icon">
-                <img src="images/icons8-search-48.png" alt="" width="25px" />
-              </div>
-              <input type="text" placeholder="Looking for something specific?" />
-            </li>
-            <li class="profile-icon">
-              <a href=""
-                ><div class="user-icon">
-                  <img
-                    src="images/profile.png"
-                    alt=""
-                    width="35px"
-                  /></div
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      
-      <main>
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a class="n-active" href="home.html">Home</a></li>
+          <li><a class="n-active" href="#">Gift</a></li>
+          <li><a class="n-active" href="#">Order</a></li>
+          <li>
+            <a
+              class="n-active"
+              href="#loginModal"
+              id="payLink"
+              onclick="payLogin()"
+              >Pay</a
+            >
+          </li>
+          <li><a class="active" href="store.html">Store</a></li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input type="text" placeholder="Looking for something specific?" />
+          </li>
+          <li class="profile-icon">
+            <a href=""
+              ><div class="user-icon">
+                <img src="images/profile.png" alt="" width="35px" /></div
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
       <!-- pay - sreelakshmi - starts here -->
       <div id="payPage" style="display: none">
         <div id="loginModal" class="modal">
@@ -116,23 +120,29 @@
         </div>
       </div>
       <!-- pay - sreelakshmi - ends here -->
-      </main>
-      
-      <div class="navigation">
-        <p class="nav-p"><a class="home-redirect" href="home.html">Home</a>>Find A Store</p>
-      </div>
+    </main>
 
-      <div class="main-container">
-        <div class="container-left">
-            <div class="s-bar">
-                <div class="s-icon">
-                    <img src="images/icons8-search-48.png" alt="" width="25px" />
-                </div>
-                <input class="search-store" type="text" placeholder="Find a store near you" id="locationInput" />
-            </div>
+    <div class="navigation">
+      <p class="nav-p">
+        <a class="home-redirect" href="home.html">Home</a>>Find A Store
+      </p>
+    </div>
 
-            <h5 class="nearby">Nearby (2)</h5>
+    <div class="main-container">
+      <div class="container-left">
+        <div class="s-bar">
+          <div class="s-icon">
+            <img src="images/icons8-search-48.png" alt="" width="25px" />
+          </div>
+          <input
+            class="search-store"
+            type="text"
+            placeholder="Find a store near you"
+            id="locationInput"
+          />
+        </div>
 
+        <h5 class="nearby">Nearby (2)</h5>
             <div id="cards">
               <!-- <div class="store-card">
                 <div class="card-top">
@@ -149,10 +159,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="card-bottom">
-                  <img class="car-img" src="/images/car.png">
-                  <p class="time-p">10 mins drive</p>
-                  <a class="direction-btn" href="">Show Direction</a>
+                <div class="icons">
+                  <img class="dine-img" src="/images/dine.png" />&nbsp;
+                  <img class="wifi-img" src="/images/wifi.png" />
                 </div>
               </div> -->
             </div>
@@ -161,6 +170,9 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31562.565722096093!2d76.84733068349146!3d8.565127842073474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05be54c4adee2d%3A0x6367a27de8baa463!2sKazhakkoottam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1699438726994!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-
-</body>
+      <div class="container-right">
+        <div id="map" style="width: 100%; height: 400px"></div>
+      </div>
+    </div>
+  </body>
 </html>
