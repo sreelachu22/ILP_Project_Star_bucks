@@ -17,7 +17,7 @@ async function fetchData() {
       maincontainer.classList.add("main");
 
     //   const container = document.getElementById("frap-div");
-      for(let i=0;i<6;i++){
+      for(let i=0;i<56;i++){
         const frapContainer = document.createElement("div");
         frapContainer.classList.add("frap");
         const container1 = document.createElement("div");
@@ -69,6 +69,3 @@ async function fetchData() {
     }
   }
   fetchData();
-
-
-

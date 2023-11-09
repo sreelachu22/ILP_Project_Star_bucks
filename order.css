@@ -316,8 +316,9 @@
     font-size: 17px;
     margin-right: 30px;
 }
+
 #ordernav{
-    background-color: lightgray;
+    background-color: #f2f0eb;
     margin-top: -20px;
     height: 60px;
     border-bottom: 2px solid rgb(198, 195, 195);
@@ -356,6 +357,8 @@
 .box p:last-child {
     border-right: none; 
 }
+
+
 .main{
     display: flex;
     flex-direction: row;

@@ -16,8 +16,8 @@ async function fetchData() {
       const maincontainer = document.getElementById("outer_container");
       maincontainer.classList.add("main");
 
-    //   const container = document.getElementById("frap-div");
-      for(let i=0;i<6;i++){
+      const container = document.getElementById("frap-div");
+      for(let i=0;i<1;i++){
         const frapContainer = document.createElement("div");
         frapContainer.classList.add("frap");
         const container1 = document.createElement("div");
@@ -28,8 +28,6 @@ async function fetchData() {
 
         const container2 = document.createElement("div");
         container2.classList.add("frap2");
-        // const image2 = document.createElement("img");
-        // image2.src= products[i].thumbnail;
         const h4 = document.createElement("h4");
         h4.textContent=products[i].title;
         // container2.appendChild(image2);
@@ -51,7 +49,6 @@ async function fetchData() {
         const button1 = document.createElement("button");
         button1.classList.add("button1");
         button1.textContent="Add Item";
-        // button1.onclick()
 
         container4.appendChild(p5);
         container4.appendChild(button1);
@@ -60,7 +57,6 @@ async function fetchData() {
         frapContainer.appendChild(container1);
         frapContainer.appendChild(container2);
         maincontainer.appendChild(frapContainer);
-        // maincontainer.style.display = "block";
     }
 
 
@@ -69,6 +65,3 @@ async function fetchData() {
     }
   }
   fetchData();
-
-
-
