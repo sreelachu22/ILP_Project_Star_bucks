@@ -13,6 +13,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/order.css" />
+    <link rel="stylesheet" href="/drinks.css" />
+    <script src="mainHome.js"></script>
+    <script src="js/pay.js"></script>
+    <script src="/js/order.js"></script>
   </head>
   <body>
     <header>
@@ -21,13 +25,13 @@
           <li class="logo">
             <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
           </li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Gift</a></li>
-          <li><a href="#">Order</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gift.html">Gift</a></li>
+          <li><a href="order.html">Order</a></li>
           <li>
             <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
           </li>
-          <li><a href="#">Store</a></li>
+          <li><a href="store.html">Store</a></li>
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
@@ -86,16 +90,45 @@
         </div>
       </div>
     </div>
-
-    <div class="box">
+    <!-- <div class="box">
       <div class="content">
-        <p class="active11 active"><a href="bestseller.html">BestSeller</a></p>
+        <p class="active11 active"><a href="order.html">BestSeller</a></p>
         <p class="active11"><a href="drinks.html">Drinks</a></p>
         <p class="active11"><a href="food.html">Food</a></p>
         <p class="active11"><a href="merchandise.html">Merchandise</a></p>
         <p class="active11"><a href="coffee.html">Coffee At Home</a></p>
         <p class="active11"><a href="ready.html">Ready to Eat</a></p>
       </div>
+    </div> -->
+
+    <div>
+      <nav id="ordernav">
+        <ul>
+          <li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+              href="order.html"
+              class="atag"
+              >BestSeller</a
+            >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;|
+          </li>
+          <li><a class="atag" href="drinks.html">Drinks</a> &nbsp;&nbsp; |</li>
+          <li>
+            <a class="atag" href="food.html">Food</a> &nbsp; &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="merchandise.html">Merchendise</a> &nbsp;
+            &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="coffee.html">Coffee At Home</a> &nbsp;
+            &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="ready.html">Ready to Eat</a> &nbsp;
+            &nbsp;&nbsp;
+          </li>
+        </ul>
+      </nav>
     </div>
 
     <div class="textt">
@@ -112,7 +145,29 @@
     <div id="outer_container2">
       <!-- <div id="frap-div"></div> -->
     </div>
+    <div id="drinkbox">
+      <div id="drinktext">
+        <h3>Mayuri, our barista has a message for you</h3>
+        <p>
+          Let us help you create an exceptional season! Bring home the Starbucks
+          merchandise.
+        </p>
+        <img src="/images/chaya-removebg-preview.png" alt="" />
+      </div>
+    </div>
 
+    <div class="end">
+      <div>
+        <img src="/images/ibutn.png" alt="" />
+      </div>
+      <div class="avrg">
+        <p>
+          An average active adult requires 2,000 kcal energy per day, however,
+          calorie needs may vary.
+        </p>
+        <p>FSSAI License No.</p>
+      </div>
+    </div>
     <div class="end">
       <div>
         <img src="/images/ibutn.png" alt="" />

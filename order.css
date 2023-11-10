@@ -14,6 +14,9 @@
     display:flex ;
     
 }
+.navigation{
+    margin-top: 100px;
+}
 .navigation a{
     text-decoration: none;
     color: gray;
@@ -166,8 +169,9 @@
     background-color: #1e3932;
     border: 2px solid #1e3932;
     padding: 30px;
-    width: 100%;
+    width: 96%;
     display:flex ;
+    height: 31px;
     
 }
 .navigation a{
@@ -217,7 +221,7 @@
     /* border-radius: 4px; */
     float: left;
     margin-bottom: 80px;
-    height: 35px;
+    height: 27px;
     padding: 3px;
     cursor: pointer;
     width: 80px;
@@ -235,7 +239,7 @@
     /* border-top: 5px;
     border-bottom: 5px; */
     margin-bottom: 2px;
-    height: 35px;
+    height: 27px;
     padding: 3px;
     cursor: pointer;
 }
@@ -250,7 +254,7 @@
     border: 1px solid gray;
     float: left;
     margin-bottom: 2px;
-    height: 35px;
+    height: 27px;
     padding: 3px;
     cursor: pointer;
 }
@@ -284,28 +288,40 @@
     margin-left: 26px;
 }
 .scoo{
+    z-index: 2;
+    
     margin-bottom: -1px;
     width: 22px;
 }
 
-.box {
+/* .box {
     width: 100%; 
     height: 55px; 
     display: flex;
     background-color: rgb(226, 225, 225); 
-}
-.box p{
+} */
+/* .box p{
     display: inline;
     text-align: center;
     padding: 0 10px;
     /* margin-top: 70px; */
-    margin: 11px; 
+    /* margin: 11px; 
     font-size: 13px;
     color: gray;
     padding-right: 60px;
     /* padding: 5px;  */
-    border-right: 1px solid #ccc;
+    /* border-right: 1px solid #ccc; */ 
+.atag{
+    color: gray;
+    font-size: 17px;
+    margin-right: 30px;
+}
 
+#ordernav{
+    background-color: #f2f0eb;
+    margin-top: -20px;
+    height: 60px;
+    border-bottom: 2px solid rgb(198, 195, 195);
 }
 .textt{
     margin-left: 100px;
@@ -316,7 +332,7 @@
     margin-top: -14px;
     font-size: 14px;
 }
-.content{
+/* .content{
     padding-top: 20px;
     padding-right: 200px;
     padding-left: 200px;
@@ -327,7 +343,7 @@
     /* color: rgb(25, 83, 25);
     border-bottom: rgb(25, 83, 25); */
     
-}
+
 .content a{
     text-decoration: none;
     color: gray;
@@ -341,30 +357,35 @@
 .box p:last-child {
     border-right: none; 
 }
+
+
 .main{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 /* .main2{
     display: flex;
 }  */
-/* .main, .main2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  } */
-  
 .frap{
     display: flex;
-    width: 390px;
+    width: 350px;
     height: 250px;
     border-radius: 10px;
-    padding-right: 0px;
+    /* padding-right: 0px; */
     border: 0px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
     background-color: #f9f9f9;
     margin-left: 100px;
-    margin-top: 70px;
+    margin-top: 30px;
+    /* min-width: 100%;
+    min-height: 232px; */
+}
+.frap:hover{
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+.frap2{
+    margin-top: 47px;
 }
 .frap1 img{
     width: 93px;
@@ -391,18 +412,19 @@
 .frap2 .tall{
     margin-top: -17px;
 }
-.frap2 a{
+.button1{
     border: 2px solid gray;
     background-color: gray;
     border-radius: 23px;
+    cursor: pointer;
     text-decoration: none;
-    padding: 11px;
-    color: white;
+    /* padding: 11px; */
+    color: lightgrey;
     margin-left: 61px;
     margin-top: 25px;
     width: 56px;
     font-size: 13px;
-    height: 15px;
+    height: 33px;
 }
 .frap2 h3{
     margin-top: 40px;
