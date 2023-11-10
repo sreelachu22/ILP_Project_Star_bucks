@@ -1,22 +1,29 @@
+let count1=0;
+let count2=0
+
 function showMap() {
   var location = document.getElementById('locationInput').value;
   var iframe = document.createElement('iframe');
   if(location==="kochi")
   {
-
-  const response=fetch('https://mocki.io/v1/d91108ee-c08b-4bf3-8ace-813f4fe57fad')
+  const response=fetch('https://mocki.io/v1/37ef34f9-131a-4b39-a409-5b56dcdfca89')
   .then(response => response.json())
   .then(response => {
+    console.log(response);
     const stores=[];
     response.forEach(element => {
+      if(element.location==="kochi"){
         stores.push(element);
+        count1++;
+        console.log(stores);
+      }
     });
 
     const nearby=document.getElementById('near-by');
-    nearby.textContent="Nearby(2)";
+    nearby.textContent=`Nearby(${count1})`;
 
     const cardscontainer=document.getElementById('cards');
-    for(let i=2;i<=4;i++)
+    for(let i=0;i<count1;i++)
     {
         const store = document.createElement('div');
         store.classList.add('store-card');
@@ -66,12 +73,6 @@ function showMap() {
         const direction=document.createElement('a');
         direction.classList.add('direction-btn');
         direction.textContent="Show Direction";
-        if(i==0){
-          direction.href="https://maps.app.goo.gl/dvFNeg5re2e2X8CC8";
-        }
-        else{
-          direction.href="https://maps.app.goo.gl/bAH7tZFoocPNtS7e7";
-        }
         
         name.textContent=`${stores[i].name}`;
         distance.textContent=`${stores[i].distance} kms away`;
@@ -81,6 +82,7 @@ function showMap() {
         }
         time.textContent=`${stores[i].time}`;
         img.src=`${stores[i].image}`;
+        direction.href=`${stores[i].direction}`;
 
         top.appendChild(img);
         status.appendChild(distance);
@@ -97,7 +99,8 @@ function showMap() {
         store.appendChild(top);
         store.appendChild(bottom);
 
-        cardscontainer.appendChild(store);    
+        cardscontainer.appendChild(store);   
+
     }
   })
 
@@ -109,20 +112,26 @@ function showMap() {
   }
   else if(location==="trivandrum"){
 
-  const response=fetch('https://mocki.io/v1/89f9fc1d-1d2f-436f-9082-06f7c0a5b70e')
-  .then(response => response.json())
-  .then(response => {
+  const request=fetch('https://mocki.io/v1/37ef34f9-131a-4b39-a409-5b56dcdfca89')
+  .then(request => request.json())
+  .then(request => {
     const stores=[];
-    response.forEach(element => {
+    console.log(request);
+    request.forEach(element => {
+      if(element.location==="trivandrum"){
         stores.push(element);
+        count2++;
+        console.log(stores);
+      }
     });
 
     const nearby=document.getElementById('near-by');
-    nearby.textContent="Nearby(2)";
+    nearby.textContent=`Nearby(${count2})`;
 
     const cardscontainer=document.getElementById('cards');
-    for(let i=0;i<=1;i++)
+    for(let i=0;i<count2;i++)
     {
+        
         const store = document.createElement('div');
         store.classList.add('store-card');
 
@@ -171,12 +180,6 @@ function showMap() {
         const direction=document.createElement('a');
         direction.classList.add('direction-btn');
         direction.textContent="Show Direction";
-        if(i==0){
-          direction.href="https://maps.app.goo.gl/dvFNeg5re2e2X8CC8";
-        }
-        else{
-          direction.href="https://maps.app.goo.gl/bAH7tZFoocPNtS7e7";
-        }
         
         name.textContent=`${stores[i].name}`;
         distance.textContent=`${stores[i].distance} kms away`;
@@ -184,8 +187,9 @@ function showMap() {
         if(statusp.textContent==="Closed"){
           statusp.style.color='red';
         }
-        time.textContent=`${stores[i].time} mins`;
+        time.textContent=`${stores[i].time}`;
         img.src=`${stores[i].image}`;
+        direction.href=`${stores[i].direction}`;
 
         top.appendChild(img);
         status.appendChild(distance);
@@ -203,6 +207,7 @@ function showMap() {
         store.appendChild(bottom);
 
         cardscontainer.appendChild(store);    
+
     }
   })
 
@@ -217,6 +222,7 @@ function showMap() {
     notice.classList.add('notice');
     notice.textContent="No store available at that location";
     mapContainer.appendChild(notice);
+    let nearby=document.getElementById('near-by');
     nearby.textContent="Nearby(0)";
     }  
   iframe.style.border = '0';
@@ -231,4 +237,14 @@ window.addEventListener('keyup', function(event) {
     showMap();
   }
 });
+
+
+
+
+
+
+
+
+
+
 
