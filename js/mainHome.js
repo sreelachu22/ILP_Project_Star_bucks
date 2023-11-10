@@ -1,43 +1,8 @@
-//Coupon Card
+// Initial data fetch
+fetchData(10);
 
-document.addEventListener("DOMContentLoaded", function () {
-  const cardContainer = document.querySelector(".card-container");
-  const cards = document.querySelectorAll(".card");
-  const leftArrow = document.querySelector(".left-arrow");
-  const rightArrow = document.querySelector(".right-arrow");
-
-  let currentIndex = 0;
-
-  function showCard(index) {
-    cards.forEach((card, i) => {
-      if (i === index) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-    });
-  }
-
-  function showNextCard() {
-    currentIndex = (currentIndex + 1) % cards.length;
-    showCard(currentIndex);
-  }
-
-  function showPrevCard() {
-    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-    showCard(currentIndex);
-  }
-
-  leftArrow.addEventListener("click", showPrevCard);
-  rightArrow.addEventListener("click", showNextCard);
-
-  showCard(currentIndex);
-});
-
-//Latest Offerings
-
-// Fetch data from the dummy API (replace with your actual API endpoint)
-async function fetchData() {
+// Fetch data from the dummy API
+async function fetchData(count) {
   try {
     const response = await fetch("https://dummyjson.com/products/");
     if (!response.ok) {
@@ -45,15 +10,14 @@ async function fetchData() {
     }
     const data = await response.json();
     console.log(data);
-    const users = [];
-    data.products.forEach((element) => {
-      users.push(element);
-      console.log(users);
-    });
+    const users = data.products;
+
     let randomId = [];
     const container = document.querySelector(".item-container");
-    for (let i = 0; i <= 3; i++) {
-      randomId[i] = Math.floor(Math.random() * 29 + 1);
+    const container1 = document.querySelector(".barista-container");
+
+    for (let i = 0; i < count; i++) {
+      randomId[i] = Math.floor(Math.random() * users.length);
       const box = document.createElement("div");
       box.classList.add("card-box");
       const imgbox = document.createElement("div");
@@ -84,9 +48,8 @@ async function fetchData() {
       box.appendChild(contentbox);
       container.appendChild(box);
     }
-    const container1 = document.querySelector(".barista-container");
-    for (let i = 0; i < 2; i++) {
-      randomId[i] = Math.floor(Math.random() * 29 + 1);
+    for (let i = 0; i < count; i++) {
+      randomId[i] = Math.floor(Math.random() * users.length);
       const barista_box = document.createElement("div");
       barista_box.classList.add("barista-box");
       const bimgbox = document.createElement("div");
@@ -118,4 +81,4 @@ async function fetchData() {
     console.error("error:", error);
   }
 }
-fetchData();
+// fetchData();
