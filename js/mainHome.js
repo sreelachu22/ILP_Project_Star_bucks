@@ -58,13 +58,18 @@ async function fetchData() {
       box.classList.add("card-box");
       const imgbox = document.createElement("div");
       box.classList.add("img-box");
+      const contentbox = document.createElement("div");
+      contentbox.classList.add("content-box");
+      contentbox.style.alignItems = "end";
       const image = document.createElement("img");
+      image.style.width = "150px";
+      image.style.height = "150px";
       const name = document.createElement("h4");
       const details = document.createElement("p");
       const price = document.createElement("p");
       const button = document.createElement("button");
       button.classList.add("add-item-button");
-      image.src = users[randomId[i]].thumbnail;
+      image.src = users[randomId[i]].images[1];
       name.textContent = `${users[randomId[i]].title}`;
       details.textContent = `${users[randomId[i]].description}`;
       price.textContent = `₹ ${users[randomId[i]].price}`;
@@ -72,11 +77,11 @@ async function fetchData() {
 
       imgbox.appendChild(image);
       box.appendChild(imgbox);
-
-      box.appendChild(name);
-      box.appendChild(details);
-      box.appendChild(price);
-      box.appendChild(button);
+      imgbox.appendChild(name);
+      imgbox.appendChild(details);
+      contentbox.appendChild(price);
+      contentbox.appendChild(button);
+      box.appendChild(contentbox);
       container.appendChild(box);
     }
     const container1 = document.querySelector(".barista-container");
@@ -87,6 +92,8 @@ async function fetchData() {
       const bimgbox = document.createElement("div");
       barista_box.classList.add("bimg-box");
       const bimage = document.createElement("img");
+      bimage.style.width = "150px";
+      bimage.style.height = "150px";
       const bname = document.createElement("h4");
       //   const details = document.createElement("p");
       const bprice = document.createElement("p");
