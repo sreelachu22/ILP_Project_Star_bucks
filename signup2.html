@@ -61,6 +61,8 @@
           </p>
         </div>
         <h3 class="enterOTP">Enter OTP</h3>
+        <!-- OTP boxes. -->
+        <!-- Each box only contains 1 digits. -->
         <div class="otp-box">
           <input type="text" class="otp-input" id="otp1" maxlength="1" />
           <input type="text" class="otp-input" id="otp2" maxlength="1" />
@@ -69,7 +71,8 @@
           <input type="text" class="otp-input" id="otp5" maxlength="1" />
           <input type="text" class="otp-input" id="otp6" maxlength="1" />
         </div>
-        <button id="nextButton" onclick="paymentSuccessful()">Confirm</button>
+        <!-- validateOTP function will validate that each otp boxes are not empty -->
+        <button id="nextButton" onclick="validateOTP()">Confirm</button>
       </div>
     </main>
   </body>

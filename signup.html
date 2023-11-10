@@ -48,77 +48,6 @@
       </nav>
     </header>
     <main>
-      <!-- <div id="payPage" style="display: none">
-        <div id="loginModal" class="modal">
-          <div class="modal-content">
-            <button class="close" id="closeButton" onclick="closeLoginModal()">
-              SKIP
-            </button>
-            <h2>Login</h2>
-            <form class="loginForm">
-              <label for="username">USERNAME</label><br />
-              <input
-                type="text"
-                id="username"
-                placeholder="Enter your email or mobile number*"
-                required
-              />
-              <label for="password">PASSWORD</label><br />
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter your password*"
-                required
-              />
-              <span
-                id="togglePassword"
-                onclick="togglePasswordVisibility()"
-              ></span>
-              <p>
-                Don't have an account?
-                <a class="green" href="signup.html">Sign Up</a>
-              </p>
-              <button id="loginButton" disabled onclick="redirectPay()">
-                Login
-              </button>
-            </form>
-            <p style="text-align: center">
-              Facing trouble logging in?
-              <a class="green" href="#helpModal" onclick="getHelp()"
-                >Get Help</a
-              >
-            </p>
-          </div>
-        </div>
-      </div> -->
-      <div id="gettingHelp" style="display: none">
-        <div id="helpModal" class="modal">
-          <div class="modal-content">
-            <button class="close" id="closeButton" onclick="closeLoginModal()">
-              X
-            </button>
-            <h2>Get Help</h2>
-            <p style="font-size: large">
-              Please enter your registered details and we will send you an OTP
-              to reset your password.
-            </p>
-            <form class="loginForm">
-              <label for="username">USERNAME</label><br />
-              <input
-                type="text"
-                id="username-help"
-                placeholder="Enter your email or mobile number*"
-                required
-              />
-              <label for="password">DATE OF BIRTH</label><br />
-              <input type="date" id="dob" placeholder="DD/MM/YY" required />
-              <button id="resetButton" onclick="" disabled>
-                Reset Password
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
       <div>
         <p class="home-nav">
           <a href="home.html">Home</a> ->
@@ -138,14 +67,15 @@
         />
         <div id="signup-inner-container">
           <img class="steps" src="img/signup_process1.svg" alt="" />
-          <h3>Login to Starbucks</h3>
+          <h3>Sign Up to Starbucks</h3>
           <hr _ngcontent-iwb-c83 />
+          <!-- signu up form starts here -->
           <form action="">
             <div class="login-details-block">
               <div class="input-block" id="signup-email">
                 <label for="email">EMAIL ID</label><br />
                 <input
-                  type="email"
+                  type="text"
                   id="email"
                   placeholder="Enter email ID*"
                   required
@@ -170,7 +100,7 @@
                 />
               </div>
               <div class="input-block" id="signup-confirm-pass">
-                <label for="email">CONFIRM PASSWORD</label><br />
+                <label for="password">CONFIRM PASSWORD</label><br />
                 <input
                   type="password"
                   id="confirmPass"
@@ -179,7 +109,8 @@
                 />
               </div>
             </div>
-            <button class="continueButton" onclick="redirect2()">
+            <!-- when button clicked it redirected to OTP page of signup -->
+            <button id="continueButton" onclick="toSignupOTP()">
               Continue
             </button>
           </form>
