@@ -5,8 +5,9 @@
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: 3;
   background-color: rgba(154, 154, 154, 0.628);
+  position: fixed;
 }
 
 #gettingHelp{
@@ -16,7 +17,9 @@
   right: 0;
   width: 100%;
   height: 100%;
+  z-index: 3;
   background-color: rgba(172, 172, 172, 0.525);
+  position: fixed;
 }
 .modal {
     background-color: rgb(255, 255, 255);
@@ -69,7 +72,7 @@
     display: block;
     position: relative;
   }
-.loginForm p{
+#loginForm p{
   font-size: 10px;
 }
   label{
@@ -79,7 +82,7 @@
     margin-left: 5px;
     font-size: large;
   }
-  #username, #password{
+  #username, #password,#username-login{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -88,7 +91,7 @@
     margin-top: 5px;
   }
 
-  input:active, input:hover{
+   input:active, input:hover{
     border-top: none;
     border-left: none;
     border-right: none;
@@ -122,14 +125,14 @@
     color: green;
   }
 
-  #loginButton:enabled {
+  #loginButton:enabled,#resetButton:enabled,#nextButton:enabled #continueButton:enabled {
     background-color: #115d42; /* Change the color of button when enabled */
     color: white;
     cursor: pointer;
   }
   
   /* Style for the button when hovered */
-  #loginButton:enabled:hover {
+  #loginButton:enabled:hover,#resetButton:enabled:hover,#nextButton:enabled:hover,#continueButton:enabled:hover {
     background-color: rgb(2, 46, 5); /* Change the color of button when enabled and hover over */
   }
 
@@ -180,3 +183,153 @@
     padding: 5px;
     margin-top: 5px;
   }
+
+  /* style for date input  */
+  .date-picker {
+    position: relative;
+  }
+  
+  #dateInput {
+    padding-right: 30px;
+  }
+  
+ i{
+  color: #115d42;
+ }
+  
+
+  /* Pay page styling */
+  .inlineimage{max-width:470px;
+    margin-right: 8px;
+    margin-left: 10px}.images{display: inline-block;
+    max-width: 98%;
+    height: auto;
+    width: 22%;
+    margin: 1%;
+    left:20px;
+    text-align: center}
+  
+   
+   .payContainer {
+    padding-top: 100px;
+    width: 60%;
+    padding-left: 20%;
+   }
+   
+   .panel {
+    padding: 20px;
+   }
+   
+   .panel-heading {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    padding: 20px;
+   }
+   
+   .panel-body {
+    padding: 20px;
+   }
+   
+   .form-group {
+    margin-bottom: 20px;
+   }
+   
+   .form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+   }
+   
+   .btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+   }
+   
+   .btn-lg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+   }
+   
+   .btn-block {
+    display: block;
+    width: 100%;
+   }
+   
+   .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+   }
+   
+   
+   
+   .btn-lg:hover,
+   .btn-lg:focus,
+   .btn-lg:active{
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+   }
+   
+   
+   .panel-footer {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    padding: 20px;
+   }
+   
+   .images {
+    max-width: 100%;
+    height: auto;
+   }
+
+   #paySuccess{
+    position: relative;
+    top: 20%;
+    left: 30%;
+    right: 0;
+    width: 40%;
+    height: 50%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #115d42;
+    border-radius: 20px;
+    position: fixed;
+  }
+  
+
+  #accountSuccess{
+    text-align: center;
+  }
+  
+  .greenTick{
+    margin-top:20%;
+    margin-left: 45%;
+  }
+

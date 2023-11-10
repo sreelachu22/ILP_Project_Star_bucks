@@ -1,0 +1,14 @@
+.exp{
+    border-bottom: 2px solid lightgray;
+    height: 47px;
+    display: flex;
+    
+}
+.cont{
+    display: flex;
+    margin-left: 80px;
+}
+.exp1{
+    border-bottom: 2px solid lightgray;
+    height: 47px;
+}

@@ -23,7 +23,7 @@
             <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
           </li>
           <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html">Gift</a></li>
+          <li><a href="gift.html" class="active">Gift</a></li>
           <li><a href="#">Order</a></li>
           <li>
             <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
@@ -49,77 +49,6 @@
       </nav>
     </header>
     <main>
-      <!-- pay - sreelakshmi - starts here -->
-      <div id="payPage" style="display: none">
-        <div id="loginModal" class="modal">
-          <div class="modal-content">
-            <button class="close" id="closeButton" onclick="closeLoginModal()">
-              SKIP
-            </button>
-            <h2>Login</h2>
-            <form id="loginForm">
-              <label for="username">USERNAME</label><br />
-              <input
-                type="text"
-                id="username"
-                placeholder="Enter your email or mobile number*"
-                required
-              />
-              <label for="password">PASSWORD</label><br />
-              <input
-                type="password"
-                id="password"
-                placeholder="Enter your password*"
-                required
-              />
-              <span
-                id="togglePassword"
-                onclick="togglePasswordVisibility()"
-              ></span>
-              <p>
-                Don't have an account?
-                <a class="green" href="signup.html">Sign Up</a>
-              </p>
-              <button id="loginButton" disabled>Login</button>
-            </form>
-            <p style="text-align: center">
-              Facing trouble logging in?
-              <a class="green" href="#helpModal" onclick="getHelp()"
-                >Get Help</a
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id="gettingHelp" style="display: none">
-        <div id="helpModal" class="modal">
-          <div class="modal-content">
-            <button class="close" id="closeButton" onclick="closeLoginModal()">
-              X
-            </button>
-            <h2>Get Help</h2>
-            <p style="font-size: large">
-              Please enter your registered details and we will send you an OTP
-              to reset your password.
-            </p>
-            <form id="loginForm">
-              <label for="username">USERNAME</label><br />
-              <input
-                type="text"
-                id="username-help"
-                placeholder="Enter your email or mobile number*"
-                required
-              />
-              <label for="password">DATE OF BIRTH</label><br />
-              <input type="date" id="dob" placeholder="DD/MM/YY" required />
-              <button id="resetButton" onclick="" disabled>
-                Reset Password
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- pay - sreelakshmi - ends here -->
       <section class="secnavsec">
         <p class="secnavhm"><a href="home.html">Home></a>Gift Cards</p>
       </section>
@@ -140,6 +69,34 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="nav2bg">
+        <nav class="secondnav">
+          <ul>
+            <li>
+              <a href=""> FEATURED </a>&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+            </li>
+            <li>
+              <a href=""> ANYTIME </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+            </li>
+            <li>
+              <a href="#"> CONGRATULATIONS </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+            </li>
+            <li>
+              <a href="#"> THANK YOU </a>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="trasformblk1">
+        <div class="gift_container"></div>
+      </div>
+      <div class="trasformblk2">
+        <div class="congraz_container"></div>
       </div>
     </main>
   </body>

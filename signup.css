@@ -1,0 +1,220 @@
+/* #1e3932 */
+
+.home-nav{
+    height: 15px;
+    margin-top: 7%;
+    padding-top: 8px;
+    font-size: 15px;
+}
+.home-nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.green_ldots{
+    position: relative;
+    float: left;
+    margin-top: 110px;
+}
+
+.green_rleaf{
+    float: right;
+}
+.signup-container{
+    background-color: #1e3932;
+    position: relative;
+    width: 100%;
+    height: 80%;
+}
+
+#signup-inner-container{
+    position: relative;
+    top: 150PX;
+    background-color: white;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+#signup-inner-container h3{
+    padding-top: 20px;
+    color: #1e3932;
+    padding-left: 100px;
+}
+.login-details-block {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 70px;
+    padding-top: -100px;
+  }
+  
+  .input-block {
+    margin: 20px;
+    margin-top: -10px;
+    width: 620px; 
+    box-sizing: border-box; 
+    padding: 10px;
+  }
+  
+
+  .steps{
+    margin-top: 100px;
+    margin-left: 20%;
+  }
+
+  hr{
+    color: rgba(201, 201, 201, 0.614);
+    opacity: 0.2;
+  }
+
+  input{
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-color: rgba(201, 201, 201, 0.614);
+  }
+
+  label{
+    font-size: small;
+    color: rgb(36, 36, 36);
+    margin-left: 2px;
+  }
+
+  .continueButton{
+    width: 400px;
+    margin-left: 38%;
+    position: relative;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(156, 156, 156, 0.943);
+    color: white;
+    cursor: pointer;
+    border: none;
+  }
+
+  #continueButton:enabled {
+    background-color: #115d42;
+    color: white;
+    cursor: pointer;
+  }
+
+  #continueButton:enabled:hover {
+    background-color: rgb(2, 46, 5);
+    color: white;
+    cursor: pointer;
+  }
+
+
+  /* Signup 2nd page(OTP) style */
+
+  .signup2-inner-container{
+    background-color: white;
+    font-size: smaller;
+  }
+
+  .step{
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 20%;
+  }
+
+  .otpHead{
+    font-size: large;
+    margin-left: 10%;
+  }
+  .otp-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.otp-input {
+    width: 40px;
+    height: 50px;
+    border: 1px solid #6b6b6b;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+}
+.enterOTP{
+  color: #6b6b6b;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 5%;
+}
+
+
+ /* Account created successfully */
+ #paymentSuccessful{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  z-index: 3;
+  background-color: rgba(154, 154, 154, 0.628);
+  position: fixed;
+}
+
+
+#nextButton{
+  margin-top: 5%;
+  width: 400px;
+    margin-left: 36%;
+    position: relative;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: rgba(156, 156, 156, 0.943);
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+
+/* payment successful */
+#popup{
+  position: relative;
+  top: 20%;
+  left: 30%;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  background-color: rgba(255, 255, 255);
+  border: 1px solid #115d42;
+  border-radius: 20px;
+  position: fixed;
+}
+
+#continueToPayment{
+  position: absolute;
+  width: 400px;
+    margin-left: 15%;
+    position: absolute;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 15%;
+    background-color: #115d42;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#continueToPayment:hover{
+  background-color: #1e3932;
+}
+
+#accountSuccess{
+  text-align: center;
+}
+
+.greenTick{
+  margin-top:10%;
+  margin-left: 45%;
+}
