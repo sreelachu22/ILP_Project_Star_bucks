@@ -58,6 +58,11 @@ a {
   color: white;
   border-color: #00754a;
 }
+.mainbtn:hover {
+  background-color: black;
+  color: white;
+  transition: 2ms;
+}
 
 /* gift nav bar */
 
@@ -166,5 +171,66 @@ a {
 }
 .congraz_container p {
   font-size: 14px;
-  margin-bottom: 0;
+  margin-bottom: 4px;
+}
+
+/* bottom block */
+.mergback {
+  display: flex;
+  position: absolute;
+  display: flex;
+  width: 1200px;
+  height: 220px;
+  margin-top: 360px;
+  margin-left: 130px;
+  margin-bottom: 50px;
+  background-image: url(images/icons8-starbucks-300.png);
+  background-position-x: left;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-repeat: no-repeat;
+  background-color: #539e86;
+  border-radius: 20px;
+}
+.sub {
+  position: absolute;
+  width: 100px;
+  height: 30px;
+  margin-top: 70px;
+  margin-left: 500px;
+  font-size: small;
+}
+.subtxt {
+  margin-top: 60px;
+  margin-left: 50px;
+  font-size: larger;
+}
+.subin {
+  position: absolute;
+  margin-top: 71px;
+  width: 200px;
+  height: 30px;
+  margin-left: 300px;
+  border-color: white;
+  border: none;
+  border-bottom: black;
+}
+
+.strchechi img {
+  height: 270px;
+  width: 160px;
+  margin-left: 900px;
+  margin-top: -50px;
+}
+.mergback h3 {
+  position: absolute;
+  width: 700px;
+  color: white;
+  margin-top: 70px;
+}
+.mergback p {
+  position: absolute;
+  width: 800px;
+  color: white;
+  margin-top: 110px;
 }
