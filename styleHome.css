@@ -271,7 +271,11 @@ nav ul li.profile-icon .user-icon {
 }
 
 .card-box {
+  display: flex;
+  flex-direction: column;
+  font-size: medium;
   max-width: 300px;
+  max-height: auto;
   border: none;
   border-radius: 8px;
   padding: 10px;
@@ -279,12 +283,26 @@ nav ul li.profile-icon .user-icon {
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
+.img-box {
+  /* margin-bottom: 100px; */
+  flex: 2;
+}
 .img-box img {
   width: 150px;
   height: auto;
   text-align: center;
-  /* border-style: groove; */
-  border-width: 70px;
+}
+.content-box {
+  flex: 1;
+}
+.add-item-button {
+  color: #ffffff;
+  background-color: #115d42;
+  border: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 50px;
+  margin-left: 150px;
 }
 
 #barista-recommends {
@@ -309,9 +327,6 @@ nav ul li.profile-icon .user-icon {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-}
-.barista-box img {
-  width: 50px;
 }
 #coffee {
   background-color: #dbdbdb;
