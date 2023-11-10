@@ -224,38 +224,41 @@ function togglePasswordVisibility() {
 
 
 //!Payment page js
-// async function validateCardDetails() {
-//   // Retrieve card details from the form
-//   const cardNumber = document.getElementById('cardNumber').value;
-//   const expiryDate = document.getElementById('expiryDate').value;
-//   const cvCode = document.getElementById('cvCode').value;
-//   const cardOwner = document.getElementById('cardOwner').value;
+async function validateCardDetails() {
+  // Retrieve card details from the form
+  const cardNumber = document.getElementById('cardNumber').value;
+  const cardType = document.getElementById('cardType').value;
+  const cvCode = document.getElementById('cvCode').value;
+  const cardOwner = document.getElementById('cardOwner').value;
  
-//   // Fetch account information from the bank API
-//   const response = await fetch('bank_api_url/account', {
-//      method: 'GET',
-//      headers: {
-//        'Content-Type': 'application/json',
-//        'Authorization': 'bank_api_key',
-//      },
-//   });
+  // Fetch account information from the bank API
+  const response = await fetch('https://mocki.io/v1/8519910e-5506-426f-a86d-7f592fd77d21', {
+     method: 'GET',
+     headers: {
+       'Content-Type': 'application/json',
+       'Authorization': 'bank_api_key',
+     },
+  });
  
-//   const data = await response.json();
+  
+  const data = await response.json();
+ console.log(data.cardNumber);
+  // Validate the card details
+  if (data.cards.includes(cardNumber) && data.cvv.includes(cvCode) && data.expiry.includes(cardType) && data.names.includes(cardOwner)) {
+     document.getElementById('confirmPayment').disabled = false;
+  } else {
+     document.getElementById('confirmPayment').disabled = true;
+  }
+ }
  
-//   // Validate the card details
-//   if (data.cards.includes(cardNumber) && data.cvv.includes(cvCode) && data.expiry.includes(expiryDate) && data.names.includes(cardOwner)) {
-//      document.getElementById('confirmPayment').disabled = false;
-//   } else {
-//      document.getElementById('confirmPayment').disabled = true;
-//   }
-//  }
- 
-//  document.getElementById('confirmPayment').disabled = true;
-//  document.getElementById('cardNumber').addEventListener('input', validateCardDetails);
-//  document.getElementById('expiryDate').addEventListener('input', validateCardDetails);
-//  document.getElementById('cvCode').addEventListener('input', validateCardDetails);
-//  document.getElementById('cardOwner').addEventListener('input', validateCardDetails);
+ document.getElementById('confirmPayment').disabled = true;
+ document.getElementById('cardNumber').addEventListener('input', validateCardDetails);
+ document.getElementById('cardType').addEventListener('input', validateCardDetails);
+ document.getElementById('cvCode').addEventListener('input', validateCardDetails);
+ document.getElementById('cardOwner').addEventListener('input', validateCardDetails);
 
+
+ 
 
 //!Payment successful
 
@@ -287,3 +290,6 @@ function paymentSuccessful() {
   document.body.appendChild(paySuccess);
   paySuccess.style.display = 'block';
 }
+
+
+
