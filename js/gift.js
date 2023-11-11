@@ -1,3 +1,4 @@
+//!daynamic element fetch 1
 async function fetchData() {
   try {
     const response = await fetch("https://dummyjson.com/products/");
@@ -42,7 +43,8 @@ async function fetchData() {
       box.appendChild(button);
       container.appendChild(box);
     }
-    // congrazz container
+    //! congrazz container dynamic fetch
+
     const container1 = document.querySelector(".congraz_container");
     for (let i = 0; i < 2; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
