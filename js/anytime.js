@@ -31,7 +31,9 @@ async function fetchData() {
       name.textContent = `${users[randomId[i]].title}`;
       details.textContent = `${users[randomId[i]].description}`;
       button.textContent = "Add Item";
-
+      button.onclick = function () {
+        redirectToPage("additem.html");
+      };
       imgbox.appendChild(image);
       box.appendChild(imgbox);
 
@@ -40,9 +42,9 @@ async function fetchData() {
       box.appendChild(button);
       container[0].appendChild(box);
     }
-
-    const container2 = document.querySelector("congraz_container"); // Assuming the class is named "congraz_container"
-    for (let i = 0; i < 1; i++) {
+    //
+    const container2 = document.getElementsByClassName(".congraz_container"); // Assuming the class is named "congraz_container"
+    for (let i = 0; i < 2; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
       const barista_box = document.createElement("div");
       barista_box.classList.add("gift_container_card-box");
@@ -53,6 +55,7 @@ async function fetchData() {
       const xdescription = document.createElement("p");
       const bbutton = document.createElement("button");
       bbutton.classList.add("mainbtn_add");
+
       bimage.src = users[randomId[i]].thumbnail;
       bname.textContent = `${users[randomId[i]].title}`;
       xdescription.textContent = users[randomId[i]].description;
@@ -64,10 +67,14 @@ async function fetchData() {
       barista_box.appendChild(bname);
       barista_box.appendChild(xdescription);
       barista_box.appendChild(bbutton);
-      container2.appendChild(barista_box);
+      container2[0].appendChild(barista_box);
     }
   } catch (error) {
     console.error("error:", error);
   }
 }
 fetchData();
+
+function redirectToPage(pageName) {
+  window.location.href = pageName;
+}
