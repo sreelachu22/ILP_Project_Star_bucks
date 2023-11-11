@@ -52,6 +52,7 @@ async function fetchData() {
       const xdescription = document.createElement("p");
       const bbutton = document.createElement("button");
       bbutton.classList.add("mainbtn_add");
+
       bimage.src = users[randomId[i]].thumbnail;
       bname.textContent = `${users[randomId[i]].title}`;
       xdescription.textContent = users[randomId[i]].description;
@@ -70,7 +71,7 @@ async function fetchData() {
   }
 }
 fetchData();
-
+bbutton.addEventListener("click", redirectToPage("additem.html"));
 // visibility check nav
 // function showDiv(divId) {
 //   // Hide all divs
@@ -101,3 +102,8 @@ fetchData();
 //   div1.classList.remove("trasformblk1");
 //   div2.classList.add("trasformblk1");
 // }
+
+// redirect
+function redirectToPage(pageName) {
+  window.location.href = pageName;
+}
