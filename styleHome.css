@@ -5,6 +5,7 @@ body {
   font-size: larger;
 }
 
+/* navbar */
 header {
   background-color: white;
   padding: 10px 0;
@@ -16,8 +17,6 @@ header {
 }
 nav {
   height: 50px;
-  /* position: fixed;
-  background-color: white; */
 }
 nav ul {
   display: flex;
@@ -46,8 +45,8 @@ nav ul li a:hover::after {
   bottom: -10px;
   left: 0;
   width: 100%;
-  height: 2px; /* Adjust the height of the underline as needed */
-  background-color: #00704a; /* Green color */
+  height: 2px;
+  background-color: #00704a;
 }
 nav ul li.logo {
   display: flex;
@@ -89,6 +88,7 @@ nav ul li.profile-icon .user-icon {
   font-size: 1.2em;
 }
 
+/* Signup */
 .green-section {
   background-color: #0b3f2d;
   color: #ffffff;
@@ -125,11 +125,12 @@ nav ul li.profile-icon .user-icon {
   margin-right: 40px;
 }
 #rewards {
-  margin-bottom: 0px; /* Adjust the margin as needed */
+  margin-bottom: 0px;
 }
 
+/* Handcrafted Curations */
 #curations {
-  margin-top: 0px; /* Adjust the margin as needed */
+  margin-top: 0px;
 }
 
 #curations {
@@ -155,13 +156,13 @@ nav ul li.profile-icon .user-icon {
 
 .dish img {
   border-radius: 50%;
-  width: 120px; /* Adjust the width of the circular images */
-  height: 120px; /* Adjust the height of the circular images */
+  width: 120px;
+  height: 120px;
   transition: transform 0.3s, border 0.3s;
 }
 .dish:hover img {
-  border: 3px solid #00704a; /* Add a dark green border on hover */
-  transform: scale(0.95); /* Apply a slight zoom on hover */
+  border: 3px solid #00704a;
+  transform: scale(0.95);
 }
 
 .dish p {
@@ -169,6 +170,8 @@ nav ul li.profile-icon .user-icon {
   font-weight: bold;
   font-size: smaller;
 }
+
+/* Offer Card */
 #card-section {
   position: relative;
   text-align: center;
@@ -176,13 +179,13 @@ nav ul li.profile-icon .user-icon {
 
 .card-container {
   display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  align-items: center; /* Center the cards vertically */
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
 .card {
-  background-image: url("images/bluebg.png"); /* Add your background image */
+  background-image: url("images/bluebg.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -201,7 +204,7 @@ nav ul li.profile-icon .user-icon {
 }
 #flag {
   position: relative;
-  float: left; /* Add this to allow other elements to flow around it */
+  float: left;
   width: 110px;
   margin-right: 1080px;
   margin-bottom: 2px;
@@ -258,6 +261,8 @@ nav ul li.profile-icon .user-icon {
   height: 30px;
   padding-top: 15px;
 }
+
+/* Latest Offerings */
 #latest-offerings h2 {
   text-align: left;
   margin-left: 60px;
@@ -265,8 +270,6 @@ nav ul li.profile-icon .user-icon {
 
 .item-container {
   display: flex;
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
   gap: 20px;
   overflow: scroll;
   scroll-behavior: smooth;
@@ -297,7 +300,6 @@ nav ul li.profile-icon .user-icon {
   margin-left: 20px;
 }
 .img-box {
-  /* margin-bottom: 100px; */
   flex: 2;
 }
 .img-box img {
@@ -319,6 +321,7 @@ nav ul li.profile-icon .user-icon {
   margin-left: 150px;
 }
 
+/* Barista Recommends */
 #barista-recommends {
   background-color: #dbdbdb;
   height: auto;
@@ -356,6 +359,8 @@ nav ul li.profile-icon .user-icon {
 .barista-box img {
   border-radius: 10px;
 }
+
+/* World Of Coffee */
 #coffee {
   background-color: #dbdbdb;
   margin-top: 50px;
@@ -441,6 +446,8 @@ nav ul li.profile-icon .user-icon {
   position: absolute;
   z-index: 1;
 }
+
+/* Footer */
 .footer {
   background-color: #063a28;
   height: auto;
