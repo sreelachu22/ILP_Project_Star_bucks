@@ -1,3 +1,4 @@
+//!daynamic element fetch 1
 async function fetchData() {
   try {
     const response = await fetch("https://dummyjson.com/products/");
@@ -26,6 +27,9 @@ async function fetchData() {
       details.classList.add("gift_container_p");
       const button = document.createElement("button");
       button.classList.add("mainbtn_add");
+      button.onclick = function () {
+        redirectToPage("additem.html");
+      };
       image.src = users[randomId[i]].thumbnail;
       name.textContent = `${users[randomId[i]].title}`;
       details.textContent = `${users[randomId[i]].description}`;
@@ -39,19 +43,23 @@ async function fetchData() {
       box.appendChild(button);
       container.appendChild(box);
     }
-    // congrazz container
+    //! congrazz container dynamic fetch
+
     const container1 = document.querySelector(".congraz_container");
     for (let i = 0; i < 2; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
-      const barista_box = document.createElement("div");
-      barista_box.classList.add("gift_container_card-box");
+      const congraz_box = document.createElement("div");
+      congraz_box.classList.add("gift_container_card-box");
       const bimgbox = document.createElement("div");
-      barista_box.classList.add("gift_container_img-box");
+      congraz_box.classList.add("gift_container_img-box");
       const bimage = document.createElement("img");
       const bname = document.createElement("h4");
       const xdescription = document.createElement("p");
       const bbutton = document.createElement("button");
       bbutton.classList.add("mainbtn_add");
+      bbutton.onclick = function () {
+        redirectToPage("additem.html");
+      };
 
       bimage.src = users[randomId[i]].thumbnail;
       bname.textContent = `${users[randomId[i]].title}`;
@@ -59,12 +67,12 @@ async function fetchData() {
       bbutton.textContent = "Add Item";
 
       bimgbox.appendChild(bimage);
-      barista_box.appendChild(bimgbox);
+      congraz_box.appendChild(bimgbox);
 
-      barista_box.appendChild(bname);
-      barista_box.appendChild(xdescription);
-      barista_box.appendChild(bbutton);
-      container1.appendChild(barista_box);
+      congraz_box.appendChild(bname);
+      congraz_box.appendChild(xdescription);
+      congraz_box.appendChild(bbutton);
+      container1.appendChild(congraz_box);
     }
   } catch (error) {
     console.error("error:", error);

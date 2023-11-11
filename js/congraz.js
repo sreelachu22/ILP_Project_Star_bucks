@@ -13,8 +13,8 @@ async function fetchData() {
     });
     console.log(users);
     let randomId = [];
-    const container = document.getElementsByClassName("gift_container");
-    for (let i = 0; i <= 13; i++) {
+    const container = document.getElementsByClassName("congraz_container");
+    for (let i = 0; i < 1; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
       const box = document.createElement("div");
       box.classList.add("gift_container_card-box");
