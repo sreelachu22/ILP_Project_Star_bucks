@@ -13,10 +13,11 @@
     color: gray;
 } */
 
-.main-container {
-  display: flex;
-  margin-left: 67px;
-  margin-right: 67px;
+.main-container{
+    display: flex;
+    margin-left: 67px;
+    margin-right: 67px;
+    margin-top: 105px;
 }
 
 .container-left {

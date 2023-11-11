@@ -1,5 +1,10 @@
-  function redirect2(){ window.location.href = "signup2.html"; }
-  function redirectPay(){ window.location.href = "pay.html"; }
+//!redirect to signup OTP page
+function toSignupOTP() {
+    window.location.href = 'signup2.html';
+
+}
+
+
 //! Move to the next OTP input box when a digit is entered
 let otpBoxes = document.querySelectorAll('input[id^="otp"]');
 
@@ -16,65 +21,52 @@ function moveToNext(e) {
 
 otpBoxes.forEach(box => box.addEventListener('input', moveToNext));
 
-// function checkOtp() {
-//     const otpBoxes = ['otp1', 'otp2', 'otp3', 'otp4', 'otp5', 'otp6'];
-//     let isAllBoxesFilled = true;
+//!OTP validation
+function validateOTP() {
+    const otpBoxes = document.getElementsByClassName('otp-input');
+    let otpFilled = true;
+   //checks whether all otp boxes are filled
+    for (let i = 0; i < otpBoxes.length; i++) {
+       if (otpBoxes[i].value === '') {
+         otpFilled = false;
+         break;
+       }
+    }
+   
+    if (otpFilled) {
+       Successful('Account created successfully');
+    } else {
+       alert('Please enter correct OTP');
+    }
+   }
 
-//     for (let i = 0; i < otpBoxes.length; i++) {
-//         if (document.getElementById(otpBoxes[i]).value === '') {
-//             isAllBoxesFilled = false;
-//             break;
-//         }
-//     }
-
-//     if (isAllBoxesFilled) {
-//         document.getElementById('nextButton').disabled = false;
-//     } else {
-//         document.getElementById('nextButton').disabled = true;
-//     }
-// }
-
-//!account created successfully
-
-function paymentSuccessful() {
-    let popup = document.createElement('div');
-    popup.setAttribute("id", 'popup');
-    popup.style.borderColor = "green"
-
-    let greenTick = document.createElement('img');
-    greenTick.src = '/img/green_tic.png';
-    greenTick.style.height = "60px";
-    greenTick.style.width = "60px"
-    greenTick.classList.add("greenTick")
-
-    let accountSuccess = document.createElement('p');
-    accountSuccess.setAttribute("id", 'accountSuccess');
-    accountSuccess.innerText = 'Account created successfully';
-
-    let displayDetails = document.createElement('div');
-    displayDetails.classList.add("displayDetails")
-    let mail = document.createElement('p');
-    let mob = document.createElement('p');
-    
-    mail.innerText = document.getElementById('email').value;
-    mob.innerText = document.getElementById('mobile').value;
-
-    let continueToPayment = document.createElement('button');
-    continueToPayment.setAttribute("id", 'continueToPayment');
-    continueToPayment.innerText = 'Continue to payment';
-
-    displayDetails.appendChild(mail);
-    displayDetails.appendChild(mob);
-    popup.appendChild(greenTick);
-    popup.appendChild(accountSuccess);
-    popup.appendChild(displayDetails);
-    popup.appendChild(continueToPayment);
-
-    continueToPayment.addEventListener('click', function() {
-        document.body.removeChild(popup);
-        window.location.href = 'pay.html';
-    });
-
-    document.body.appendChild(popup);
-    popup.style.display = 'block';
-}
+// //singup page validation
+// function signupValidation(){
+//     fetch('https://dummyjson.com/users/')
+//        .then(response => response.json())
+//        .then(data => {
+//            const signupUsers = [];
+//            data.Users.forEach(element => {
+//                signupUsers.push(element);
+//            });
+//             let isSignUpValidated = false;
+//             const emailSignup = document.getElementById('signup-email').value;
+//             const phoneSignup = document.getElementById('signup-mobile').value;
+//             const createPassword = document.getElementById('createPass').value;
+//             const confirmPassword = document.getElementById('confirmPass').value;
+//             console.log("signup test");
+//             for (let i = 0; i < 5; i++) {
+//                 console.log("signup test");
+//               if(emailSignup === signupUsers[i].email && phoneSignup === signupUsers[i].phone && createPassword === signupUsers[i].password && createPassword === confirmPassword){
+//                 isSignUpValidated = true;
+//                 break;
+//               }
+//             }
+//             if (!isSignUpValidated) {
+//               alert('Enter valid details');
+//             } else {
+//               window.location.href = "signup2.html";
+//             } 
+//        })  
+//        .catch(error => console.error('Error:', error));
+//      }

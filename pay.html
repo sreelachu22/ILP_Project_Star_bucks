@@ -43,7 +43,7 @@
     <div class="payContainer">
       <div class="row">
         <div>
-          <div class="panel panel-default">
+          <div class="panel">
             <div class="panel-heading">
               <h3 class="text-center">Payment Details</h3>
               <div class="inlineimage">
@@ -58,26 +58,19 @@
             </div>
             <div class="panel-body">
               <form role="form">
+                <!-- form for entering payment details - contains Card number,card type,CV code,card owner and amount -->
                 <div class="form-group">
                   <label>CARD NUMBER</label>
                   <div class="input-group">
                     <input
                       id="cardNumber"
-                      type="tel"
+                      type="text"
+                      maxlength="16"
                       class="form-control"
                       placeholder="Valid Card Number"
                     />
-                    <span><span class="fa fa-credit-card"></span></span>
                   </div>
                 </div>
-                <!-- <div class="form-group">
-                  <label><span class="hidden-xs">EXPIRATION</span></label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    placeholder="MM / YY"
-                  />
-                </div> -->
                 <div class="form-group">
                   <label>CARD TYPE</label>
                   <input
@@ -91,7 +84,8 @@
                   <label>CV CODE</label>
                   <input
                     id="cvCode"
-                    type="tel"
+                    type="number"
+                    maxlength="3"
                     class="form-control"
                     placeholder="CVC"
                   />
@@ -109,7 +103,8 @@
                   <label><span>Amount</span></label>
                   <input
                     id="amount"
-                    type="number"
+                    type="text"
+                    minlength="3"
                     class="form-control"
                     placeholder="₹Amount"
                   />
@@ -117,11 +112,7 @@
               </form>
             </div>
             <div class="panel-footer">
-              <button
-                id="confirmPayment"
-                class="btn btn-success btn-lg btn-block"
-                onclick="paymentSuccessful()"
-              >
+              <button id="confirmPayment" onclick="confirmPayment()">
                 Confirm Payment
               </button>
             </div>
