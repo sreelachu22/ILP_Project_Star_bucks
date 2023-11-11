@@ -13,7 +13,7 @@ async function fetchData() {
     });
     console.log(users);
     let randomId = [];
-    const container = document.getElementsByClassName("thankyou_container");
+    const container = document.getElementsByClassName("congraz_container");
     for (let i = 0; i < 1; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
       const box = document.createElement("div");
