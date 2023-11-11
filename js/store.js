@@ -1,6 +1,7 @@
-let count = 0;
+let count = 0; //Variable to count the no. of stores available
 
 
+//To fetch data from API when user type the location on the search bar and press 'Enter'
 document.getElementById("locationInput").addEventListener("keyup", function (event) {
   if (event.code === "Enter") {
     document.getElementById("mapContainer").innerHTML = "";
@@ -10,6 +11,7 @@ document.getElementById("locationInput").addEventListener("keyup", function (eve
 });
 
 
+//Function to fetch data from API based on the location typed by customer
 function fetchData() {
   fetch("https://mocki.io/v1/37ef34f9-131a-4b39-a409-5b56dcdfca89")
     .then((response) => response.json())
@@ -22,6 +24,7 @@ function fetchData() {
 }
 
 
+//Function to call the createCards function and show map of the location typed
 function showMap(data) {
   const response = data;
   var location = document.getElementById("locationInput").value;
@@ -68,7 +71,7 @@ function showMap(data) {
 }
 
 
-
+//Function to create cards based on the no. of stores available in that particular location
 function createCards(stores, i) {
   const cardscontainer = document.getElementById("cards");
 
