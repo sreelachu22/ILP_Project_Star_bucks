@@ -1,7 +1,6 @@
 //!redirect to signup OTP page
 function toSignupOTP() {
-    window.location.href = 'signup2.html';
-
+    window.location.href = 'signupRename.html';
 }
 
 
