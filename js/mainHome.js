@@ -58,21 +58,17 @@ async function fetchData(count) {
       bimage.style.width = "150px";
       bimage.style.height = "150px";
       const bname = document.createElement("h4");
-      //   const details = document.createElement("p");
       const bprice = document.createElement("p");
       const bbutton = document.createElement("button");
       bbutton.classList.add("add-item-button");
       bimage.src = users[randomId[i]].thumbnail;
       bname.textContent = `${users[randomId[i]].title}`;
-      //   details.textContent = `${users[randomId[i]].description}`;
       bprice.textContent = `₹ ${users[randomId[i]].price}`;
       bbutton.textContent = "Add Item";
 
       bimgbox.appendChild(bimage);
       barista_box.appendChild(bimgbox);
-
       barista_box.appendChild(bname);
-      //   barista_box.appendChild(details);
       barista_box.appendChild(bprice);
       barista_box.appendChild(bbutton);
       container1.appendChild(barista_box);
