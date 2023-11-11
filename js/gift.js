@@ -52,6 +52,7 @@ async function fetchData() {
       const xdescription = document.createElement("p");
       const bbutton = document.createElement("button");
       bbutton.classList.add("mainbtn_add");
+
       bimage.src = users[randomId[i]].thumbnail;
       bname.textContent = `${users[randomId[i]].title}`;
       xdescription.textContent = users[randomId[i]].description;
@@ -70,12 +71,39 @@ async function fetchData() {
   }
 }
 fetchData();
-
+bbutton.addEventListener("click", redirectToPage("additem.html"));
 // visibility check nav
+// function showDiv(divId) {
+//   // Hide all divs
+//   var allDivs = document.querySelectorAll(".hidden");
+//   for (var i = 0; i < allDivs.length; i++) {
+//     allDivs[i].classList.add("hidden");
+//   }
 
-const div = document.querySelector("#my-div");
-const anchor = document.querySelector("#my-anchor");
+//   // Show the selected div
+//   var selectedDiv = document.getElementById(divId);
+//   selectedDiv.classList.remove("hidden");
+// }
 
-anchor.addEventListener("click", () => {
-  div.style.display = "none";
-});
+// function showPaySection() {
+//   var div1 = document.getElementById("div1");
+//   var div2 = document.getElementById("div2");
+
+//   // Show pay section and hide others
+//   div1.classList.add("trasformblk1");
+//   div2.classList.remove("trasformblk1");
+// }
+
+// function showGiftSection() {
+//   var div1 = document.getElementById("div1");
+//   var div2 = document.getElementById("div2");
+
+//   // Show gift section and hide others
+//   div1.classList.remove("trasformblk1");
+//   div2.classList.add("trasformblk1");
+// }
+
+// redirect
+function redirectToPage(pageName) {
+  window.location.href = pageName;
+}

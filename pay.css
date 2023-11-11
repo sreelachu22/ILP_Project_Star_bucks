@@ -1,3 +1,4 @@
+/* login and getting help popup css */
 #payPage{
   position: absolute;
   top: 0;
@@ -9,6 +10,7 @@
   background-color: rgba(154, 154, 154, 0.628);
   position: fixed;
 }
+
 
 #gettingHelp{
   position: absolute;
@@ -48,6 +50,7 @@
     width: 92%;
   }
   
+  /* styling SKIP text  for closing the popup */
   .close {
     color: green;
     float: right;
@@ -68,6 +71,7 @@
     cursor: pointer;
   }
   
+  /* login form css */
   #loginForm{
     display: block;
     position: relative;
@@ -108,7 +112,7 @@
   #loginButton {
     padding: 10px 20px;
     margin-bottom: 10px;
-    background-color: rgba(156, 156, 156, 0.943);
+    background-color: #115d42;
     width: 60%;
     border-radius: 30px;
     height: 40px;
@@ -121,37 +125,27 @@
     cursor: pointer;
   }
 
+  /* green texts such as get help and signup */
   .green{
     color: green;
   }
 
-  #loginButton:enabled,#resetButton:enabled,#nextButton:enabled #continueButton:enabled {
-    background-color: #115d42; /* Change the color of button when enabled */
-    color: white;
-    cursor: pointer;
-  }
   
   /* Style for the button when hovered */
-  #loginButton:enabled:hover,#resetButton:enabled:hover,#nextButton:enabled:hover,#continueButton:enabled:hover {
-    background-color: rgb(2, 46, 5); /* Change the color of button when enabled and hover over */
+  #loginButton:hover,#nextButton:hover,#continueButton:hover {
+    background-color: rgb(2, 46, 5);
   }
 
 
-/* gettingHelp page css */
+/* gettingHelp page input and button css */
   .dob-input {
     position: relative;
     width: 300px;
   }
   
-  #dob {
-    width: 97%;
-    padding-right: 25px;
-  }
-  
   #resetButton {
     padding: 10px 20px;
     margin-bottom: 10px;
-    background-color: rgba(156, 156, 156, 0.943);
     width: 60%;
     border-radius: 30px;
     height: 40px;
@@ -164,23 +158,19 @@
     cursor: pointer;
   }
 
-  #resetButton:enabled {
-    background-color: #115d42; /* Change the color of button when enabled */
-    color: white;
+  #resetButton {
+    background-color: #5c5c5cc0;
+    color: rgb(0, 0, 0);
     cursor: pointer;
   }
   
-  /* Style for the button when hovered */
-  #resetButton:enabled:hover {
-    background-color: rgb(2, 46, 5); /* Change the color of button when enabled and hover over */
-  }
-
   #username-help, #dob{
     border-top: none;
     border-left: none;
     border-right: none;
     width: 100%;
     padding: 5px;
+    padding-right: 25px;
     margin-top: 5px;
   }
 
@@ -193,10 +183,7 @@
     padding-right: 30px;
   }
   
- i{
-  color: #115d42;
- }
-  
+
 
   /* Pay page styling */
   .inlineimage{max-width:470px;
@@ -250,52 +237,31 @@
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
    }
    
-   .btn {
+   #confirmPayment {
     display: inline-block;
-    padding: 6px 12px;
     margin-bottom: 0;
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 1.42857143;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
     cursor: pointer;
     background-image: none;
     border: 1px solid transparent;
-    border-radius: 4px;
     text-decoration: none;
-    color: #fff;
-    background-color: #5cb85c;
-    border-color: #4cae4c;
-   }
-   
-   .btn-lg {
     padding: 10px 16px;
     font-size: 18px;
-    line-height: 1.3333333;
     border-radius: 6px;
-   }
-   
-   .btn-block {
     display: block;
     width: 100%;
-   }
-   
-   .btn-success {
     color: #fff;
-    background-color: #5cb85c;
+    background-color: #115d42;
     border-color: #4cae4c;
    }
    
    
    
-   .btn-lg:hover,
-   .btn-lg:focus,
-   .btn-lg:active{
+   #confirmPayment:hover,
+   #confirmPayment:focus,
+   #confirmPayment:active{
     color: #fff;
-    background-color: #449d44;
-    border-color: #398439;
+    background-color: rgb(2, 46, 5);;
    }
    
    
@@ -310,7 +276,8 @@
     height: auto;
    }
 
-   #paySuccess{
+   /* Payment and account creation successful message popup styling */
+   #successful{
     position: relative;
     top: 20%;
     left: 30%;
@@ -323,8 +290,7 @@
     position: fixed;
   }
   
-
-  #accountSuccess{
+  .successMessage{
     text-align: center;
   }
   

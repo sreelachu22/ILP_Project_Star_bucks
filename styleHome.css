@@ -265,9 +265,20 @@ nav ul li.profile-icon .user-icon {
 
 .item-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
   gap: 20px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+.item-container::-webkit-scrollbar {
+  width: 12px;
+  height: 3px;
+}
+
+.item-container::-webkit-scrollbar-thumb {
+  background-color: rgb(40, 108, 92);
 }
 
 .card-box {
@@ -282,6 +293,8 @@ nav ul li.profile-icon .user-icon {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-bottom: 50px;
+  margin-left: 20px;
 }
 .img-box {
   /* margin-bottom: 100px; */
@@ -291,6 +304,7 @@ nav ul li.profile-icon .user-icon {
   width: 150px;
   height: auto;
   text-align: center;
+  border-radius: 10px;
 }
 .content-box {
   flex: 1;
@@ -316,6 +330,17 @@ nav ul li.profile-icon .user-icon {
 .barista-container {
   display: flex;
   padding-bottom: 60px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+}
+.barista-container::-webkit-scrollbar {
+  width: 12px;
+  height: 3px;
+}
+
+.barista-container::-webkit-scrollbar-thumb {
+  background-color: rgb(40, 108, 92);
 }
 .barista-box {
   background-color: #ffffff;
@@ -327,6 +352,9 @@ nav ul li.profile-icon .user-icon {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.barista-box img {
+  border-radius: 10px;
 }
 #coffee {
   background-color: #dbdbdb;
