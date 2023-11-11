@@ -42,12 +42,12 @@ async function fetchData() {
       box.appendChild(button);
       container[0].appendChild(box);
     }
-    //
+    //!error in this fetch
     const container2 = document.getElementsByClassName(".congraz_container"); // Assuming the class is named "congraz_container"
     for (let i = 0; i < 2; i++) {
       randomId[i] = Math.floor(Math.random() * 29 + 1);
-      const barista_box = document.createElement("div");
-      barista_box.classList.add("gift_container_card-box");
+      const congo_box = document.createElement("div");
+      congo_box.classList.add("gift_container_card-box");
       const bimgbox = document.createElement("div");
       bimgbox.classList.add("gift_container_img-box"); // Fixed typo here
       const bimage = document.createElement("img");
@@ -62,12 +62,12 @@ async function fetchData() {
       bbutton.textContent = "Add Item";
 
       bimgbox.appendChild(bimage);
-      barista_box.appendChild(bimgbox);
+      congo_box.appendChild(bimgbox);
 
-      barista_box.appendChild(bname);
-      barista_box.appendChild(xdescription);
-      barista_box.appendChild(bbutton);
-      container2[0].appendChild(barista_box);
+      congo_box.appendChild(bname);
+      congo_box.appendChild(xdescription);
+      congo_box.appendChild(bbutton);
+      container2[0].appendChild(congo_box);
     }
   } catch (error) {
     console.error("error:", error);
