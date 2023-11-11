@@ -12,7 +12,11 @@ Star bucks website
 
 ## Pay Page
 Login page
-![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/e8b8c301-5e21-4a74-81f9-2ab9c28b3541)
+![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/0776487c-0699-4e11-b87c-2e3bde9946e1)
+Pay Page
+![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/de75070f-aceb-4bd6-8339-8007867e8b5e)
+Payment success
+![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/8e41fdd0-b3c9-49ed-8d90-79ef47f0e81a)
 Get Help Page
 ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/8435f1d6-a89f-4986-8e6e-266167601c03)
 Signup page
