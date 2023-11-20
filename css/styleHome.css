@@ -185,7 +185,7 @@ nav ul li.profile-icon .user-icon {
 }
 
 .card {
-  background-image: url("images/bluebg.png");
+  background-image: url("/images/bluebg.png");
   background-size: cover;
   background-position: center;
   color: white;
@@ -375,7 +375,7 @@ nav ul li.profile-icon .user-icon {
 }
 #coffee-story {
   position: relative;
-  background-image: url("images/coffee_culture_blog_web1_c6e691b286.jpg"); /* Add your background image */
+  background-image: url("/images/coffee_culture_blog_web1_c6e691b286.jpg"); /* Add your background image */
   background-size: cover;
   background-position: center;
   color: white;
