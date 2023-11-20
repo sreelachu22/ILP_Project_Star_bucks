@@ -1,66 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleHome.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="pay.css">
-    <link rel="stylesheet" href="store.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="css/store.css" />
+
     <script src="js/pay.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Store</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-          <ul>
-            <li class="logo">
-              <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
-            </li>
-            <li><a class="n-active" href="home.html">Home</a></li>
-            <li><a class="n-active" href="gift.html">Gift</a></li>
-            <li><a class="n-active" href="order.html">Order</a></li>
-            <li><a class="n-active" href="#loginModal" id="payLink" onclick="payLogin()">Pay</a></li>
-            <li><a class="active" href="store.html">Store</a></li>
-            <li class="search-bar">
-              <div class="search-icon">
-                <img src="images/icons8-search-48.png" alt="" width="25px" />
-              </div>
-              <input type="text" placeholder="Looking for something specific?" />
-            </li>
-            <li class="profile-icon">
-              <a href=""
-                ><div class="user-icon">
-                  <img
-                    src="images/profile.png"
-                    alt=""
-                    width="35px"
-                  /></div
-              ></a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div class="navigation">
-        <p class="nav-p"><a class="home-redirect" href="home.html">Home</a>>Find A Store</p>
-      </div>
-
-      <div class="main-container">
-        <div class="container-left">
-            <div class="s-bar">
-                <div class="s-icon">
-                    <img src="images/icons8-search-48.png" alt="" width="25px" />
-                </div>
-                <input class="search-store" type="text" placeholder="Find a store near you" id="locationInput" />
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a class="n-active" href="home.html">Home</a></li>
+          <li><a class="n-active" href="gift.html">Gift</a></li>
+          <li><a class="n-active" href="order.html">Order</a></li>
+          <li><a class="n-active" href="signIn_signUp.html">Pay</a></li>
+          <li><a class="active" href="store.html">Store</a></li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
+            <input type="text" placeholder="Looking for something specific?" />
+          </li>
+          <li class="profile-icon">
+            <a href=""
+              ><div class="user-icon">
+                <img src="images/profile.png" alt="" width="35px" /></div
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="navigation">
+      <p class="nav-p">
+        <a class="home-redirect" href="home.html">Home</a>>Find A Store
+      </p>
+    </div>
 
-            <h5 class="nearby" id="near-by">Nearby (0)</h5>
+    <div class="main-container">
+      <div class="container-left">
+        <div class="s-bar">
+          <div class="s-icon">
+            <img src="images/icons8-search-48.png" alt="" width="25px" />
+          </div>
+          <input
+            class="search-store"
+            type="text"
+            placeholder="Find a store near you"
+            id="locationInput"
+          />
+        </div>
 
-            <div id="cards">
-              <!-- <div class="store-card">
+        <h5 class="nearby" id="near-by">Nearby (0)</h5>
+
+        <div id="cards">
+          <!-- <div class="store-card">
                 <div class="card-top">
                     <img class="store-img" src="/images/Store_Image_Def.jpg">
                   <div class="store-details">
@@ -81,14 +81,13 @@
                   <a class="direction-btn" href="">Show Direction</a>
                 </div>
               </div> -->
-            </div>
-        </div>
-        
-        <div id="mapContainer">
-          <!-- <p id="notice"></p> -->
         </div>
       </div>
 
-</body>
-<script src="js/store.js"></script>
+      <div id="mapContainer">
+        <!-- <p id="notice"></p> -->
+      </div>
+    </div>
+  </body>
+  <script src="js/store.js"></script>
 </html>

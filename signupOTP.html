@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="pay.css" />
-    <link rel="stylesheet" href="signup.css" />
+    <link rel="stylesheet" href="css/signupOTP.css" />
     <title>Starbucks</title>
-    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,7 +24,7 @@
           <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
           <li>
-            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
+            <a href="signIn_signUp.html">Pay</a>
           </li>
           <li><a href="store.html">Store</a></li>
           <li class="search-bar">
@@ -35,7 +34,7 @@
             <input type="text" placeholder="Looking for something specific?" />
           </li>
           <li class="profile-icon">
-            <a href="#loginModal" id="payLink" onclick="payLogin()"
+            <a href="signIn_signUp.html"
               ><div class="user-icon">
                 <img
                   src="images/icons8-customer-80.png"
@@ -51,9 +50,8 @@
       <div id="signup2-inner-container">
         <p class="home-nav" style="color: black">
           <a href="home.html">Home</a> ->
-          <a href="signup.html">Verification</a>
+          <a href="signupOTP.html">Verification</a>
         </p>
-        <img class="step" src="img/signup_process2.png" alt="" />
         <div class="otpHead">
           <h3>OTP was sent to your mobile number</h3>
           <p>
@@ -77,6 +75,5 @@
     </main>
   </body>
   <script src="js/mainHome.js"></script>
-  <script src="js/pay.js"></script>
-  <script src="js/signup.js"></script>
+  <script src="js/signupOTP.js"></script>
 </html>
