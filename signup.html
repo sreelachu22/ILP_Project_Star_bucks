@@ -4,110 +4,211 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="pay.css" />
-    <link rel="stylesheet" href="signup.css" />
-    <title>Starbucks</title>
-    <link rel="stylesheet" href="styleHome.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <!-- <script src="js/login.js"></script> -->
+    <title>Login Modal</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li class="logo">
-            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
-          </li>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html">Gift</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li>
-            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
-          </li>
-          <li><a href="store.html">Store</a></li>
-          <li class="search-bar">
-            <div class="search-icon">
-              <img src="images/icons8-search-48.png" alt="" width="25px" />
-            </div>
-            <input type="text" placeholder="Looking for something specific?" />
-          </li>
-          <li class="profile-icon">
-            <a href="#loginModal" id="payLink" onclick="payLogin()"
-              ><div class="user-icon">
-                <img
-                  src="images/icons8-customer-80.png"
-                  alt=""
-                  width="40px"
-                /></div
-            ></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <div>
-        <p class="home-nav">
-          <a href="home.html">Home</a> ->
-          <a href="signup.html">Create An Account</a>
+    <!-- <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <button id="closeButton" class="close" onclick="closeLoginModal()">
+          SKIP
+        </button>
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="username">USERNAME</label><br />
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your email or mobile number*"
+            required
+          />
+          <label for="password">PASSWORD</label><br />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password*"
+            required
+          />
+          <span id="togglePassword" onclick="togglePasswordVisibility()"></span>
+          <p>
+            Don't have an account?
+            <a class="green" href="signup.html">Sign Up</a>
+          </p>
+          <button id="loginButton" disabled>Login</button>
+        </form>
+        <p style="position: absolute; bottom: 0; margin-left: 30%">
+          Facing trouble logging in?
+          <a class="green" href="#helpModal" onclick="getHelp()">Get Help</a>
         </p>
       </div>
-      <div class="signup-container">
-        <img
-          class="green_ldots"
-          src="img/green_ldots.svg"
-          alt="green left dots image"
-        />
-        <img
-          class="green_rleaf"
-          src="img/green_rleaf.svg"
-          alt="green right leaf"
-        />
-        <div id="signup-inner-container">
-          <img class="steps" src="img/signup_process1.svg" alt="" />
-          <h3>Sign Up to Starbucks</h3>
-          <hr _ngcontent-iwb-c83 />
-          <!-- signu up form starts here -->
-          <form>
-            <div class="login-details-block">
-              <div class="input-block" id="signup-email">
-                <label for="email">EMAIL ID</label><br />
-                <input type="text" id="email" placeholder="Enter email ID*" />
-              </div>
-              <div class="input-block" id="signup-mobile">
-                <label for="text">USERNAME</label><br />
-                <input type="text" id="mobile" placeholder="Enter username" />
-              </div>
-              <div class="input-block" id="signup-create-pass">
-                <label for="password">CREATE PASSWORD</label><br />
-                <input
-                  type="password"
-                  id="createPass"
-                  placeholder="Enter Password*"
-                  required
-                />
-              </div>
-              <div class="input-block" id="signup-confirm-pass">
-                <label for="password">CONFIRM PASSWORD</label><br />
-                <input
-                  type="password"
-                  id="confirmPass"
-                  placeholder="Re-enter Password*"
-                />
-              </div>
-            </div>
-            <!-- when button clicked it redirected to OTP page of signup -->
-            <button id="continueButton" onclick="toSignupOTP()">
-              Continue
-            </button>
+    </div>
+
+    <div id="gettingHelp" style="display: none">
+      <div id="helpModal" class="modal">
+        <div class="modal-content">
+          <button class="close" id="closeButton" onclick="closeLoginModal()">
+            X
+          </button>
+          <h2>Get Help</h2>
+          <p style="font-size: large">
+            Please enter your registered details and we will send you an OTP to
+            reset your password.
+          </p>
+          <form id="loginForm">
+            <label for="username">USERNAME</label><br />
+            <input
+              type="text"
+              id="username-help"
+              placeholder="Enter your email or mobile number*"
+              required
+            />
+            <label for="password">DATE OF BIRTH</label><br />
+            <input type="date" id="dob" placeholder="DD/MM/YY" required />
+            <button id="resetButton" onclick="" disabled>Reset Password</button>
           </form>
         </div>
       </div>
-    </main>
+    </div> -->
+    <div id="container" class="container">
+      <!-- FORM SECTION -->
+      <div class="row">
+        <!-- SIGN UP -->
+        <div class="col align-items-center flex-col sign-up">
+          <div class="form-wrapper align-items-center">
+            <div class="form sign-up">
+              <div class="input-group">
+                <i class="bx bxs-user"></i>
+                <input type="text" placeholder="Username" />
+              </div>
+              <div class="input-group">
+                <i class="bx bx-mail-send"></i>
+                <input type="email" placeholder="Email" />
+              </div>
+              <div class="input-group">
+                <i class="bx bxs-lock-alt"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <div class="input-group">
+                <i class="bx bxs-lock-alt"></i>
+                <input type="password" placeholder="Confirm password" />
+              </div>
+              <button>Sign up</button>
+              <p>
+                <span> Already have an account? </span>
+                <a onclick="toggleToSignin()" class="pointer"> Sign in here </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- END SIGN UP -->
+        <!-- SIGN IN -->
+        <div class="col align-items-center flex-col sign-in">
+          <div class="form-wrapper align-items-center">
+            <div class="form sign-in">
+              <div class="input-group">
+                <i class="bx bxs-user"></i>
+                <input type="text" placeholder="Username" />
+              </div>
+              <div class="input-group">
+                <i class="bx bxs-lock-alt"></i>
+                <input type="password" placeholder="Password" />
+              </div>
+              <button>Sign in</button>
+              <p>
+                <b> Forgot password? </b>
+              </p>
+              <p>
+                <span> Don't have an account? </span>
+                <a onclick="toggleToSignup()" class="pointer"> Sign up here </a>
+              </p>
+            </div>
+          </div>
+          <div class="form-wrapper"></div>
+        </div>
+        <!-- END SIGN IN -->
+      </div>
+      <!-- END FORM SECTION -->
+      <!-- CONTENT SECTION -->
+      <div class="row content-row">
+        <!-- SIGN IN CONTENT -->
+        <div class="col align-items-center flex-col">
+          <div class="text sign-in">
+            <h2>Welcome</h2>
+          </div>
+          <div class="img sign-in"></div>
+        </div>
+        <!-- END SIGN IN CONTENT -->
+        <!-- SIGN UP CONTENT -->
+        <div class="col align-items-center flex-col">
+          <div class="img sign-up"></div>
+          <div class="text sign-up">
+            <h2>Join with us</h2>
+          </div>
+        </div>
+        <!-- END SIGN UP CONTENT -->
+      </div>
+      <!-- END CONTENT SECTION -->
+    </div>
+    <script>
+      // JavaScript code to set the initial state
+      //   document.addEventListener("DOMContentLoaded", function () {
+      //     // Get the container element
+      //     let container = document.getElementById("container");
+
+      //     // Set the initial state (show sign-in, hide sign-up)
+      //     container.classList.add("sign-in");
+      //     container.classList.remove("sign-up");
+      //   });
+
+      //   function toggleToSignup() {
+      //     // Get the container element
+      //     let container = document.getElementById("container");
+
+      //     // Set the initial state (show sign-in, hide sign-up)
+      //     container.classList.remove("sign-in");
+      //     container.classList.add("sign-up");
+      //   }
+
+      //   function toggleToSignin() {
+      //     document.addEventListener("DOMContentLoaded", function () {
+      //       // Get the container element
+      //       let container = document.getElementById("container");
+
+      //       // Set the initial state (show sign-in, hide sign-up)
+      //       container.classList.add("sign-in");
+      //       container.classList.remove("sign-up");
+      //     });
+      //   }
+
+      //   function toggle() {
+      //     let container = document.getElementById("container");
+
+      //     function toggleSections() {
+      //       container.classList.toggle("sign-in");
+      //       container.classList.toggle("sign-up");
+      //     }
+
+      //     let signUpLink = document.querySelector(".pointer");
+      //     signUpLink.addEventListener("click", function () {
+      //       toggleSections();
+      //     });
+      //   });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get the container element
+        let container = document.getElementById("container");
+
+        // Set the initial state (show sign-in, hide sign-up)
+        container.classList.add("sign-in");
+        container.classList.remove("sign-up");
+
+        // Add a click event listener to the "Sign up here" link
+        let signUpLink = document.querySelectorAll(".pointer");
+        signUpLink.addEventListener("click", function () {
+          // Toggle between sign-in and sign-up sections
+          container.classList.toggle("sign-in");
+          container.classList.toggle("sign-up");
+        });
+      });
+    </script>
   </body>
-  <script src="js/mainHome.js"></script>
-  <script src="js/pay.js"></script>
-  <script src="js/signup.js"></script>
 </html>

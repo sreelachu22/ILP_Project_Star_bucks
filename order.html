@@ -3,20 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="pay.css" />
     <title>Starbucks</title>
-    <link rel="stylesheet" href="styleHome.css" />
+    <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="order.css" />
-    <link rel="stylesheet" href="drinks.css" />
-    <script src="mainHome.js"></script>
-    <script src="js/pay.js"></script>
-    <script src="/js/order.js"></script>
+    <link rel="stylesheet" href="css/order.css" />
+    <link rel="stylesheet" href="css/drinks.css" />
+    <script src="js/mainHome.js"></script>
+    <script src="js/order.js"></script>
   </head>
   <body>
     <!-- main nav -->
@@ -32,13 +30,7 @@
           <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
           <li>
-            <a
-              class="n-active"
-              href="#loginModal"
-              id="payLink"
-              onclick="payLogin()"
-              >Pay</a
-            >
+            <a class="n-active" href="signIn_signUp.html">Pay</a>
           </li>
           <li><a href="store.html">Store</a></li>
           <li class="search-bar">
@@ -78,13 +70,15 @@
           style="color: white"
           class="loc"
         />
-        <input class="nostore" type="text" placeholder="No Store Selected" onclick="goToStorePage()" />
+        <input
+          class="nostore"
+          type="text"
+          placeholder="No Store Selected"
+          onclick="goToStorePage()"
+        />
         <img src="images/cloo.png" alt="" style="color: white" />
-        <p style="color: white; " class="mins">
-          mins
-        </p>
+        <p style="color: white" class="mins"></p>
       </div>
-
 
       <div class="deliver">
         <div id="deliver1">
@@ -183,6 +177,5 @@
     </div>
   </body>
   <script src="js/mainHome.js"></script>
-  <script src="js/pay.js"></script>
-  <script src="/js/order.js"></script>
+  <script src="js/order.js"></script>
 </html>

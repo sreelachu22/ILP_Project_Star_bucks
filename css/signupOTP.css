@@ -1,0 +1,103 @@
+/* Style for home -> page session */
+.home-nav{
+    height: 15px;
+    margin-top: 7%;
+    padding-top: 8px;
+    font-size: 15px;
+}
+.home-nav a{
+    text-decoration: none;
+    color: black;
+}
+
+  /* Signup 2nd page(OTP) style */
+
+  .signup2-inner-container{
+    background-color: white;
+    font-size: smaller;
+  }
+
+  .step{
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 20%;
+  }
+
+  .otpHead{
+    font-size: large;
+    margin-left: 10%;
+  }
+  .otp-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.otp-input {
+    width: 40px;
+    height: 50px;
+    border: 1px solid #6b6b6b;
+    border-radius: 4px;
+    text-align: center;
+    margin: 5px;
+    font-size: 18px;
+}
+.enterOTP{
+  color: #6b6b6b;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 5%;
+}
+
+
+ /* OTPpage to next page */
+
+#nextButton{
+  margin-top: 5%;
+  width: 400px;
+    margin-left: 36%;
+    position: relative;
+    border-radius: 30px;
+    height: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #115d42;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+
+.greenTick{
+  margin-top:10%;
+  margin-left: 45%;
+}
+
+/* Payment and account creation successful message popup styling */
+#successful{
+  position: relative;
+  top: 20%;
+  left: 30%;
+  right: 0;
+  width: 40%;
+  height: 50%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #115d42;
+  border-radius: 20px;
+  position: fixed;
+}
+
+.successMessage{
+  text-align: center;
+}
+
+.greenTick{
+  margin-top:20%;
+  margin-left: 45%;
+  height: 60px;
+  width: 60px;
+}
+
+.close{
+    text-decoration: none;
+}
