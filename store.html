@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleHome.css">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="">
-    <link rel="stylesheet" href="pay.css">
-    <link rel="stylesheet" href="store.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
-    <script src="js/pay.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="css/store.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <title>Store</title>
   </head>
@@ -47,27 +45,28 @@
       </p>
     </div>
 
-      <div class="main-container">
-        <div class="container-left">
-            <div class="s-bar">
-                <div class="s-icon">
-                    <img src="images/icons8-search-48.png" alt="" width="25px" />
-                </div>
-                <input class="search-store" type="text" placeholder="Find a store near you" id="locationInput" />
-            </div>
-
-            <h5 class="nearby" id="near-by">Nearby (0)</h5>
-
-            <div id="cards">
-
-            </div>
+    <div class="main-container">
+      <div class="container-left">
+        <div class="s-bar">
+          <div class="s-icon">
+            <img src="images/icons8-search-48.png" alt="" width="25px" />
+          </div>
+          <input
+            class="search-store"
+            type="text"
+            placeholder="Find a store near you"
+            id="locationInput"
+          />
         </div>
-        
-        <div id="mapContainer" class="map-container"></div>
-        </div>
+
+        <h5 class="nearby" id="near-by">Nearby (0)</h5>
+
+        <div id="cards"></div>
       </div>
 
-</body>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="js/store.js"></script>
+      <div id="mapContainer" class="map-container"></div>
+    </div>
+  </body>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="js/store.js"></script>
 </html>
