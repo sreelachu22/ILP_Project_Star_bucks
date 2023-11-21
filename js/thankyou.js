@@ -1,6 +1,8 @@
 async function fetchData() {
   try {
-    const response = await fetch("https://dummyjson.com/products/");
+    const response = await fetch(
+      "https://mocki.io/v1/586e9bf3-fec3-411d-94d5-224f549ac241"
+    );
     if (!response.ok) {
       throw new Error(`API request failed with status: ${response.status}`);
     }
@@ -15,7 +17,7 @@ async function fetchData() {
     let randomId = [];
     const container = document.getElementsByClassName("congraz_container");
     for (let i = 0; i < 1; i++) {
-      randomId[i] = Math.floor(Math.random() * 29 + 1);
+      randomId[i] = Math.floor(Math.random() * 9 + 1);
       const box = document.createElement("div");
       box.classList.add("gift_container_card-box");
       const imgbox = document.createElement("div");
