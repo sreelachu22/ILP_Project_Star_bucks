@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="pay.css" />
     <title>Starbucks</title>
-    <link rel="stylesheet" href="styleHome.css" />
-    <link rel="stylesheet" href="gift.css" />
-    <link rel="stylesheet" href="additem.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="css/gift.css" />
+    <link rel="stylesheet" href="css/additem.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
@@ -18,69 +19,113 @@
 
   <body>
     <header>
-      <nav>
-        <ul>
-          <li class="logo">
-            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
-          </li>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html" class="active">Gift</a></li>
-          <li><a href="order.html">Order</a></li>
-          <li>
-            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
-          </li>
-          <li><a href="#">Store</a></li>
-          <li class="search-bar">
-            <div class="search-icon">
-              <img src="images/icons8-search-48.png" alt="" width="25px" />
-            </div>
-            <input type="text" placeholder="Looking for something specific?" />
-          </li>
-          <li class="profile-icon">
-            <a href=""
-              ><div class="user-icon">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img
+            src="images/icons8-starbucks-80.png"
+            alt="Starbucks Icon"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+          />
+          Starbucks
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gift.html">Gift</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="order.html">Order</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signIn_signUp.html">Pay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Store</a>
+            </li>
+            <li class="nav-item">
+              <div class="search-bar">
                 <img
-                  src="images/icons8-customer-80.png"
+                  src="images/icons8-search-48.png"
                   alt=""
-                  width="40px"
-                /></div
-            ></a>
-          </li>
-        </ul>
+                  width="25px"
+                  class="search-icon"
+                />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Looking for something specific?"
+                />
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <div class="user-icon">
+                  <img
+                    src="images/icons8-customer-80.png"
+                    alt=""
+                    width="40px"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </nav>
+
       <section class="secnavsec">
         <p class="secnavhm v">
           <a href="home.html">Home></a>Gift & Merchandise
         </p>
       </section>
     </header>
-  </body>
-  <video autoplay muted loop>
-    <source
-      src="images/SaveTube.App-Starbucks_ It Starts With You-(1080p).mp4"
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-  <footer class="footerPay">
-    <div class="paybtdiv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GIFT CARD AMOUNT</div>
-    <div class="paybtdiv A">
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RECIPIENT DETAILS
-    </div>
-    <div class="paybtdiv B">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SENDER DETAILS</div>
 
-    <div class="paybtdiv C">
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CURRENT ITEM</p>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;India Exclusive
-    </div>
-    <div>
-      <div class="paybtdiv D">
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay With</p>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHER PAYMENT METHODS
+    <video autoplay muted loop class="d-block w-100">
+      <source
+        src="images/SaveTube.App-Starbucks_ It Starts With You-(1080p).mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <footer class="footerPay">
+      <div class="paybtdiv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GIFT CARD AMOUNT</div>
+      <div class="paybtdiv A">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RECIPIENT DETAILS
       </div>
-      <button class="mainbtn p">Make Payment</button>
-    </div>
-  </footer>
+      <div class="paybtdiv B">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SENDER DETAILS</div>
+      <div class="paybtdiv C">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CURRENT ITEM</p>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;India Exclusive
+      </div>
+      <div class="d-flex flex-column align-items-center">
+        <div class="paybtdiv D mb-3">
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pay With</p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OTHER PAYMENT METHODS
+        </div>
+        <button class="btn btn-primary mainbtn p">Make Payment</button>
+      </div>
+    </footer>
 
-  <script src="js/pay.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>

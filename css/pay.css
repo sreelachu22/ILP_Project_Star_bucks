@@ -1,0 +1,120 @@
+
+    /* Pay page styling */
+    .inlineimage{max-width:470px;
+      margin-right: 8px;
+      margin-left: 10px}.images{display: inline-block;
+      max-width: 98%;
+      height: auto;
+      width: 22%;
+      margin: 1%;
+      left:20px;
+      text-align: center}
+    
+     
+     .payContainer {
+      padding-top: 100px;
+      width: 60%;
+      padding-left: 20%;
+     }
+     
+     .panel {
+      padding: 20px;
+     }
+     
+     .panel-heading {
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      padding: 20px;
+     }
+     
+     .panel-body {
+      padding: 20px;
+     }
+     
+     .form-group {
+      margin-bottom: 20px;
+     }
+     
+     .form-control {
+      display: block;
+      width: 100%;
+      height: 34px;
+      padding: 6px 12px;
+      font-size: 14px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+     }
+     
+     #confirmPayment {
+      display: inline-block;
+      margin-bottom: 0;
+      text-align: center;
+      cursor: pointer;
+      background-image: none;
+      border: 1px solid transparent;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 18px;
+      border-radius: 6px;
+      display: block;
+      width: 100%;
+      color: #fff;
+      background-color: #115d42;
+      border-color: #4cae4c;
+     }
+     
+     
+     
+     #confirmPayment:hover,
+     #confirmPayment:focus,
+     #confirmPayment:active{
+      color: #fff;
+      background-color: rgb(2, 46, 5);;
+     }
+     
+     
+     .panel-footer {
+      background-color: #f5f5f5;
+      border-color: #ddd;
+      padding: 20px;
+     }
+     
+     .images {
+      max-width: 100%;
+      height: auto;
+     }
+  
+     /* Payment and account creation successful message popup styling */
+     #successful{
+      position: relative;
+      top: 20%;
+      left: 30%;
+      right: 0;
+      width: 40%;
+      height: 50%;
+      background-color: rgb(255, 255, 255);
+      border: 1px solid #115d42;
+      border-radius: 20px;
+      position: fixed;
+    }
+    
+    .successMessage{
+      text-align: center;
+    }
+    
+    .greenTick{
+      margin-top:20%;
+      margin-left: 45%;
+      height: 60px;
+      width: 60px;
+    }
+    
+    .close{
+        text-decoration: none;
+    }

@@ -1,5 +1,5 @@
 # ILP_Project_Star_bucks
-Star bucks website
+Star bucks website clone (Use default web browser zoom 90%)
 ## Home Page
 ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/ba1ff91a-cce5-4492-9b2e-d1dee7815a97)
 
