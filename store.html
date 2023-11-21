@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="pay.css">
     <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     
     <script src="js/pay.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -60,35 +61,15 @@
             <h5 class="nearby" id="near-by">Nearby (0)</h5>
 
             <div id="cards">
-              <!-- <div class="store-card">
-                <div class="card-top">
-                    <img class="store-img" src="/images/Store_Image_Def.jpg">
-                  <div class="store-details">
-                    <h6 class="store-name">LULU Mall Trivandrum</h6>
-                    <div class="distance-status">
-                      <p class="distance-p">8.00 kms away.</p>
-                      <p class="status-p"><b>&nbsp;Open</b></p>
-                    </div>
-                    <div class="icons">
-                      <img class="dine-img" src="/images/dine.png">&nbsp;
-                      <img class="wifi-img" src="/images/wifi.png">
-                    </div>
-                  </div>
-                </div>
-                <div class="card-bottom">
-                  <img class="car-img" src="/images/car.png">
-                  <p class="time-p">10 mins drive</p>
-                  <a class="direction-btn" href="">Show Direction</a>
-                </div>
-              </div> -->
+
             </div>
         </div>
         
-        <div id="mapContainer">
-          <!-- <p id="notice"></p> -->
+        <div id="mapContainer" class="map-container"></div>
         </div>
       </div>
 
 </body>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="js/store.js"></script>
 </html>

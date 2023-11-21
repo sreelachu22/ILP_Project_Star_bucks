@@ -1,22 +1,86 @@
-let count = 0; //Variable to count the no. of stores available
+// Define global variables for map and marker
+var map;
+var marker;
+
+// Function to initialize the map
+function initMap() {
+    map = L.map('mapContainer').setView([0, 0], 13); // Set initial view and zoom level
+
+    // Add OpenStreetMap tile layer to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Get user's location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            const latLng = new L.LatLng(latitude, longitude);
+
+            // Set map view to the obtained location
+            map.setView(latLng, 13);
+
+            // Create a marker for user's location
+            marker = L.marker(latLng).addTo(map);
+            marker.bindPopup("Your Location").openPopup();
+        });
+    } else {
+        alert('Geolocation is not supported by your browser');
+    }
+}
+
+// Function to search for a location entered by the user
+function searchLocation() {
+    var input = document.getElementById('locationInput').value;
+    console.log(input);
+    // Use a geocoding service to get the coordinates of the entered location
+    fetch('https://nominatim.openstreetmap.org/search?format=json&q=' + input)
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.length > 0) {
+                const lat = parseFloat(data[0].lat);
+                const lon = parseFloat(data[0].lon);
+
+                // Update map view to the searched location
+                map.setView([lat, lon], 13);
+
+                // Remove existing marker and add a new one for the searched location
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+                marker = L.marker([lat, lon]).addTo(map);
+                marker.bindPopup("Searched Location").openPopup();
+            } else {
+                alert('Location not found');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+}
+
+// Call the initMap function when the DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+    initMap();
+});
 
 
-//To fetch data from API when user type the location on the search bar and press 'Enter'
 document.getElementById("locationInput").addEventListener("keyup", function (event) {
   if (event.code === "Enter") {
-    document.getElementById("mapContainer").innerHTML = "";
-    document.getElementById("cards").innerHTML = "";
-    fetchData();
+      searchLocation();
+      document.getElementById("cards").innerHTML = "";
+      fetchData();
   }
 });
 
 
-//Function to fetch data from API based on the location typed by customer
 function fetchData() {
   fetch("https://mocki.io/v1/37ef34f9-131a-4b39-a409-5b56dcdfca89")
     .then((response) => response.json())
     .then((data) => {
-      showMap(data);
+      showStores(data);
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -24,12 +88,10 @@ function fetchData() {
 }
 
 
-//Function to call the createCards function and show map of the location typed
-function showMap(data) {
+function showStores(data) {
   const response = data;
   var location = document.getElementById("locationInput").value;
   location = location.toLowerCase();
-  var iframe = document.createElement("iframe");
 
   if (location === "kochi") {
     const stores = response.filter(element => element.location === "kochi");
@@ -40,8 +102,6 @@ function showMap(data) {
     for (let i = 0; i < stores.length; i++) {
       createCards(stores, i);
     }
-
-    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d502964.57949330326!2d75.97125086521099!3d9.98288650752262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d514abec6bf%3A0xbd582caa5844192!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1699642657957!5m2!1sen!2sin";
   } 
 
   else if (location === "trivandrum") {
@@ -53,23 +113,17 @@ function showMap(data) {
     for (let i = 0; i < stores.length; i++) {
       createCards(stores, i);
     }
-
-    iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252543.56612501183!2d76.75934858015351!3d8.500037895233676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bbb805bbcd47%3A0x15439fab5c5c81cb!2sThiruvananthapuram%2C%20Kerala!5e0!3m2!1sen!2sin!4v1699642576892!5m2!1sen!2sin"; 
   } 
   
   else {
     let notice = document.createElement("p");
     notice.classList.add("notice");
     notice.textContent = "No store available at that location";
-    document.getElementById("mapContainer").appendChild(notice);
+    document.getElementById("cards").appendChild(notice);
     let nearby = document.getElementById("near-by");
     nearby.textContent = "Nearby(0)";
   }
-  
-  iframe.style.border = "0";
-  document.getElementById("mapContainer").appendChild(iframe);
 }
-
 
 //Function to create cards based on the no. of stores available in that particular location
 function createCards(stores, i) {
@@ -151,3 +205,8 @@ function createCards(stores, i) {
 
   cardscontainer.appendChild(store);
 }
+
+
+
+
+
