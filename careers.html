@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks Careers</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="careers.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <!-- Add this script tag to include the FileSaver.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- TypeScript -->
+    <script src="js/script.ts"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gift.html">Gift</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li>
+            <a href="#loginModal" id="payLink" onclick="payLogin()">Pay</a>
+          </li>
+          <li><a href="store.html">Store</a></li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input type="text" placeholder="Looking for something specific?" />
+          </li>
+          <li class="profile-icon">
+            <a href="#loginModal" id="payLink" onclick="payLogin()"
+              ><div class="user-icon">
+                <img
+                  src="images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                /></div
+            ></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container mt-5">
+      <div class="heading">
+        <h2 class="display-1">Careers</h2>
+      </div>
+
+      <div class="col-lg-12 col-xs-12">
+        <div class="row">
+          <!-- Repeat the following block for each job listing -->
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="courses-thumb courses-thumb-secondary">
+              <div class="courses-top">
+                <!-- ... (existing code) ... -->
+              </div>
+
+              <div class="courses-detail">
+                <h3>
+                  <a
+                    href="#"
+                    data-toggle="modal"
+                    data-target="#applicationModal"
+                    >Lorem ipsum dolor sit amet</a
+                  >
+                </h3>
+
+                <p class="lead"><strong>$60 000</strong></p>
+
+                <p>
+                  Medical / Health Jobs for
+                  <strong>BMI Kings Park Hospital</strong>
+                </p>
+              </div>
+
+              <div class="courses-info">
+                <button
+                  class="section-btn btn btn-primary btn-block"
+                  data-toggle="modal"
+                  data-target="#applicationModal"
+                >
+                  Apply Now
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- End of job listing block -->
+        </div>
+      </div>
+
+      <!-- Add more job cards as needed -->
+    </div>
+
+    <!-- Application Form Modal -->
+    <div class="modal" id="applicationModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Apply for <span id="jobTitle"></span></h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="applicationForm" novalidate>
+              <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  required
+                />
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" required />
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="resume">Resume (PDF or Word):</label>
+                <input
+                  type="file"
+                  class="form-control-file"
+                  id="resume"
+                  accept=".pdf, .doc, .docx"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please upload a valid PDF or Word file.
+                </div>
+              </div>
+              <button
+                type="button"
+                class="btn btn-primary btn-block"
+                onclick="submitApplication()"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <section class="top-footer">
+        <div class="logo-footer">
+          <a href="home.html"
+            ><img src="images/icons8-starbucks-80.png" alt="starbucks!!"
+          /></a>
+        </div>
+        <div class="about-us">
+          <h3>About Us</h3>
+          <ul class="about-us-ul">
+            <li><a href="">Coffeehouse</a></li>
+            <li><a href="">Our Heritage</a></li>
+            <li><a href="">Our Company</a></li>
+          </ul>
+        </div>
+        <div class="responsibility">
+          <h3>Responsibility</h3>
+          <ul class="response-ul">
+            <li><a href="">Community</a></li>
+            <li><a href="">Ethical Sourcing</a></li>
+            <li><a href="">Environmental Stewardship</a></li>
+            <li><a href="">Diversity</a></li>
+          </ul>
+        </div>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul class="quick-links-ul">
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Starbucks Rewards Day Offer</a></li>
+            <li><a href="">Delivery</a></li>
+            <li><a href="">Season's Gifting</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Customer Service</a></li>
+            <li><a href="">FAQs</a></li>
+            <li>
+              <a href="">Offer for Beverage Subscription at Starbucks.</a>
+            </li>
+            <li><a href="">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <h3>SOCIAL MEDIA</h3>
+          <a href=""><img src="images/instagram.svg" alt="" /></a>
+          <a href=""><img src="images/facebook.svg" alt="" /></a>
+          <a href=""><img src="images/twitter.svg" alt="" /></a>
+        </div>
+        <div class="download">
+          <a href=""><img src="images/appstoreiOS.png" alt="" /></a><br />
+          <a href=""><img src="images/appstoreAndroid.png" alt="" /></a>
+        </div>
+      </section>
+      <hr />
+      <section class="bottom-footer">
+        <div class="bottom-footer-left">
+          <p>
+            <a href="">Web Accessibility</a> |
+            <a href="">Privacy Statement</a> | <a href="">Terms of Use</a> |
+            <a href="">Contact Us</a>
+          </p>
+        </div>
+        <div class="bottom-footer-right">
+          <a href="home.html"
+            >© 2023 Starbucks Coffee Company. All rights reserved.</a
+          >
+        </div>
+      </section>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Add this script tag to include xlsx library -->
+  </body>
+</html>
