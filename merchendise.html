@@ -11,14 +11,15 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/order.css">
-    <link rel="stylesheet" href="css/drinks.css">
-    <link rel="stylesheet" href="css/food.css">
-    <link rel="stylesheet" href="css/merchendise.css">
-    <script src="js/mainHome.js"></script>
+    <link rel="stylesheet" href="/order.css" />
+    <link rel="stylesheet" href="/drinks.css" />
+    <link rel="stylesheet" href="/food.css" />
+    <link rel="stylesheet" href="/merchendise.css" />
+    <script src="mainHome.js"></script>
+    <script src="js/pay.js"></script>
     <!-- <script src="/js/order.js"></script> -->
-    <script src="js/food.js"></script>
-    <script src="js/merchendise.js"></script>
+    <script src="/js/food.js"></script>
+    <!-- <script src="/js/merchendise.js"></script> -->
   </head>
   <body>
     <header>
@@ -29,7 +30,7 @@
           </li>
           <li><a href="home.html">Home</a></li>
           <li><a href="gift.html">Gift</a></li>
-          <li><a href="order.html" >Order</a></li>
+          <li><a href="order.html">Order</a></li>
           <li><a href="signIn_signUp.html">Pay</a></li>
           <li><a href="store.html">Store</a></li>
           <li class="search-bar">
@@ -51,97 +52,106 @@
         </ul>
       </nav>
     </header>
-<body>
     <div class="navigation">
-        <p class="nav-p" style="font-size: 15px;"><a href="home.html">Home</a>>Order</p>
+      <p class="nav-p" style="font-size: 15px">
+        <a href="home.html">Home</a>>Order
+      </p>
     </div>
     <div class="green">
-
       <div class="line1">
-        <img src="/images/download.png" alt="" style="color: white;" class="loc">
-        <input class="nostore" type="text" placeholder="No Store Selected">
-        <img src="/images/cloo.png" alt="" style="color: white;">
-        <p style="color: white; font-size: 15px; margin-top: 1px;" class="mins" >mins</p>
+        <img
+          src="/images/download.png"
+          alt=""
+          style="color: white"
+          class="loc"
+        />
+        <input class="nostore" type="text" placeholder="No Store Selected" />
+        <img src="/images/cloo.png" alt="" style="color: white" />
+        <p style="color: white; font-size: 15px; margin-top: 1px" class="mins">
+          mins
+        </p>
       </div>
 
       <div class="deliver">
         <div id="deliver1">
-        <img class="scoo" src="https://www.starbucks.in/assets/icon/bike1.svg"  alt="">
-        <p class="p1">Delivery</p>
+          <img
+            class="scoo"
+            src="https://www.starbucks.in/assets/icon/bike1.svg"
+            alt=""
+          />
+          <p class="p1">Delivery</p>
         </div>
         <div id="deliver2">
-        <img src="/images/dinein.png" alt="">
-        <p class="p2"> Dine-In</p>
+          <img src="/images/dinein.png" alt="" />
+          <p class="p2">Dine-In</p>
         </div>
         <div id="deliver3">
-        <img src="/images/takeaway.png" alt="">
-        <p class="p3">Takeaway</p>
+          <img src="/images/takeaway.png" alt="" />
+          <p class="p3">Takeaway</p>
         </div>
       </div>
     </div>
 
     <div>
-        <nav id="ordernav">
-          <ul>
-            <li>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-                href="order.html"
-                class="atag"
-                >BestSeller</a
-              >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;|
-            </li>
-            <li><a class="atag" href="drinks.html">Drinks</a> &nbsp;&nbsp; |</li>
-            <li>
-              <a class="atag"  href="food.html">Food</a> &nbsp; &nbsp;&nbsp; |
-            </li>
-            <li>
-              <a class="atag" href="merchendise.html">Merchendise</a> &nbsp;
-              &nbsp;&nbsp; |
-            </li>
-            <li>
-              <a class="atag" href="coffee.html">Coffee At Home</a> &nbsp;
-              &nbsp;&nbsp; |
-            </li>
-            <li>
-              <a class="atag" href="ready.html">Ready to Eat</a> &nbsp;
-              &nbsp;&nbsp;
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav id="ordernav">
+        <ul>
+          <li>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+              href="order.html"
+              class="atag"
+              >BestSeller</a
+            >&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;|
+          </li>
+          <li><a class="atag" href="drinks.html">Drinks</a> &nbsp;&nbsp; |</li>
+          <li>
+            <a class="atag" href="food.html">Food</a> &nbsp; &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="merchendise.html">Merchendise</a> &nbsp;
+            &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="coffee.html">Coffee At Home</a> &nbsp;
+            &nbsp;&nbsp; |
+          </li>
+          <li>
+            <a class="atag" href="ready.html">Ready to Eat</a> &nbsp;
+            &nbsp;&nbsp;
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-      <div class="textt">
-        <h4>Mugs</h4>
-        <p>Artistic collection of ceramic mugs with acacia wood lids.
-        </p>
-      </div>
+    <div class="textt">
+      <h4>Mugs</h4>
+      <p>Artistic collection of ceramic mugs with acacia wood lids.</p>
+    </div>
 
-      <div id="outer_container">
-      </div>
-      <div id="outer_container2">
-      </div>
+    <div id="outer_container"></div>
+    <div id="outer_container2"></div>
 
-      <div id="drinkbox">
-        <div id="drinktext">
+    <div id="drinkbox">
+      <div id="drinktext">
         <h3>Mayuri, our barista has a message for you</h3>
-        <p>Let us help you create an exceptional season! Bring home the Starbucks merchandise.</p>
-        <img src="/images/chaya-removebg-preview.png" alt="">
-    </div>
+        <p>
+          Let us help you create an exceptional season! Bring home the Starbucks
+          merchandise.
+        </p>
+        <img src="/images/chaya-removebg-preview.png" alt="" />
+      </div>
     </div>
 
-      <div class="end">
-        <div>
-          <img src="/images/ibutn.png" alt="" />
-        </div>
-        <div class="avrg">
-          <p>
-            An average active adult requires 2,000 kcal energy per day, however,
-            calorie needs may vary.
-          </p>
-          <p>FSSAI License No.</p>
-        </div>
+    <div class="end">
+      <div>
+        <img src="/images/ibutn.png" alt="" />
       </div>
-    
-</body>
-    
+      <div class="avrg">
+        <p>
+          An average active adult requires 2,000 kcal energy per day, however,
+          calorie needs may vary.
+        </p>
+        <p>FSSAI License No.</p>
+      </div>
+    </div>
+  </body>
 </html>

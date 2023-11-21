@@ -1,13 +1,13 @@
 async function fetchData() {
   try {
-    const response = await fetch("https://dummyjson.com/products/");
+    const response = await fetch("https://mocki.io/v1/d55208da-ea8c-491e-b13c-63623bfe6094");
     if (!response.ok) {
       throw new Error(`API request failed with status: ${response.status}`);
     }
     const data = await response.json();
     console.log(data);
     const products = [];
-    data.products.forEach((element) => {
+    data.forEach((element) => {
       products.push(element);
       console.log(products);
     });
@@ -66,3 +66,10 @@ async function fetchData() {
   }
 }
 fetchData();
+
+
+    function goToStorePage() {
+       
+        window.location.href = 'store.html';
+    }
+
