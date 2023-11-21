@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks Careers</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/careers.css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
-    <!-- Add this script tag to include the FileSaver.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-
-    <!-- TypeScript -->
-    <script src="js/script.ts"></script>
+    <link rel="stylesheet" href="careers.css" />
   </head>
   <body>
     <header>
@@ -31,6 +25,9 @@
             <a href="signIn_signUp.html">Pay</a>
           </li>
           <li><a href="store.html">Store</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact_pop.html">Contact Us</a></li>
+
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
@@ -55,13 +52,11 @@
         <h2 class="display-1">Careers</h2>
       </div>
 
-      <div class="col-lg-12 col-xs-12">
-        <div class="row">
-          <!-- Repeat the following block for each job listing -->
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="courses-thumb courses-thumb-secondary">
+      <div class="container-fluid mt-5" id="coursesContainer">
+        <!-- Content will be dynamically added here -->
+      </div>
+      <!-- <div class="courses-thumb courses-thumb-secondary">
               <div class="courses-top">
-                <!-- ... (existing code) ... -->
               </div>
 
               <div class="courses-detail">
@@ -91,17 +86,14 @@
                   Apply Now
                 </button>
               </div>
-            </div>
-          </div>
-          <!-- End of job listing block -->
-        </div>
-      </div>
-
-      <!-- Add more job cards as needed -->
+            </div> -->
     </div>
+    <!-- End of job listing block -->
+
+    <!-- Add more job cards as needed -->
 
     <!-- Application Form Modal -->
-    <div class="modal" id="applicationModal">
+    <div class="modal fade" id="applicationModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -118,15 +110,79 @@
                   type="text"
                   class="form-control"
                   id="fullName"
+                  onclick="submitApplication()"
+                  name="fullName"
                   required
                 />
                 <div class="invalid-feedback">Please enter your full name.</div>
               </div>
               <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" required />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
                 <div class="invalid-feedback">
                   Please enter a valid email address.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contactNumber">Contact Number:</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="contactNumber"
+                  pattern="[0-9]{10}"
+                  name="contactNumber"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter a valid 10-digit contact number.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="highestQualification">Highest Qualification:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="highestQualification"
+                  name="highestQualification"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter your highest qualification.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="workExperience">Work Experience:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="workExperience"
+                  name="workExperience"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter your work experience.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="locationPreference">Location Preference:</label>
+                <select
+                  class="form-control"
+                  id="locationPreference"
+                  name="locationPreference"
+                  required
+                >
+                  <option value="" disabled selected>Select Location</option>
+                  <option value="Trivandrum">Trivandrum</option>
+                  <option value="Kochi">Kochi</option>
+                </select>
+                <div class="invalid-feedback">
+                  Please select a location preference.
                 </div>
               </div>
               <div class="form-group">
@@ -143,9 +199,10 @@
                 </div>
               </div>
               <button
-                type="button"
-                class="btn btn-primary btn-block"
-                onclick="submitApplication()"
+                type="submit"
+                class="submitButton btn btn-primary btn-block"
+                id="submit"
+                name="submit"
               >
                 Submit
               </button>
@@ -229,5 +286,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- Add this script tag to include xlsx library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+    <!-- Add this script tag to include the FileSaver.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
+    <!-- TypeScript -->
+    <script src="js/script.js"></script>
   </body>
 </html>
