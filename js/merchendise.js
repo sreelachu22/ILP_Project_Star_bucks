@@ -1,13 +1,13 @@
 async function fetchData() {
     try {
-      const response = await fetch("https://dummyjson.com/products/");
+      const response = await fetch("hhttps://mocki.io/v1/d55208da-ea8c-491e-b13c-63623bfe6094");
       if (!response.ok) {
         throw new Error(`API request failed with status: ${response.status}`);
       }
       const data = await response.json();
       console.log(data);
       const products = [];
-      data.products.forEach((element) => {
+      data.forEach((element) => {
         products.push(element);
         console.log(products);
       });
@@ -17,7 +17,7 @@ async function fetchData() {
       maincontainer.classList.add("main");
 
     //   const container = document.getElementById("frap-div");
-      for(let i=0;i<3;i++){
+      for(let i=0;i<5;i++){
         const frapContainer = document.createElement("div");
         frapContainer.classList.add("frap");
         const container1 = document.createElement("div");

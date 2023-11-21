@@ -31,7 +31,15 @@
           <li><a href="home.html">Home</a></li>
           <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
-          <li><a class="n-active" href="#loginModal" id="payLink" onclick="payLogin()">Pay</a></li>
+          <li>
+            <a
+              class="n-active"
+              href="#loginModal"
+              id="payLink"
+              onclick="payLogin()"
+              >Pay</a
+            >
+          </li>
           <li><a href="store.html">Store</a></li>
           <li class="search-bar">
             <div class="search-icon">
@@ -70,12 +78,13 @@
           style="color: white"
           class="loc"
         />
-        <input class="nostore" type="text" placeholder="No Store Selected" />
+        <input class="nostore" type="text" placeholder="No Store Selected" onclick="goToStorePage()" />
         <img src="images/cloo.png" alt="" style="color: white" />
-        <p style="color: white; font-size: 15px; margin-top: 1px" class="mins">
+        <p style="color: white; " class="mins">
           mins
         </p>
       </div>
+
 
       <div class="deliver">
         <div id="deliver1">
