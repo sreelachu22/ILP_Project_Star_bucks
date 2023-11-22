@@ -119,6 +119,10 @@ function showStores(data) {
     let notice = document.createElement("p");
     notice.classList.add("notice");
     notice.textContent = "No store available at that location";
+    let warnimg = document.createElement("img");
+    warnimg.classList.add("warnimg");
+    warnimg.src = "/images/noStore.png";
+    document.getElementById("cards").appendChild(warnimg);
     document.getElementById("cards").appendChild(notice);
     let nearby = document.getElementById("near-by");
     nearby.textContent = "Nearby(0)";
@@ -205,8 +209,3 @@ function createCards(stores, i) {
 
   cardscontainer.appendChild(store);
 }
-
-
-
-
-

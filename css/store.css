@@ -1,17 +1,14 @@
+/* body {
+  background-image: url('/images/map.gif');
+  background-size:cover;
+  background-repeat: no-repeat;
+} */
+
 .nav-p {
   font-size: 15px;
   color: gray;
   margin-left: 65px;
 }
-
-/* .active{
-    border-bottom: 2px solid rgb(4, 34, 4);
-    padding-bottom: 5px;
-}
-
-.n-active{
-    color: gray;
-} */
 
 .main-container{
     display: flex;
@@ -22,7 +19,7 @@
 
 .container-left {
   background-color: #1e3932;
-  min-width: 450px;
+  width: 45%;
   min-height: 500px;
 }
 
@@ -39,6 +36,7 @@
 .search-store {
   padding-left: 100px;
   padding-right: 100px;
+  width: 35%;
   margin-top: 25px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -167,5 +165,14 @@ iframe {
 
 .notice {
   text-align: center;
-  color: red;
+  color: white;
 }
+
+.warnimg{
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
