@@ -108,7 +108,7 @@ function showStores(data) {
         notice.textContent = "No store available at that location";
         var warnimg = document.createElement("img");
         warnimg.classList.add("warnimg");
-        warnimg.src = "/images/noStore.png";
+        warnimg.src = "images/map.gif";
         var cards = document.getElementById("cards");
         if (cards) {
             cards.appendChild(warnimg);
