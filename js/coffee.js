@@ -65,3 +65,7 @@ async function fetchData() {
     }
   }
   fetchData();
+
+  function goStorePage() {
+    window.location.href = "store.html";
+  }
