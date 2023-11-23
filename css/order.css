@@ -9,11 +9,13 @@
   font-weight: bold; /* You can also change other styles */
   /* Add any other styles you want for the highlighted state */
 }
+
 .green {
   background-color: #1e3932;
   border: 2px solid #1e3932;
   padding: 30px;
-  width: 100%;
+  width: 1340px;
+  height: 40px;
   display: flex;
 }
 .navigation {
@@ -37,6 +39,9 @@
   background-color: #1e3932;
   text-align: center;
   color: lightgray;
+}
+.mug{
+  height: 150px;
 }
 .loc {
   height: 19px;
@@ -178,14 +183,7 @@
 .active {
   border-bottom: 2px solid #00704a;
 }
-.green {
-  background-color: #1e3932;
-  border: 2px solid #1e3932;
-  padding: 30px;
-  width: 96%;
-  display: flex;
-  height: 31px;
-}
+
 .navigation a {
   text-decoration: none;
   color: gray;
@@ -388,7 +386,7 @@ padding-left: 6px;
   cursor: pointer;
   text-decoration: none;
   /* padding: 11px; */
-  color: lightgrey;
+  color: white;
   margin-left: 61px;
   margin-top: 25px;
   width: 56px;
@@ -396,7 +394,7 @@ padding-left: 6px;
   height: 33px;
 }
 .frap2 h3 {
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 13px;
   font-size: 17px;
 }
@@ -405,7 +403,7 @@ padding-left: 6px;
   font-size: 12px;
 }
 .frap2 h4 {
-  margin-top: 0px;
+  margin-top: -9px;
 }
 .money {
   display: flex;
