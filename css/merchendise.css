@@ -51,22 +51,21 @@
 .frap2 .tall{
     margin-top: -17px;
 }
-.button1{
+/* .button1{
     border: 2px solid gray;
     background-color: gray;
     border-radius: 23px;
     cursor: pointer;
     text-decoration: none;
-    /* padding: 11px; */
     color: lightgrey;
     margin-left: 61px;
     margin-top: 25px;
     width: 56px;
     font-size: 13px;
     height: 33px;
-}
+} */
 .frap2 h3{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 13px;
     font-size: 17px;
 }
@@ -75,7 +74,7 @@
     font-size: 12px;
 }
 .frap2 h4{
-    margin-top: 0px;
+    margin-top: -11px;
 }
 .money{
     display: flex;
