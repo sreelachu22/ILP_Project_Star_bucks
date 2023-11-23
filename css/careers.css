@@ -3,6 +3,7 @@ body {
   margin: 0 !important;
   padding: 0 !important;
   font-size: larger !important;
+  background-color: rgb(228, 224, 224);
 }
 
 /* navbar */
@@ -90,15 +91,16 @@ nav ul li.profile-icon .user-icon {
 
 .heading {
   /* margin-top: 100px; */
-  height: 500px;
+  height: 630px;
   width: 100%;
   text-align: center;
   font-size: xx-large;
   background-image: url("/images/careers\ bg.jpg");
   background-size: cover;
 }
+
 .heading h2 {
-  padding-top: 170px;
+  padding-top: 250px;
   color: rgb(255, 255, 255);
   font-weight: bolder;
 }

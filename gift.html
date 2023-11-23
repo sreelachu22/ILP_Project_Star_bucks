@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks</title>
     <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="css/search.css" />
+
     <link rel="stylesheet" href="css/gift.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -41,7 +43,15 @@
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input type="text" placeholder="Looking for something specific?" />
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
           </li>
           <li class="profile-icon">
             <a href=""
@@ -197,4 +207,5 @@
     </footer>
   </body>
   <script src="js/gift.js"></script>
+  <script src="js/search.js"></script>
 </html>

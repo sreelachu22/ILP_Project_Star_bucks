@@ -1,32 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us</title>
+    <title>Home Page</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/contact_pop.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="css/contact_pop.css" />
   </head>
 
   <body>
-    <div class="container">
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-toggle="modal"
-        data-target="#contactModal"
-      >
-        <i class="hidden-icon fa fa-phone fa-2x"></i>
-        Contact Us
-      </button>
-    </div>
+    <!-- Content of your home page goes here -->
 
     <!-- Modal -->
     <div
@@ -101,9 +91,19 @@
       </div>
     </div>
 
+    <!-- Bootstrap and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/floating-button.js"></script>
     <script src="js/Gsheet.js"></script>
+    <script src="js/gift.js"></script>
+
+    <!-- Script to open the modal by default -->
+    <script>
+      $(document).ready(function () {
+        $("#contactModal").modal("show");
+      });
+    </script>
   </body>
 </html>
