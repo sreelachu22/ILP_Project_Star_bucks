@@ -2,12 +2,14 @@
 .home-nav{
     height: 15px;
     margin-top: 7%;
-    padding-top: 8px;
     font-size: 15px;
+    /* position: relative; */
+    right: 0%;
 }
 .home-nav a{
     text-decoration: none;
     color: black;
+    
 }
 
   /* Signup 2nd page(OTP) style */
@@ -15,12 +17,6 @@
   .signup2-inner-container{
     background-color: white;
     font-size: smaller;
-  }
-
-  .step{
-    width: 800px;
-    margin-top: 20px;
-    margin-left: 20%;
   }
 
   .otpHead{
@@ -53,13 +49,13 @@
  /* OTPpage to next page */
 
 #nextButton{
-  margin-top: 5%;
-  width: 400px;
-    margin-left: 36%;
+  width: 35%;
+    margin-left: 32.5%;
+    margin-right: 32.5%;
     position: relative;
-    border-radius: 30px;
+    border-radius: 30px;  
     height: 50px;
-    margin-top: 100px;
+    margin-top: 7%;
     margin-bottom: 100px;
     background-color: #115d42;
     color: white;
@@ -103,45 +99,55 @@
 }
 
 
-body {
-  font-family: 'Varela Round', sans-serif;
-}
-.modal-confirm {		
+
+.modal-confirm {
   color: #636363;
-  width: 325px;
-  margin: 30px auto;
+  /* margin: 30px auto; */
 }
+
 .modal-confirm .modal-content {
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
   border: none;
+  width : 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: auto;
 }
+
 .modal-confirm .modal-header {
-  border-bottom: none;   
-      position: relative;
+  border-bottom: none;
+  position: relative;
 }
+
 .modal-confirm h4 {
   text-align: center;
-  font-size: 26px;
+  font-size: 3rem;
   margin: 30px 0 -15px;
+  
 }
-.modal-confirm .form-control, .modal-confirm .btn {
+
+.modal-confirm .form-control,
+.modal-confirm .btn {
   min-height: 40px;
-  border-radius: 3px; 
+  border-radius: 5px;
 }
+
 .modal-confirm .close {
-      position: absolute;
+  position: absolute;
   top: -5px;
   right: -5px;
-}	
+}
+
 .modal-confirm .modal-footer {
   border: none;
   text-align: center;
   border-radius: 5px;
   font-size: 13px;
-}	
+}
+
 .modal-confirm .icon-box {
-  color: #fff;		
+  color: #fff;
   position: absolute;
   margin: 0 auto;
   left: 0;
@@ -151,32 +157,42 @@ body {
   height: 95px;
   border-radius: 50%;
   z-index: 9;
-  background: #82ce34;
+  background: #115d42;
   padding: 15px;
   text-align: center;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
+
 .modal-confirm .icon-box i {
   font-size: 58px;
   position: relative;
   top: 3px;
 }
+
 .modal-confirm.modal-dialog {
-  margin-top: 80px;
+  margin-top: 6%;
+  
 }
-  .modal-confirm .btn {
-      color: #fff;
-      border-radius: 4px;
-  background: #82ce34;
+
+.modal-confirm .btn {
+  color: #fff;
+  border-radius: 20px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background: #115d42;
   text-decoration: none;
-  transition: all 0.4s;
-      line-height: normal;
-      border: none;
-  }
-.modal-confirm .btn:hover, .modal-confirm .btn:focus {
-  background: #6fb32b;
+  transition: background 0.4s;
+  line-height: normal;
+  border: none;
+}
+
+.modal-confirm .btn:hover,
+.modal-confirm .btn:focus {
+  background: #115d42;
   outline: none;
 }
+
 .trigger-btn {
   display: inline-block;
   margin: 100px auto;
