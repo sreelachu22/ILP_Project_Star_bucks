@@ -1,5 +1,5 @@
 .modal-content {
-  background-image: url(images/big.png);
+  background-image: url(/images/big.png);
   background-repeat: no-repeat;
   background-color: rgba(39, 119, 49, 0.658);
 }
