@@ -27,6 +27,7 @@
     margin-left: 87px;
     font-size: 16px;
 }
+
 .textt p{
     color: #212529;
     margin-top: -14px;
@@ -93,7 +94,7 @@
     cursor: pointer;
     text-decoration: none;
     /* padding: 11px; */
-    color: lightgrey;
+    color: white;
     margin-left: 61px;
     margin-top: 25px;
     width: 56px;
@@ -101,7 +102,7 @@
     height: 33px;
 }
 .frap2 h3{
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 13px;
     font-size: 17px;
 }
@@ -110,7 +111,7 @@
     font-size: 12px;
 }
 .frap2 h4{
-    margin-top: -39px;
+    margin-top: -9px;
 }
 .money{
     display: flex;

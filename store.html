@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="stylesheet" href="css/store.css" />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
     <title>Store</title>
   </head>
   <body>
@@ -24,6 +20,10 @@
           <li><a class="n-active" href="order.html">Order</a></li>
           <li><a class="n-active" href="signIn_signUp.html">Pay</a></li>
           <li><a class="active" href="store.html">Store</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li>
+            <a href="contact_pop.html">Contact Us</a>
+          </li>
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
@@ -51,22 +51,15 @@
           <div class="s-icon">
             <img src="images/icons8-search-48.png" alt="" width="25px" />
           </div>
-          <input
-            class="search-store"
-            type="text"
-            placeholder="Find a store near you"
-            id="locationInput"
-          />
+          <input class="search-store" type="text" placeholder="Find a store near you" id="locationInput"/>
         </div>
-
         <h5 class="nearby" id="near-by">Nearby (0)</h5>
-
         <div id="cards"></div>
       </div>
-
       <div id="mapContainer" class="map-container"></div>
     </div>
   </body>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="js/store.js"></script>
+  <!-- <script src="js/store.js"></script> -->
+  <script src="js/store_ts.js"></script>
 </html>
