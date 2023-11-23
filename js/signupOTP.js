@@ -27,38 +27,26 @@ function validateOTP() {
     }
    
     if (otpFilled) {
-       //const otpSubmitButton =  document.getElementById("nextButton");
-       $('#myModal').modal('show');
+      //  $('#myModal').modal('show');
+      // Successful("Account created successfully");
+      showConfirmationModal();
 
     } else {
        alert('Please enter correct OTP');
     }
    }
 
-//!signup account creation successful
-//Display a popup containing green tick and success message
-//If closed, redirect to pay.html
-function Successful(msg) {
-    let successful = document.createElement('div');
-    successful.setAttribute("id", 'successful');
-  
-    let greenTick = document.createElement('img');
-    greenTick.src = '/img/green_tic.png';
-    greenTick.classList.add("greenTick")
-  
-    let successMessage = document.createElement('p');
-    successMessage.setAttribute("id", 'successMessage');
-    successMessage.classList.add("successMessage");
-    successMessage.innerText = msg;
-    
-    successful.appendChild(greenTick);
-    successful.appendChild(successMessage);
-  
-    document.body.appendChild(successful);
-    successful.style.display = 'block';
-  
+
+  function showConfirmationModal() {
+    // Use jQuery to show the Bootstrap modal
+    $('#myModal').modal('show');
+
     setTimeout(function () {
-      successful.style.display = 'none';
-      window.location.href = 'pay.html';
-    }, 3000);
-  }
+      $('#myModal').modal('hide');
+      window.location.href = 'home.html';
+  }, 3000);
+}
+
+$(document).ready(function () {
+  $('#nextButton').on('click', validateOTP);
+});
