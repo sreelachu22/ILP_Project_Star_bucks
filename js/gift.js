@@ -1,4 +1,5 @@
 //!daynamic element fetch 1
+src = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.5.1.min.js";
 async function fetchData() {
   try {
     const response = await fetch(
@@ -85,4 +86,22 @@ bbutton.addEventListener("click", redirectToPage("additem.html"));
 
 function redirectToPage(pageName) {
   window.location.href = pageName;
+}
+//! ajax
+function openModal() {
+  // Load modal content using AJAX
+  var modalContainer = document.getElementById("modalContainer");
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      modalContainer.innerHTML = xhr.responseText;
+
+      // Display the modal
+      document.getElementById("contactModal").style.display = "block";
+    }
+  };
+
+  xhr.open("GET", "contact_pop.html", true);
+  xhr.send();
 }

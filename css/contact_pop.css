@@ -1,9 +1,33 @@
 .modal-content {
   background-image: url(/images/big.png);
   background-repeat: no-repeat;
-  background-color: rgba(39, 119, 49, 0.658);
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
 }
 
 .btn-primary {
-  background-color: teal;
+  background-color: rgba(0, 0, 0, 0.842);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: rgba(19, 75, 28, 0.884);
+}
+
+body {
+  background-image: url(/images/top-view-roasted-coffee-beans-with-copy-space.jpg);
+  background-size: cover; /* or 'contain' depending on your preference */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Fixed background */
+  pointer-events: none;
+}
+label {
+  color: white;
+}
+
+.modal-title {
+  color: white;
+}
+.close {
+  color: white;
 }
