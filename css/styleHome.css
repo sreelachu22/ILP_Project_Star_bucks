@@ -129,9 +129,10 @@ nav ul li.profile-icon .user-icon {
 }
 
 /* Handcrafted Curations */
-#curations {
+/* #curations {
   margin-top: 0px;
-}
+  margin-bottom: 20px;
+} */
 
 #curations {
   text-align: center;
@@ -146,12 +147,14 @@ nav ul li.profile-icon .user-icon {
 .dish-container {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  height: 250px;
 }
 
 .dish {
   margin: 50px;
   text-align: center;
+  width: 120px;
 }
 
 .dish img {
@@ -169,6 +172,7 @@ nav ul li.profile-icon .user-icon {
   margin-top: 10px;
   font-weight: bold;
   font-size: smaller;
+  text-align: center;
 }
 
 /* Offer Card */

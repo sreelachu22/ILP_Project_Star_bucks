@@ -1,7 +1,9 @@
 //!daynamic element fetch 1
 async function fetchData() {
   try {
-    const response = await fetch("https://dummyjson.com/products/");
+    const response = await fetch(
+      "https://mocki.io/v1/586e9bf3-fec3-411d-94d5-224f549ac241"
+    );
     if (!response.ok) {
       throw new Error(`API request failed with status: ${response.status}`);
     }
@@ -15,7 +17,7 @@ async function fetchData() {
     let randomId = [];
     const container = document.querySelector(".gift_container");
     for (let i = 0; i <= 2; i++) {
-      randomId[i] = Math.floor(Math.random() * 29 + 1);
+      randomId[i] = Math.floor(Math.random() * 9 + 1);
       const box = document.createElement("div");
       box.classList.add("gift_container_card-box");
       const imgbox = document.createElement("div");
@@ -47,7 +49,7 @@ async function fetchData() {
 
     const container1 = document.querySelector(".congraz_container");
     for (let i = 0; i < 2; i++) {
-      randomId[i] = Math.floor(Math.random() * 29 + 1);
+      randomId[i] = Math.floor(Math.random() * 9 + 1);
       const congraz_box = document.createElement("div");
       congraz_box.classList.add("gift_container_card-box");
       const bimgbox = document.createElement("div");
@@ -80,38 +82,7 @@ async function fetchData() {
 }
 fetchData();
 bbutton.addEventListener("click", redirectToPage("additem.html"));
-// visibility check nav
-// function showDiv(divId) {
-//   // Hide all divs
-//   var allDivs = document.querySelectorAll(".hidden");
-//   for (var i = 0; i < allDivs.length; i++) {
-//     allDivs[i].classList.add("hidden");
-//   }
 
-//   // Show the selected div
-//   var selectedDiv = document.getElementById(divId);
-//   selectedDiv.classList.remove("hidden");
-// }
-
-// function showPaySection() {
-//   var div1 = document.getElementById("div1");
-//   var div2 = document.getElementById("div2");
-
-//   // Show pay section and hide others
-//   div1.classList.add("trasformblk1");
-//   div2.classList.remove("trasformblk1");
-// }
-
-// function showGiftSection() {
-//   var div1 = document.getElementById("div1");
-//   var div2 = document.getElementById("div2");
-
-//   // Show gift section and hide others
-//   div1.classList.remove("trasformblk1");
-//   div2.classList.add("trasformblk1");
-// }
-
-// redirect
 function redirectToPage(pageName) {
   window.location.href = pageName;
 }

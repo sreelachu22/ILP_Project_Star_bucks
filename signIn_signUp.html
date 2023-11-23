@@ -9,7 +9,7 @@
     <title>Login Modal</title>
   </head>
   <body>
-    <header>
+    <!-- <header>
       <nav>
         <ul>
           <li class="logo">
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </nav>
-    </header>
+    </header> -->
     <div id="container" class="container">
       <div class="row">
         <div class="col align-items-center flex-col sign-up">
@@ -48,21 +48,39 @@
             <div class="form sign-up">
               <div class="input-group">
                 <i class="bx bxs-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Name" id="signup-name" />
+              </div>
+              <div class="input-group">
+                <i class="bx bxs-user"></i>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  id="signup-username"
+                />
               </div>
               <div class="input-group">
                 <i class="bx bx-mail-send"></i>
-                <input type="email" placeholder="Email" />
+                <input type="email" placeholder="Email" id="signup-email" />
               </div>
               <div class="input-group">
                 <i class="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="signup-password"
+                />
               </div>
               <div class="input-group">
                 <i class="bx bxs-lock-alt"></i>
                 <input type="password" placeholder="Confirm password" />
               </div>
-              <button onclick="goToSignupOTP()">Sign up</button>
+              <!-- <div class="input-group" id="accept-terms">
+                <input type="checkbox" id="signup-terms" />
+                <label for="accept-terms"
+                  >I accept the terms and conditions</label
+                >
+              </div> -->
+              <button onclick="validateRegister()">Sign up</button>
               <p>
                 <span> Already have an account? </span>
                 <a onclick="" class="pointer green"> Sign in here </a>
@@ -77,13 +95,17 @@
             <div class="form sign-in">
               <div class="input-group">
                 <i class="bx bxs-user"></i>
-                <input type="text" placeholder="Username" />
+                <input type="text" placeholder="Username" id="login-username" />
               </div>
               <div class="input-group">
                 <i class="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Password" />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  id="login-password"
+                />
               </div>
-              <button onclick="goToPayment()">Sign in</button>
+              <button onclick="validateLogin()">Sign in</button>
               <p class="green" id="forgotpassword">
                 <a href="forgotPassword.html"> Forgot password? </a>
               </p>
