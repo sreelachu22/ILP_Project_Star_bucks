@@ -4,15 +4,6 @@
   margin-left: 65px;
 }
 
-/* .active{
-    border-bottom: 2px solid rgb(4, 34, 4);
-    padding-bottom: 5px;
-}
-
-.n-active{
-    color: gray;
-} */
-
 .main-container {
   display: flex;
   margin-left: 67px;
@@ -23,12 +14,12 @@
 .container-left {
   background-color: #1e3932;
   min-width: 450px;
-  min-height: 500px;
+  min-height: 540px;
 }
 
 .container-right {
-  width: 65%;
-  min-height: 500px;
+  min-width: 450px;
+  min-height: 540px;
 }
 
 .s-bar {
@@ -155,6 +146,7 @@
 iframe {
   height: 100%;
   width: 100%;
+  min-width: 450px;
 }
 
 .search-button {
@@ -168,5 +160,13 @@ iframe {
 
 .notice {
   text-align: center;
-  color: red;
+  color: white;
+  margin-top: 50px;
+}
+
+.warnimg {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
