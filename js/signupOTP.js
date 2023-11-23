@@ -27,13 +27,15 @@ function validateOTP() {
     }
    
     if (otpFilled) {
-       Successful('Account created successfully');
+       //const otpSubmitButton =  document.getElementById("nextButton");
+       $('#myModal').modal('show');
+
     } else {
        alert('Please enter correct OTP');
     }
    }
 
-//!Payment successful & signup account creation successful
+//!signup account creation successful
 //Display a popup containing green tick and success message
 //If closed, redirect to pay.html
 function Successful(msg) {
