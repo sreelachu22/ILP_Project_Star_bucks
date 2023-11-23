@@ -1,7 +1,12 @@
 {
+  "dependencies": {
+    "@types/leaflet": "^1.9.8",
+    "leaflet": "^1.9.4",
+    "typescript": "^5.3.2"
+  },
   "name": "ilp_project_star_bucks",
+  "description": "Star bucks website clone (Use default web browser zoom 90%)\r ## Home Page\r ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/ba1ff91a-cce5-4492-9b2e-d1dee7815a97)",
   "version": "1.0.0",
-  "description": "Starbucks website clone (Use default web browser zoom 90%) - Home Page ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/ba1ff91a-cce5-4492-9b2e-d1dee7815a97)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
