@@ -5,20 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="stylesheet" href="css/store.css" />
-
-    <link rel="stylesheet" href="css/search.css" />
-
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-    />
-
     <title>Store</title>
   </head>
   <body>
@@ -26,30 +16,27 @@
       <nav>
         <ul>
           <li class="logo">
-            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+            <video
+              class="logo"
+              src="/images/Starbucks Logo Animation.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              height="70px"
+              width="auto"
+            ></video>
           </li>
           <li><a class="n-active" href="home.html">Home</a></li>
           <li><a class="n-active" href="gift.html">Gift</a></li>
           <li><a class="n-active" href="order.html">Order</a></li>
           <li><a class="n-active" href="signIn_signUp.html">Pay</a></li>
           <li><a class="active" href="store.html">Store</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li>
-            <a href="contact_pop.html">Contact Us</a>
-          </li>
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Looking for something specific?"
-              oninput="searchFunction()"
-            />
-            <div id="searchResults">
-              <div id="searchDropdown"></div>
-            </div>
+            <input type="text" placeholder="Looking for something specific?" />
           </li>
           <li class="profile-icon">
             <a href=""
@@ -86,6 +73,6 @@
     </div>
   </body>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-  <script src="js/store.js"></script>
-  <script src="js/search.js"></script>
+  <!-- <script src="js/store.js"></script> -->
+  <script src="js/store_ts.js"></script>
 </html>
