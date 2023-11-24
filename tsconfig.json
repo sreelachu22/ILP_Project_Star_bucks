@@ -5,13 +5,14 @@
       "es2020",
       "dom"
     ], // Adjust the library versions as needed
-    "module": "ESNext",
+    "module": ["ESNext","commonjs"],
     "moduleResolution": "Node",
     "jsx": "react",
     "emitDeclarationOnly": true,
     "declaration": true,
     "allowImportingTsExtensions": true,
     "strictNullChecks": true,
+    "strict": true,
     "strictFunctionTypes": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
@@ -25,3 +26,5 @@
     "**/node_modules/*"
   ]
 }
+   
+
