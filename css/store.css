@@ -10,11 +10,15 @@
   margin-left: 65px;
 }
 
+.navigation{
+  margin-top: 105px;
+}
+
 .main-container{
     display: flex;
     margin-left: 67px;
     margin-right: 67px;
-    margin-top: 105px;
+    margin-top: 17px;
 }
 
 .container-left {
@@ -164,6 +168,7 @@ iframe {
 
 #mapContainer {
   width: 100%;
+  z-index: -1;
 }
 
 .notice {
