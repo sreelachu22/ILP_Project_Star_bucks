@@ -237,7 +237,7 @@ nav{
 }
 
 .img{
-  margin-top: 10%;
+  margin-top: 5%;
 }
 .text.sign-in h2,
 .text.sign-in p,
@@ -410,6 +410,14 @@ nav{
   transform: translateY(0);
 }
 
+.skip a{
+  text-decoration: none;
+  color: #0c6c4a;
+  font-size: 0.8rem;
+  float: right;
+  margin-top: -5%;
+  margin-bottom: 2%;
+}
 
 /* green texts such as get help and signup */
 .green{

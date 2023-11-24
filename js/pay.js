@@ -18,6 +18,13 @@ function confirmPayment(){
           let enteredCardType = document.getElementById('cardType').value;
           let enteredCVCode = document.getElementById('cvCode').value;
           let enteredCardOwner = document.getElementById('cardOwner').value;
+          let paidAmount = document.getElementById('amount').value;
+
+          localStorage.setItem('enteredCardNumber', enteredCardNumber);
+          localStorage.setItem('enteredCardType', enteredCardType);
+          localStorage.setItem('enteredCVCode', enteredCVCode);
+          localStorage.setItem('enteredCardOwner', enteredCardOwner);
+          localStorage.setItem('paidAmount', paidAmount);
           //validation check
           for (let i = 0; i < cards.length; i++) {
               if (enteredCardNumber == cards[i].cardNumber &&
