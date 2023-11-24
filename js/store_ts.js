@@ -1,6 +1,17 @@
+"use strict";
 // Define global variables for map and marker
 var map;
 var marker;
+var lati;
+var long;
+
+
+// Call the initMap function when the DOM is ready
+document.addEventListener('DOMContentLoaded', function () {
+    initMap();
+});
+
+
 // Function to initialize the map
 function initMap() {
     map = L.map('mapContainer').setView([0, 0], 13); // Set initial view and zoom level
@@ -14,6 +25,12 @@ function initMap() {
             var latitude = position.coords.latitude;
             var longitude = position.coords.longitude;
             var latLng = new L.LatLng(latitude, longitude);
+            console.log(latitude);
+            console.log(longitude);
+            console.log(latLng);
+            lati=latitude;
+            long=longitude
+            fetchData();
             // Set map view to the obtained location
             map.setView(latLng, 13);
             // Create a marker for user's location
@@ -25,38 +42,9 @@ function initMap() {
         alert('Geolocation is not supported by your browser');
     }
 }
-// Function to search for a location entered by the user
-function searchLocation() {
-    var input = document.getElementById('locationInput').value;
-    console.log(input);
-    // Use a geocoding service to get the coordinates of the entered location
-    fetch("https://nominatim.openstreetmap.org/search?format=json&q=".concat(input))
-        .then(function (response) { return response.json(); })
-        .then(function (data) {
-        if (data && data.length > 0) {
-            var lat = parseFloat(data[0].lat);
-            var lon = parseFloat(data[0].lon);
-            // Update map view to the searched location
-            map.setView([lat, lon], 13);
-            // Remove existing marker and add a new one for the searched location
-            if (marker) {
-                map.removeLayer(marker);
-            }
-            marker = L.marker([lat, lon]).addTo(map);
-            marker.bindPopup("Searched Location").openPopup();
-        }
-        else {
-            alert('Location not found');
-        }
-    })
-        .catch(function (error) {
-        console.error('Error fetching data:', error);
-    });
-}
-// Call the initMap function when the DOM is ready
-document.addEventListener('DOMContentLoaded', function () {
-    initMap();
-});
+
+
+// Operations to perform when 'enter' button is pressed after typing in the input field
 document.getElementById("locationInput").addEventListener("keyup", function (event) {
     if (event.code === "Enter") {
         searchLocation();
@@ -64,8 +52,40 @@ document.getElementById("locationInput").addEventListener("keyup", function (eve
         fetchData();
     }
 });
+
+
+// Function to search for a location entered by the user
+function searchLocation() {
+    var input = document.getElementById('locationInput').value;
+    fetch("https://nominatim.openstreetmap.org/search?format=json&q=".concat(input))
+        .then(function (response) { return response.json(); })
+        .then(function (data) {
+            if (data && data.length > 0) {
+                var lat = parseFloat(data[0].lat);
+                var lon = parseFloat(data[0].lon);
+                // Animate map to the searched location with a smooth flyTo animation
+                map.flyTo([lat, lon], 13, {
+                    animate: true,
+                    duration: 1 // Duration of the animation in seconds
+                });
+                if (marker) {
+                    map.removeLayer(marker);
+                }
+                marker = L.marker([lat, lon]).addTo(map);
+                marker.bindPopup("Searched Location").openPopup();
+            } else {
+                alert('Location not found');
+            }
+        })
+        .catch(function (error) {
+            console.error('Error fetching data:', error);
+        });
+}
+
+
+// Fetch data from API to create store cards
 function fetchData() {
-    fetch("https://mocki.io/v1/37ef34f9-131a-4b39-a409-5b56dcdfca89")
+    fetch("https://mocki.io/v1/a1529868-11bf-4b16-bb00-1c12978dcd31")
         .then(function (response) { return response.json(); })
         .then(function (data) {
         showStores(data);
@@ -74,10 +94,19 @@ function fetchData() {
         console.error("Error:", error);
     });
 }
+
+
+// Function to display store cards
 function showStores(data) {
     var response = data;
     var location = document.getElementById("locationInput").value;
     location = location.toLowerCase();
+    if(location==="")
+    {
+        if((lati=8.5588705) && (long=76.8777134)){
+            location="trivandrum";
+        }
+    }
     if (location === "kochi" || location === "trivandrum") {
         var stores = response.filter(function (element) { return element.location.toLowerCase() === location; });
         var nearby = document.getElementById("near-by");
@@ -94,7 +123,7 @@ function showStores(data) {
         notice.textContent = "No store available at that location";
         var warnimg = document.createElement("img");
         warnimg.classList.add("warnimg");
-        warnimg.src = "/images/noStore.png";
+        warnimg.src = "images/map.gif";
         var cards = document.getElementById("cards");
         if (cards) {
             cards.appendChild(warnimg);
@@ -106,11 +135,17 @@ function showStores(data) {
         }
     }
 }
+
+
+// Function to create cards dynamically from API data
 function createCards(stores, i) {
     var cardscontainer = document.getElementById("cards");
     if (cardscontainer) {
         var store = document.createElement("div");
         store.classList.add("store-card");
+        store.addEventListener("click", function () {
+            showLocationOnMap(stores[i].latitude, stores[i].longitude);
+        });
         var top_1 = document.createElement("div");
         top_1.classList.add("card-top");
         var img = document.createElement("img");
@@ -168,4 +203,18 @@ function createCards(stores, i) {
         store.appendChild(bottom);
         cardscontainer.appendChild(store);
     }
+}
+
+
+// Function to display map of the store
+function showLocationOnMap(latitude, longitude) {
+    map.setView([latitude, longitude], 13); // Set the view of the map to the provided coordinates
+
+    if (marker) {
+        map.removeLayer(marker); // Remove the existing marker
+    }
+
+    var latLng = new L.LatLng(latitude, longitude);
+    marker = L.marker(latLng).addTo(map); // Add a new marker to the clicked location
+    marker.bindPopup("Clicked Location").openPopup();
 }

@@ -1,3 +1,5 @@
+import * as L from 'leaflet';
+
 // Define global variables for map and marker
 let map: L.Map;
 let marker: L.Marker;
