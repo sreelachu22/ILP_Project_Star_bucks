@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="css/search.css" />
+
     <link rel="stylesheet" href="css/careers.css" />
   </head>
   <body>
@@ -34,7 +36,15 @@
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input type="text" placeholder="Looking for something specific?" />
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
           </li>
           <li class="profile-icon">
             <a href="signIn_signUp.html"
@@ -49,57 +59,22 @@
         </ul>
       </nav>
     </header>
-    <div class="container mt-5">
+    <div class="container-fluid mt-5">
       <div class="heading">
         <h2 class="display-1">Careers</h2>
       </div>
 
-      <div class="container-fluid mt-5" id="coursesContainer">
+      <div class="container mt-5" id="coursesContainer">
         <!-- Content will be dynamically added here -->
       </div>
-      <!-- <div class="courses-thumb courses-thumb-secondary">
-              <div class="courses-top">
-              </div>
-
-              <div class="courses-detail">
-                <h3>
-                  <a
-                    href="#"
-                    data-toggle="modal"
-                    data-target="#applicationModal"
-                    >Lorem ipsum dolor sit amet</a
-                  >
-                </h3>
-
-                <p class="lead"><strong>$60 000</strong></p>
-
-                <p>
-                  Medical / Health Jobs for
-                  <strong>BMI Kings Park Hospital</strong>
-                </p>
-              </div>
-
-              <div class="courses-info">
-                <button
-                  class="section-btn btn btn-primary btn-block"
-                  data-toggle="modal"
-                  data-target="#applicationModal"
-                >
-                  Apply Now
-                </button>
-              </div>
-            </div> -->
-    </div>
-    <!-- End of job listing block -->
-
-    <!-- Add more job cards as needed -->
+      
 
     <!-- Application Form Modal -->
     <div class="modal fade" id="applicationModal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Apply for <span id="jobTitle"></span></h4>
+            <h4 class="modal-title">Application <span id="jobTitle"></span></h4>
             <button type="button" class="close" data-dismiss="modal">
               &times;
             </button>
@@ -143,6 +118,19 @@
                 />
                 <div class="invalid-feedback">
                   Please enter a valid 10-digit contact number.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="jobApply">Applying for the Position of:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="jobApply"
+                  name="jobApply"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Please enter which job you are applying for.
                 </div>
               </div>
               <div class="form-group">
@@ -215,7 +203,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="container-fluid footer">
       <section class="top-footer">
         <div class="logo-footer">
           <a href="home.html"
@@ -294,6 +282,8 @@
 
     <!-- TypeScript -->
     <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+
     <!-- <script src="js/Gsheet.js"></script> -->
   </body>
 </html>

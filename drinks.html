@@ -13,6 +13,8 @@
     />
     <link rel="stylesheet" href="css/order.css">
     <link rel="stylesheet" href="css/drinks.css">
+    <link rel="stylesheet" href="css/search.css" />
+
     <script src="js/mainHome.js"></script>
     <script src="js/order.js"></script>
     <script src="js/drinks.js"></script>
@@ -37,7 +39,15 @@
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input type="text" placeholder="Looking for something specific?" />
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
           </li>
           <li class="profile-icon">
             <a href="signIn_signUp.html"
@@ -149,5 +159,6 @@
       </div>
     
 </body>
-    
+<script src="js/search.js"></script>
+
 </html>

@@ -11,9 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/order.css" />
-    <link rel="stylesheet" href="css/drinks.css" />
-    <link rel="stylesheet" href="css/food.css" />
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="stylesheet" href="css/drinks.css">
+    <link rel="stylesheet" href="css/food.css">
+    <link rel="stylesheet" href="css/search.css" />
     <script src="js/mainHome.js"></script>
     <!-- <script src="/js/order.js"></script> -->
     <script src="/js/food.js"></script>
@@ -40,7 +41,16 @@
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input type="text" placeholder="Looking for something specific?" />
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
+          </li>t type="text" placeholder="Looking for something specific?" />
           </li>
           <li class="profile-icon">
             <a href="signIn_signUp.html"
@@ -151,6 +161,7 @@
       <div>
         <img src="/images/ibutn.png" alt="" />
       </div>
+
       <div class="avrg">
         <p>
           An average active adult requires 2,000 kcal energy per day, however,
@@ -160,4 +171,5 @@
       </div>
     </div>
   </body>
+<script src="js/search.js"></script>
 </html>
