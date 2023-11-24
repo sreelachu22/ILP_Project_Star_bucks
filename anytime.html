@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starbucks</title>
+    <link rel="stylesheet" href="css/search.css" />
     <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="stylesheet" href="css/gift.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,20 +23,32 @@
             <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
           </li>
           <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html" class="active">Gift</a></li>
+          <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
           <li>
-            <a href="signIn_signUp.html">Pay</a>
+            <a href="pay.html">Pay</a>
           </li>
           <li><a href="store.html">Store</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li>
+            <a href="contact_pop.html">Contact Us</a>
+          </li>
           <li class="search-bar">
             <div class="search-icon">
               <img src="images/icons8-search-48.png" alt="" width="25px" />
             </div>
-            <input type="text" placeholder="Looking for something specific?" />
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
           </li>
           <li class="profile-icon">
-            <a href=""
+            <a href="signIn_signUp.html"
               ><div class="user-icon">
                 <img
                   src="images/icons8-customer-80.png"
@@ -181,4 +194,5 @@
     </footer>
   </body>
   <script src="js/anytime.js"></script>
+  <script src="js/search.js"></script>
 </html>

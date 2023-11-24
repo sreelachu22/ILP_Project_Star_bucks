@@ -24,8 +24,8 @@
 }
 
 .container-right {
-  width: 65%;
-  min-height: 500px;
+  min-width: 450px;
+  min-height: 540px;
 }
 
 .s-bar {
@@ -85,6 +85,7 @@
   border-radius: 10px;
   padding-bottom: 5px;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 
 .distance-p {
@@ -153,6 +154,8 @@
 iframe {
   height: 100%;
   width: 100%;
+  min-width: 450px;
+  z-index: -5;
 }
 
 .search-button {

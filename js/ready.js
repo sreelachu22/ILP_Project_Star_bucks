@@ -1,6 +1,6 @@
 async function fetchData() {
     try {
-      const response = await fetch("https://mocki.io/v1/d55208da-ea8c-491e-b13c-63623bfe6094");
+      const response = await fetch("https://mocki.io/v1/73d694d0-bd11-4e29-8916-d124897d1721");
       if (!response.ok) {
         throw new Error(`API request failed with status: ${response.status}`);
       }
@@ -17,7 +17,7 @@ async function fetchData() {
       maincontainer.classList.add("main");
 
       const container = document.getElementById("frap-div");
-      for(let i=0;i<1;i++){
+      for(let i=0;i<2;i++){
         const frapContainer = document.createElement("div");
         frapContainer.classList.add("frap");
         const container1 = document.createElement("div");
@@ -65,3 +65,7 @@ async function fetchData() {
     }
   }
   fetchData();
+
+  function goStorePage() {
+    window.location.href = "store.html";
+  }

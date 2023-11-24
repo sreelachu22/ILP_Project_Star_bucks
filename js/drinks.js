@@ -1,29 +1,31 @@
 async function fetchData() {
-    try {
-      const response = await fetch("https://mocki.io/v1/d55208da-ea8c-491e-b13c-63623bfe6094");
-      if (!response.ok) {
-        throw new Error(`API request failed with status: ${response.status}`);
-      }
-      const data = await response.json();
-      console.log(data);
-      const products = [];
-      data.forEach((element) => {
-        products.push(element);
-        console.log(products);
-      });
+  try {
+    const response = await fetch(
+      "https://mocki.io/v1/73d694d0-bd11-4e29-8916-d124897d1721"
+    );
+    if (!response.ok) {
+      throw new Error(`API request failed with status: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+    const products = [];
+    data.forEach((element) => {
+      products.push(element);
+      console.log(products);
+    });
 
-
-      const maincontainer = document.getElementById("outer_container");
-      maincontainer.classList.add("main");
+    const maincontainer = document.getElementById("outer_container");
+    maincontainer.classList.add("main");
 
     //   const container = document.getElementById("frap-div");
-      for(let i=0;i<56;i++){
+    for (let j = 0; j < 2; j++) {
+      for (let i = 0; i < 5; i++) {
         const frapContainer = document.createElement("div");
         frapContainer.classList.add("frap");
         const container1 = document.createElement("div");
         container1.classList.add("frap1");
         const image1 = document.createElement("img");
-        image1.src=products[i].thumbnail;
+        image1.src = products[i].thumbnail;
         container1.appendChild(image1);
 
         const container2 = document.createElement("div");
@@ -31,26 +33,26 @@ async function fetchData() {
         // const image2 = document.createElement("img");
         // image2.src= products[i].thumbnail;
         const h4 = document.createElement("h4");
-        h4.textContent=products[i].title;
+        h4.textContent = products[i].title;
         // container2.appendChild(image2);
         container2.appendChild(h4);
 
         const container3 = document.createElement("div");
         container3.classList.add("tall");
         const p3 = document.createElement("p");
-        p3.textContent=products[i].category;
+        p3.textContent = products[i].category;
         const p4 = document.createElement("p");
-        p4.textContent=products[i].description;
+        p4.textContent = products[i].description;
         container3.appendChild(p3);
         container3.appendChild(p4);
 
         const container4 = document.createElement("div");
         container4.classList.add("money");
         const p5 = document.createElement("h3");
-        p5.textContent=`₹ ${products[i].price}`;
+        p5.textContent = `₹ ${products[i].price}`;
         const button1 = document.createElement("button");
         button1.classList.add("button1");
-        button1.textContent="Add Item";
+        button1.textContent = "Add Item";
         // button1.onclick()
 
         container4.appendChild(p5);
@@ -61,11 +63,14 @@ async function fetchData() {
         frapContainer.appendChild(container2);
         maincontainer.appendChild(frapContainer);
         // maincontainer.style.display = "block";
+      }
     }
-
-
-    } catch (error) {
-      console.error("error:", error);
-    }
+  } catch (error) {
+    console.error("error:", error);
   }
-  fetchData();
+}
+fetchData();
+
+function goStorePage() {
+  window.location.href = "store.html";
+}

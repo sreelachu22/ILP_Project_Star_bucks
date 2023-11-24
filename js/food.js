@@ -1,6 +1,6 @@
 async function fetchData() {
     try {
-      const response = await fetch("https://mocki.io/v1/d55208da-ea8c-491e-b13c-63623bfe6094");
+      const response = await fetch("https://mocki.io/v1/73d694d0-bd11-4e29-8916-d124897d1721");
       if (!response.ok) {
         throw new Error(`API request failed with status: ${response.status}`);
       }
@@ -65,3 +65,7 @@ async function fetchData() {
     }
   }
   fetchData();
+  
+  function goStorePage() {
+    window.location.href = "store.html";
+  }
