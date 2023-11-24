@@ -22,7 +22,8 @@ function performSearch(query) {
     { name: "Home", link: "home.html" },
     { name: "Gift", link: "gift.html" },
     { name: "Order", link: "order.html" },
-    { name: "Pay", link: "signIn_signUp.html" },
+    { name: "Pay", link: "pay.html" },
+    { name: "Store", link: "store.html"},
     { name: "Careers", link: "careers.html" },
     { name: "Contact Us", link: "contact_pop.html" },
   ];
