@@ -63,6 +63,15 @@ a {
   color: white;
   transition: 2ms;
 }
+.mainbtn_add {
+  margin-top: 30px;
+  margin-left: 70px;
+  background-color: #00754a;
+  border: none;
+}
+.mainbtn_add:hover {
+  background-color: black !important;
+}
 
 /* gift nav bar */
 
