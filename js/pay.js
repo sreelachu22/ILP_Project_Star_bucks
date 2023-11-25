@@ -1,4 +1,9 @@
 //!Payment page Validation
+//Using fakeapi manually created an api which contains 12 data
+// (contains card number, card type, CV code and card owner).
+// Using the api checked whether the entered payment are already exist.
+//If exist then a payment successful popup will displayed.
+//else an alert message displayed
 document.getElementById('confirmPayment').addEventListener('click', function () {
   confirmPayment();
 });

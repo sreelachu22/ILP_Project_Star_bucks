@@ -66,7 +66,7 @@ let SignInUser = evt => {
     evt.preventDefault();
     signInWithEmailAndPassword(auth,signinEmailIn.value,signinPasswordIn.value)
     .then((credentials)=>{
-      console.log(credentials);
+        alert("Login Successful")
         window.location.href = '/home.html';
     })
     .catch((error)=>{
