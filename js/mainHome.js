@@ -38,6 +38,9 @@ async function fetchData(count) {
       details.textContent = `${users[randomId[i]].description}`;
       price.textContent = `₹ ${users[randomId[i]].price}`;
       button.textContent = "Add Item";
+      button.addEventListener("click", function () {
+        window.location.href = "pay.html";
+      });
 
       imgbox.appendChild(image);
       box.appendChild(imgbox);
@@ -65,6 +68,10 @@ async function fetchData(count) {
       bname.textContent = `${users[randomId[i]].title}`;
       bprice.textContent = `₹ ${users[randomId[i]].price}`;
       bbutton.textContent = "Add Item";
+
+      bbutton.addEventListener("click", function () {
+        window.location.href = "pay.html";
+      });
 
       bimgbox.appendChild(bimage);
       barista_box.appendChild(bimgbox);

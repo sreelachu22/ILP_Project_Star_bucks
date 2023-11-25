@@ -311,6 +311,10 @@ nav ul li.profile-icon .user-icon {
   border-radius: 50px;
   margin-left: 150px;
 }
+.add-item-button:hover {
+  background-color: black;
+  cursor: pointer;
+}
 
 /* Barista Recommends */
 #barista-recommends {
