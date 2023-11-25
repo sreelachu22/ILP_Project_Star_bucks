@@ -89,7 +89,7 @@ function fetchDatas() {
                             button1.textContent = "Add Item";
 
                             button1.addEventListener("click", function() {
-                                window.location.href = "additem.html";
+                                window.location.href = "pay.html";
                             });
                             container4.appendChild(p5);
                             container4.appendChild(button1);
