@@ -1,3 +1,5 @@
+.modal {
+}
 .modal-content {
   background-image: url(/images/big.png);
   background-repeat: no-repeat;
@@ -19,7 +21,6 @@ body {
   background-size: cover; /* or 'contain' depending on your preference */
   background-repeat: no-repeat;
   background-attachment: fixed; /* Optional: Fixed background */
-  pointer-events: none;
 }
 label {
   color: white;
