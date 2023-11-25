@@ -54,53 +54,6 @@ form.addEventListener("submit", function (e) {
         form.classList.add("was-validated");
     }
 });
-// async function fetchData() {
-//   try {
-//     const response = await fetch(
-//       "https://api-generator.retool.com/Z4W4JZ/data"
-//     );
-//     if (!response.ok) {
-//       throw new Error(`API request failed with status: ${response.status}`);
-//     }
-//     const data = await response.json();
-//     console.log(data);
-//     const course = data;
-//     let randomId: number[] = [];
-//     const coursesContainer = document.getElementById(
-//       "coursesContainer"
-//     ) as HTMLDivElement;
-//     const row = document.createElement("div");
-//     row.className = "row justify-content-center";
-//     for (let i = 0; i < 10; i++) {
-//       randomId[i] = Math.floor(Math.random() * course.length);
-//       const courseElement = document.createElement("div");
-//       courseElement.className = "courseElement col-md-5 mb-4 mx-3";
-//       const jobTitle = document.createElement("h2");
-//       jobTitle.textContent = `${course[randomId[i]].Jobs}`;
-//       const jobDesc = document.createElement("p");
-//       jobDesc.textContent = `${course[randomId[i]].Description}`;
-//       const salary = document.createElement("p");
-//       salary.textContent = `₹ ${course[randomId[i]].Salary}`;
-//       const applyNow = document.createElement("button");
-//       if (applyNow) {
-//         applyNow.className =
-//           "applyNow section-btn btn btn-primary btn-block";
-//         applyNow.setAttribute("data-toggle", "modal");
-//         applyNow.setAttribute("data-target", "#applicationModal");
-//       }
-//       applyNow.textContent = "Apply Now";
-//       courseElement.appendChild(jobTitle);
-//       courseElement.appendChild(jobDesc);
-//       courseElement.appendChild(salary);
-//       courseElement.appendChild(applyNow);
-//       row.appendChild(courseElement);
-//     }
-//     coursesContainer.appendChild(row);
-//   } catch (error) {
-//     console.error("error:", error);
-//   }
-// }
-// fetchData();
 // Modify the fetchData function to accept a callback function
 function fetchData(callback) {
     return __awaiter(this, void 0, void 0, function () {
@@ -133,7 +86,7 @@ function fetchData(callback) {
                         jobDesc = document.createElement("p");
                         jobDesc.textContent = "".concat(course[randomId[i]].Description);
                         salary = document.createElement("p");
-                        salary.textContent = "\u20B9 ".concat(course[randomId[i]].Salary);
+                        salary.textContent = "Monthly Compensation: \u20B9 ".concat(course[randomId[i]].Salary);
                         applyNow = document.createElement("button");
                         if (applyNow) {
                             applyNow.className =

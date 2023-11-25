@@ -1,0 +1,237 @@
+[debug] [2023-11-25T03:57:18.786Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T03:57:18.791Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-25T03:57:18.792Z] CLI Version:   12.9.1
+[debug] [2023-11-25T03:57:18.793Z] Platform:      win32
+[debug] [2023-11-25T03:57:18.793Z] Node Version:  v18.18.2
+[debug] [2023-11-25T03:57:18.796Z] Time:          Sat Nov 25 2023 09:27:18 GMT+0530 (India Standard Time)
+[debug] [2023-11-25T03:57:18.796Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T03:57:18.803Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T03:57:18.868Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T03:57:18.868Z] > authorizing via signed-in user (nathanielyeldo22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\ILP_Project_Star_bucks
+
+[debug] [2023-11-25T03:57:19.310Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-11-25T03:57:19.312Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-25T04:04:08.084Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T04:04:08.086Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T04:04:08.086Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T04:04:08.259Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":211,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------682498997579893222006745","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: self-signed certificate in certificate chain
+[debug] [2023-11-25T04:04:08.259Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2023-11-25T04:04:08.430Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:144:12)
+    at refreshTokens (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:508:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.getAccessToken (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:149:22)
+    at async Client.addAuthHeader (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:140:21)
+    at async Client.request (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:34)
+    at async getProjectPage (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:238:17)
+    at async getAvailableCloudProjectPage (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:270:16)
+    at async promptAvailableProjectId (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:142:41)
+    at async promptAndAddFirebaseToCloudProject (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:37:23)
+[error] 
+[error] Error: Failed to list available Google Cloud Platform projects. See firebase-debug.log for more info.
+[debug] [2023-11-25T04:04:29.386Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T04:04:29.389Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-25T04:04:29.390Z] CLI Version:   12.9.1
+[debug] [2023-11-25T04:04:29.390Z] Platform:      win32
+[debug] [2023-11-25T04:04:29.391Z] Node Version:  v18.18.2
+[debug] [2023-11-25T04:04:29.393Z] Time:          Sat Nov 25 2023 09:34:29 GMT+0530 (India Standard Time)
+[debug] [2023-11-25T04:04:29.393Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T04:04:29.401Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T04:04:29.475Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T04:04:29.476Z] > authorizing via signed-in user (nathanielyeldo22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\ILP_Project_Star_bucks
+
+[debug] [2023-11-25T04:04:29.884Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-11-25T04:04:29.887Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-11-25T04:06:28.804Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T04:06:28.806Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T04:06:28.806Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T04:06:28.997Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":211,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------215103564148435913487537","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: self-signed certificate in certificate chain
+[debug] [2023-11-25T04:06:29.202Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:144:12)
+    at refreshTokens (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:508:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.getAccessToken (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:149:22)
+    at async Client.addAuthHeader (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:140:21)
+    at async Client.request (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:34)
+    at async createCloudProject (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:180:26)
+    at async createFirebaseProjectAndLog (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+    at async promptAndCreateNewProject (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:32:12)
+    at async doSetup (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-11-25T04:06:42.474Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T04:06:42.477Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-25T04:06:42.477Z] CLI Version:   12.9.1
+[debug] [2023-11-25T04:06:42.478Z] Platform:      win32
+[debug] [2023-11-25T04:06:42.478Z] Node Version:  v18.18.2
+[debug] [2023-11-25T04:06:42.480Z] Time:          Sat Nov 25 2023 09:36:42 GMT+0530 (India Standard Time)
+[debug] [2023-11-25T04:06:42.480Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T04:06:42.485Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T04:06:42.546Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T04:06:42.546Z] > authorizing via signed-in user (nathanielyeldo22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\ILP_Project_Star_bucks
+
+[debug] [2023-11-25T04:06:43.031Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-11-25T04:06:43.035Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-11-25T04:08:48.046Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T04:08:48.048Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T04:08:48.048Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T04:08:48.267Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":211,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------472495404454731339075472","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: self-signed certificate in certificate chain
+[debug] [2023-11-25T04:08:48.268Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2023-11-25T04:08:48.391Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:144:12)
+    at refreshTokens (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:508:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.getAccessToken (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:149:22)
+    at async Client.addAuthHeader (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:140:21)
+    at async Client.request (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:34)
+    at async getProjectPage (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:238:17)
+    at async getFirebaseProjectPage (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:255:23)
+    at async selectProjectInteractively (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:94:41)
+    at async doSetup (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[debug] [2023-11-25T04:16:21.684Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T04:16:21.687Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-25T04:16:21.687Z] CLI Version:   12.9.1
+[debug] [2023-11-25T04:16:21.688Z] Platform:      win32
+[debug] [2023-11-25T04:16:21.688Z] Node Version:  v18.18.2
+[debug] [2023-11-25T04:16:21.690Z] Time:          Sat Nov 25 2023 09:46:21 GMT+0530 (India Standard Time)
+[debug] [2023-11-25T04:16:21.690Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T04:16:21.695Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T04:16:21.755Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T04:16:21.755Z] > authorizing via signed-in user (nathanielyeldo22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\ILP_Project_Star_bucks
+
+[debug] [2023-11-25T04:16:22.208Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-11-25T04:16:22.212Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-11-25T04:16:53.758Z] > refreshing access token with scopes: []
+[debug] [2023-11-25T04:16:53.761Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-11-25T04:16:53.762Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-11-25T04:16:53.921Z] *** [apiv2] error from fetch(https://www.googleapis.com/oauth2/v3/token, {"headers":{},"method":"POST","body":{"_overheadLength":545,"_valueLength":211,"_valuesToMeasure":[],"writable":false,"readable":true,"dataSize":0,"maxDataSize":2097152,"pauseStreams":true,"_released":true,"_streams":[],"_currentStream":null,"_insideLoop":false,"_pendingNext":false,"_boundary":"--------------------------456947188687008611347198","_events":{},"_eventsCount":1}}): FetchError: request to https://www.googleapis.com/oauth2/v3/token failed, reason: self-signed certificate in certificate chain
+[debug] [2023-11-25T04:16:54.051Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:144:12)
+    at refreshTokens (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:508:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Client.getAccessToken (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:149:22)
+    at async Client.addAuthHeader (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:140:21)
+    at async Client.request (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:34)
+    at async createCloudProject (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:180:26)
+    at async createFirebaseProjectAndLog (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:45:9)
+    at async promptAndCreateNewProject (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:32:12)
+    at async doSetup (C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\init\features\project.js:88:27)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
+[debug] [2023-11-25T04:18:13.031Z] ----------------------------------------------------------------------
+[debug] [2023-11-25T04:18:13.035Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nathaniel.yeldo\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-11-25T04:18:13.035Z] CLI Version:   12.9.1
+[debug] [2023-11-25T04:18:13.036Z] Platform:      win32
+[debug] [2023-11-25T04:18:13.036Z] Node Version:  v18.18.2
+[debug] [2023-11-25T04:18:13.039Z] Time:          Sat Nov 25 2023 09:48:13 GMT+0530 (India Standard Time)
+[debug] [2023-11-25T04:18:13.039Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-11-25T04:18:13.045Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-11-25T04:18:13.113Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-11-25T04:18:13.113Z] > authorizing via signed-in user (nathanielyeldo22@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Workspace\ILP_Project_Star_bucks
+
+[debug] [2023-11-25T04:18:13.514Z] *** [apiv2] error from fetch(https://firebase-public.firebaseio.com/cli.json, {"headers":{},"method":"GET"}): FetchError: request to https://firebase-public.firebaseio.com/cli.json failed, reason: self-signed certificate in certificate chain
+[warn] !  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-11-25T04:18:13.518Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json

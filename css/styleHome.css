@@ -176,6 +176,12 @@ nav ul li.profile-icon .user-icon {
   text-align: center;
   border-style: none;
   border-radius: 10px;
+  transition: background-position 0.7s ease-out;
+}
+
+.card:hover {
+  /* Apply a change in background position on hover */
+  background-position: center 10%;
 }
 
 .card-content {

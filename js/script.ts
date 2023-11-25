@@ -53,7 +53,7 @@ async function fetchData(callback: () => void) {
       const jobDesc = document.createElement("p");
       jobDesc.textContent = `${course[randomId[i]].Description}`;
       const salary = document.createElement("p");
-      salary.textContent = `₹ ${course[randomId[i]].Salary}`;
+      salary.textContent = `Monthly Compensation: ₹ ${course[randomId[i]].Salary}`;
       const applyNow = document.createElement("button");
       if (applyNow) {
         applyNow.className =
