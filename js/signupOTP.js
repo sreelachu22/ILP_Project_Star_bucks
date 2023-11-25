@@ -28,17 +28,14 @@ function phoneAuth() {
       window.confirmationResult = confirmationResult;
       coderesult = confirmationResult;
       alert("OTP Sent");
-      // document.getElementById("enterOTPbody").style.display = "block";
     })
     .catch(function (error) {
-      // error in sending OTP
       alert(error.message);
     });
 }
 
 // function for OTP verify
 function codeverify() {
-  // var code = document.getElementById("verificationcode").value;
   const code = Array.from(
     { length: 6 },
     (_, i) => document.getElementById(`otp${i + 1}`).value
