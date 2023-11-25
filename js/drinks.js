@@ -53,6 +53,10 @@ async function fetchData() {
         const button1 = document.createElement("button");
         button1.classList.add("button1");
         button1.textContent = "Add Item";
+
+        button1.addEventListener("click", function() {
+          window.location.href = "additem.html";
+        });
         // button1.onclick()
 
         container4.appendChild(p5);

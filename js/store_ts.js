@@ -144,7 +144,7 @@ function createCards(stores, i) {
         var store = document.createElement("div");
         store.classList.add("store-card");
         store.addEventListener("click", function () {
-            showLocationOnMap(stores[i].latitude, stores[i].longitude, stores[i].name);
+            showLocationOnMap(stores[i].latitude, stores[i].longitude);
         });
         var top_1 = document.createElement("div");
         top_1.classList.add("card-top");
@@ -207,7 +207,7 @@ function createCards(stores, i) {
 
 
 // Function to display map of the store
-function showLocationOnMap(latitude, longitude, name) {
+function showLocationOnMap(latitude, longitude) {
     map.setView([latitude, longitude], 13); // Set the view of the map to the provided coordinates
 
     if (marker) {
@@ -216,5 +216,5 @@ function showLocationOnMap(latitude, longitude, name) {
 
     var latLng = new L.LatLng(latitude, longitude);
     marker = L.marker(latLng).addTo(map); // Add a new marker to the clicked location
-    marker.bindPopup(name).openPopup();
+    marker.bindPopup("Clicked Location").openPopup();
 }

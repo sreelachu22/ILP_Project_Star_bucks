@@ -4,16 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | Star Bucks</title>
+    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+
     <link rel="stylesheet" href="css/pay.css" />
     <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="stylesheet" href="css/search.css" />
+
+    <!-- Add these links to your HTML -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <li class="logo">
-            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+            <video
+              class="logo"
+              src="/images/Starbucks Logo Animation.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              height="70px"
+              width="auto"
+            ></video>
           </li>
           <li><a href="home.html">Home</a></li>
           <li><a href="gift.html">Gift</a></li>
@@ -125,15 +147,66 @@
               </form>
             </div>
             <div class="panel-footer">
-              <button id="confirmPayment" onclick="confirmPayment()">
-                Confirm Payment
-              </button>
+              <button id="confirmPayment">Confirm Payment</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div
+      id="successful"
+      class="modal fade"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <a href="home.html" class="close" id="PaymentClose">CLOSE</a>
+          </div>
+          <div class="modal-body">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Payment Successful!
+            </h5>
+            <p id="successMessage" class="successMessage">
+              Scan the QR code for payment details
+            </p>
+            <!-- QR Code image -->
+            <div class="qrCode">
+              <img
+                id="qrcode"
+                src="https://quickchart.io/qr?text=No Payment History"
+                alt="Login QR"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" style="display: none">
+      <div class="modal-dialog modal-confirm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="icon-box">
+              <i class="material-icons">&#xE876;</i>
+            </div>
+            <h4 class="modal-title">Awesome!</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Account Created Successfully.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success btn-block" data-dismiss="modal">
+              OK
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-  <script src="js/pay.js"></script>
+  <script type="module" src="js/pay.js"></script>
   <script src="js/search.js"></script>
 </html>

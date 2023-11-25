@@ -1,4 +1,58 @@
-//! Move to the next OTP input box when a digit is entered
+
+const firebaseConfig = {
+  apiKey: "AIzaSyChHTWfu8OOy0CH1bZA-G9j2FEXOIiHR5c",
+  authDomain: "starbucks-authentication.firebaseapp.com",
+  projectId: "starbucks-authentication",
+  storageBucket: "starbucks-authentication.appspot.com",
+  messagingSenderId: "373089171674",
+  appId: "1:373089171674:web:74b8143b69937bcab3cde3",
+  measurementId: "G-G5J0Q2F35X",
+};
+firebase.initializeApp(firebaseConfig);
+// render recaptcha verifier
+render();
+function render() {
+  window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
+    "recaptcha-container"
+  );
+  recaptchaVerifier.render();
+}
+
+// function for send OTP
+function phoneAuth() {
+  var number = document.getElementById("number").value;
+  firebase
+    .auth()
+    .signInWithPhoneNumber(number, window.recaptchaVerifier)
+    .then(function (confirmationResult) {
+      window.confirmationResult = confirmationResult;
+      coderesult = confirmationResult;
+      alert("OTP Sent");
+    })
+    .catch(function (error) {
+      alert(error.message);
+    });
+}
+
+// function for OTP verify
+function codeverify() {
+  const code = Array.from(
+    { length: 6 },
+    (_, i) => document.getElementById(`otp${i + 1}`).value
+  ).join("");
+  coderesult
+    .confirm(code)
+    .then(function () {
+      alert("OTP Verified");
+      window.location.href = "/home.html";
+    })
+    .catch(function () {
+      console.log("OTP Not correct");
+    });
+}
+
+
+// //! Move to the next OTP input box when a digit is entered
 let otpBoxes = document.querySelectorAll('input[id^="otp"]');
 
 
@@ -13,40 +67,3 @@ function moveToNext(e) {
 }
 
 otpBoxes.forEach(box => box.addEventListener('input', moveToNext));
-
-//!OTP validation
-function validateOTP() {
-    const otpBoxes = document.getElementsByClassName('otp-input');
-    let otpFilled = true;
-   //checks whether all otp boxes are filled
-    for (let i = 0; i < otpBoxes.length; i++) {
-       if (otpBoxes[i].value === '') {
-         otpFilled = false;
-         break;
-       }
-    }
-   
-    if (otpFilled) {
-      //  $('#myModal').modal('show');
-      // Successful("Account created successfully");
-      showConfirmationModal();
-
-    } else {
-       alert('Please enter correct OTP');
-    }
-   }
-
-
-  function showConfirmationModal() {
-    // Use jQuery to show the Bootstrap modal
-    $('#myModal').modal('show');
-
-    setTimeout(function () {
-      $('#myModal').modal('hide');
-      window.location.href = 'home.html';
-  }, 3000);
-}
-
-$(document).ready(function () {
-  $('#nextButton').on('click', validateOTP);
-});

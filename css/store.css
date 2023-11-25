@@ -4,17 +4,21 @@
   margin-left: 65px;
 }
 
+.navigation{
+  margin-top: 110px;
+}
+
 .main-container{
     display: flex;
     margin-left: 67px;
     margin-right: 67px;
-    margin-top: 105px;
+    margin-top: 20px;
 }
 
 .container-left {
   background-color: #1e3932;
   min-width: 450px;
-  min-height: 540px;
+  min-height: 500px;
 }
 
 .container-right {
@@ -39,7 +43,7 @@
 .s-icon {
   position: absolute;
   left: 125px;
-  top: 175px;
+  top: 185px;
 }
 
 .home-redirect {

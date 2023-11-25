@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/search.css" />
 
     <title>Starbucks</title>
+    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+
     <link rel="stylesheet" href="css/styleHome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,6 +37,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
   </head>
   <body>
     <header>
@@ -89,31 +95,56 @@
           <a href="signupOTP.html">Verification</a>
         </p>
         <div class="otpHead">
-          <h3>OTP was sent to your email id</h3>
-          <p>Please enter the OTP you have received on your registered Email</p>
+          <h3>OTP Verification</h3>
+          <!-- <p>Please enter the OTP you have received on your registered Email</p> -->
         </div>
-        <h3 class="enterOTP">Enter OTP</h3>
-        <!-- OTP boxes. -->
-        <!-- Each box only contains 1 digit. -->
-        <div class="otp-box">
-          <input type="text" class="otp-input" id="otp1" maxlength="1" />
-          <input type="text" class="otp-input" id="otp2" maxlength="1" />
-          <input type="text" class="otp-input" id="otp3" maxlength="1" />
-          <input type="text" class="otp-input" id="otp4" maxlength="1" />
-          <input type="text" class="otp-input" id="otp5" maxlength="1" />
-          <input type="text" class="otp-input" id="otp6" maxlength="1" />
+        <div class="otpMobile">
+          <input type="text" id="number" placeholder="Enter mobile number" />
+          <div id="recaptcha-container"></div>
+          <input type="button" id="send" value="Send" onclick="phoneAuth();" />
         </div>
-        <!-- validateOTP function will validate that each otp box is not empty -->
-        <button
+
+        <div class="enterOTPbody">
+          <h3 class="enterOTP">Enter OTP</h3>
+          <!-- OTP boxes. -->
+          <!-- Each box only contains 1 digit. -->
+
+          <div class="otp-box">
+            <input type="text" class="otp-input" id="otp1" maxlength="1" />
+            <input type="text" class="otp-input" id="otp2" maxlength="1" />
+            <input type="text" class="otp-input" id="otp3" maxlength="1" />
+            <input type="text" class="otp-input" id="otp4" maxlength="1" />
+            <input type="text" class="otp-input" id="otp5" maxlength="1" />
+            <input type="text" class="otp-input" id="otp6" maxlength="1" />
+          </div>
+
+          <!-- validateOTP function will validate that each otp box is not empty -->
+          <!-- <button
           id="nextButton"
           type="button"
           class="btn btn-primary trigger-btn"
-        >
+          onclick="validateOTP();"
+          >
           Confirm
-        </button>
+          </button> -->
+          <input
+            type="button"
+            id="verify"
+            value="Verify"
+            onclick="codeverify();"
+          />
+          <br />
+          <a
+            href="signupOTP.html"
+            onclick="phoneAuth();"
+            class="green"
+            id="resendotp"
+            >Resend OTP</a
+          >
+        </div>
       </div>
       <!-- Modal HTML -->
-      <div id="myModal" class="modal fade" style="display: none">
+      <div id="myModal" class="modal fade">
         <div class="modal-dialog modal-confirm">
           <div class="modal-content">
             <div class="modal-header">
@@ -135,8 +166,15 @@
       </div>
     </main>
   </body>
-
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+  <!-- <script type="module" src="js/authentication.js"></script> -->
   <script src="js/mainHome.js"></script>
   <script src="js/signupOTP.js"></script>
+
+  <script>
+    // window.onload = function () {
+    //   sendOTP();
+    // };
+  </script>
   <script src="js/search.js"></script>
 </html>
