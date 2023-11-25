@@ -80,3 +80,22 @@ const MainFormSignin = document.getElementById("MainFormSignin");
 MainFormSignin.addEventListener('submit',SignInUser);
 
 
+const googleButtonSignup = document.getElementById('googleButtonSignup');
+googleButtonSignup.addEventListener('click', loginWithGoogle)
+const googleButtonSignin = document.getElementById('googleButtonSignin');
+googleButtonSignin.addEventListener('click', loginWithGoogle)
+
+async function loginWithGoogle(){
+  try{
+    let provider = new firebase.auth.GoogleAuthProvider();
+  const result =  await firebase.auth().signInWithPopup(provider)
+  .then(()=>{
+    alert("Google Sign in successful"),
+    window.location.href = 'home.html'
+})
+  console.log(result)
+  }catch(err){
+      console.log(err)
+  }
+  
+}
