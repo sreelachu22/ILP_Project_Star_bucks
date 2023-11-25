@@ -40,7 +40,7 @@
   text-align: center;
   color: lightgray;
 }
-.mug{
+.mug {
   height: 150px;
 }
 .loc {
@@ -50,9 +50,8 @@
   position: absolute;
   margin-left: 205px;
   font-size: 15px;
-  margin-top:-1px;
+  margin-top: -1px;
 }
-
 
 .deliver {
   position: absolute;
@@ -98,7 +97,7 @@
   padding: 3px;
   cursor: pointer;
 }
-#deliver2 img{
+#deliver2 img {
   padding-left: 6px;
   width: 15px;
 }
@@ -106,7 +105,7 @@
   background-color: white;
   color: #1e3932;
 }
-#deliver3 img{
+#deliver3 img {
   padding-left: 6px;
   width: 15px;
 }
@@ -151,7 +150,6 @@
 
   margin-left: 26px;
 }
-
 
 .box {
   width: 100%;
@@ -276,7 +274,7 @@
 }
 .scoo {
   z-index: 2;
-padding-left: 6px;
+  padding-left: 6px;
   margin-bottom: -1px;
   width: 18px;
 }
@@ -380,18 +378,21 @@ padding-left: 6px;
   margin-top: -17px;
 }
 .button1 {
-  border: 2px solid gray;
-  background-color: gray;
+  border: rgb(7, 7, 7) !important;
+  background-color: rgb(14, 85, 50) !important;
   border-radius: 23px;
   cursor: pointer;
   text-decoration: none;
   /* padding: 11px; */
   color: white;
-  margin-left: 61px;
+  margin-left: 50px !important;
   margin-top: 25px;
-  width: 56px;
+  width: 90px !important;
   font-size: 13px;
   height: 33px;
+}
+.button1:hover {
+  background-color: black !important;
 }
 .frap2 h3 {
   margin-top: 30px;
