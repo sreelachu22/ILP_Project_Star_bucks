@@ -88,7 +88,9 @@ nav ul li.profile-icon {
 nav ul li.profile-icon .user-icon {
   font-size: 1.2em !important;
 }
-
+.full_container {
+  overflow: hidden;
+}
 .heading {
   /* margin-top: 100px; */
   height: 630px;
@@ -97,8 +99,20 @@ nav ul li.profile-icon .user-icon {
   font-size: xx-large;
   background-image: url("/images/careers\ bg.jpg");
   background-size: cover;
+  margin-bottom: 70px;
+  animation: zoomIn 5s ease-in-out infinite;
 }
-
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
 .heading h2 {
   padding-top: 250px;
   color: rgb(255, 255, 255);
