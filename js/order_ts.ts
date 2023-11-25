@@ -52,8 +52,8 @@ async function fetchDatas(): Promise<void> {
         button1.classList.add("button1");
         button1.textContent = "Add Item";
 
-        button1.addEventListener("click", function() {
-          window.location.href = "additem.html";
+        button1.addEventListener("click", function () {
+          window.location.href = "pay.html";
         });
 
         container4.appendChild(p5);

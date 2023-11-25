@@ -55,7 +55,7 @@ async function fetchData() {
         button1.textContent = "Add Item";
 
         button1.addEventListener("click", function() {
-          window.location.href = "additem.html";
+          window.location.href = "pay.html";
         });
         // button1.onclick()
 
