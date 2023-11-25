@@ -1,8 +1,8 @@
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
       import {
         getDatabase,
         set,
+        get,
         ref,
         child,
       } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js";
@@ -11,6 +11,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebas
         createUserWithEmailAndPassword,
         signInWithEmailAndPassword,
         sendPasswordResetEmail,
+        sendEmailVerification,
       } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js";
 // import { error } from "console";
 
@@ -32,15 +33,21 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebas
 //signup authentication
 const signupEmailIn = document.getElementById("signup-email");
 const signupPasswordIn = document.getElementById("signup-password");
+// const signupName = document.getElementById("signup-name");
+// const signupUsername = document.getElementById("signup-username");
 
 let RegisterUser = evt => {
     evt.preventDefault();
     createUserWithEmailAndPassword(auth,signupEmailIn.value,signupPasswordIn.value)
     .then((credentials)=>{
         console.log(credentials);
-        window.location.href = '/signupOTP.html';
-    })
-    .catch((error)=>{
+        sendEmailVerification(auth.currentUser).then(()=>{
+          alert('Verification email sent! Please check your email to verify your account.');
+          window.location.href = '/signupOTP.html';
+        }).catch((error) => {
+          console.error(error.message);
+        });
+    }).catch((error)=>{
         alert(error.message);
         console.log(error.code);
         console.log(error.message);
@@ -50,7 +57,8 @@ let RegisterUser = evt => {
 const MainFormSignup = document.getElementById("MainFormSignup");
 MainFormSignup.addEventListener('submit',RegisterUser);
 
-//signin authentication
+
+//!signin authentication
 const signinEmailIn = document.getElementById("login-email");
 const signinPasswordIn = document.getElementById("login-password");
 
@@ -58,7 +66,6 @@ let SignInUser = evt => {
     evt.preventDefault();
     signInWithEmailAndPassword(auth,signinEmailIn.value,signinPasswordIn.value)
     .then((credentials)=>{
-        console.log(credentials);
         alert("Login Successful")
         window.location.href = '/home.html';
     })
@@ -71,36 +78,3 @@ let SignInUser = evt => {
 
 const MainFormSignin = document.getElementById("MainFormSignin");
 MainFormSignin.addEventListener('submit',SignInUser);
-
-//forgot password authentication
-const forgotPasswordEmail = document.getElementById("forgot-email");
-let resetPasswordButton = document.getElementById("resetpassword");
-
-let forgotPassword = () => {
-  sendPasswordResetEmail(auth,forgotPasswordEmail.value )
-  .then(()=>{
-    alert("A password reset link has been sent to your email");
-  })
-  .catch((error)=>{
-    console.log(error.code);
-    console.log(error.message);
-  })
-}
-
-resetPasswordButton.addEventListener('click', forgotPassword);
-
-// function forgotPassword() {
-//   let resetEmail = document.getElementById("forgot-email");
-//   let validEmailExpr =
-//     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-//   if (resetEmail.value === "") {
-//     alert("Email cannot be empty");
-//   } else if (!resetEmail.value.match(validEmailExpr)) {
-//     alert("Not a valid email address");
-//   } else {
-//     alert(
-//       `An email with password recovery link has been sent to ${resetEmail.value}`
-//     );
-//   }
-// }
-
