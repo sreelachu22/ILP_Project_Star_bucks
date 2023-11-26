@@ -18,7 +18,7 @@ function render() {
   recaptchaVerifier.render();
 }
 
-// function for send OTP
+//! function for send OTP
 function phoneAuth() {
   var number = document.getElementById("number").value;
   firebase
@@ -34,7 +34,7 @@ function phoneAuth() {
     });
 }
 
-// function for OTP verify
+//! function for OTP verify
 function codeverify() {
   const code = Array.from(
     { length: 6 },
