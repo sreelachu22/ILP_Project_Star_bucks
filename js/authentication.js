@@ -72,13 +72,12 @@ let RegisterUser = evt => {
       const name = document.getElementById("signup-name").value;
       const username = document.getElementById("signup-username").value;
       const firestore = getFirestore(app);
-      // const photoURL = await fetchProfilePicture();
+      const photoURL = await fetchProfilePicture();
       setEmailCookie(email);
       addDoc(collection(firestore, email), {
         name: name,
         username: username,
         email: email,
-        // photoURL: photoURL
       })
       .then((docRef) => {
           console.log("Document written with ID: ", docRef.id);
