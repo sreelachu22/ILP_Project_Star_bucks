@@ -3,17 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/signIn_signUp.css" />
-    <link rel="stylesheet" href="css/styleHome.css" />
-    <!-- <script src="js/login.js"></script> -->
+    <link rel="stylesheet" href="./css/signIn_signUp.css" />
+    <link rel="stylesheet" href="./css/styleHome.css" />
     <title>Starbucks</title>
-    <link rel="icon" href="/images/icons8-starbucks-80.png" />
-
-    <!-- <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script> -->
+    <link rel="icon" href="./images/icons8-starbucks-80.png" />
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.3/firebase-firestore.js"></script>
+
+    <script src="./js/dataStoreRetrieval.js"></script>
   </head>
   <body>
     <div id="container" class="container">
@@ -23,7 +22,7 @@
             <div class="form sign-up">
               <form action="" id="MainFormSignup">
                 <div class="skip green">
-                  <a href="home.html">SKIP</a>
+                  <a href="./home.html">SKIP</a>
                 </div>
                 <div class="input-group">
                   <i class="bx bxs-user"></i>
@@ -41,14 +40,6 @@
                   <i class="bx bx-mail-send"></i>
                   <input type="email" placeholder="Email" id="signup-email" />
                 </div>
-                <!-- <div class="input-group">
-                <i class="bx bx-mail-send"></i>
-                <input
-                  type="email"
-                  placeholder="Confirm Email"
-                  id="confirm-signup-email"
-                />
-              </div> -->
                 <div class="input-group">
                   <i class="bx bxs-lock-alt"></i>
                   <input
@@ -65,17 +56,14 @@
                     id="confirm-password-signup"
                   />
                 </div>
-                <!-- <div class="input-group" id="accept-terms">
-                <input type="checkbox" id="signup-terms" />
-                <label for="accept-terms"
-                  >I accept the terms and conditions</label
-                >
-              </div> -->
-                <!-- onclick="validateRegister()" -->
                 <button id="signUpButton">Sign up</button>
                 <br /><br />
-                <button class="btn waves-effect blue" id="googleButtonSignup">
-                  Signup with google
+                <button
+                  class="btn waves-effect blue"
+                  id="googleButtonSignup"
+                  onclick="saveToFireStore()"
+                >
+                  Sign up with google
                 </button>
                 <p>
                   <span> Already have an account? </span>
@@ -92,16 +80,12 @@
             <div class="form sign-in">
               <form action="" id="MainFormSignin">
                 <div class="skip green">
-                  <a href="home.html">SKIP</a>
+                  <a href="./home.html">SKIP</a>
                 </div>
                 <div class="input-group">
                   <i class="bx bxs-user"></i>
                   <input type="text" placeholder="Email id" id="login-email" />
                 </div>
-                <!-- <div class="input-group">
-                <i class="bx bxs-user"></i>
-                <input type="email" placeholder="Email id" id="login-email" />
-              </div> -->
                 <div class="input-group">
                   <i class="bx bxs-lock-alt"></i>
                   <input
@@ -113,10 +97,10 @@
                 <button id="signinButton">Sign in</button>
                 <br /><br />
                 <button class="btn waves-effect blue" id="googleButtonSignin">
-                  Login with google
+                  Sign in with google
                 </button>
                 <p class="green" id="forgotpassword">
-                  <a href="forgotPassword.html"> Forgot password? </a>
+                  <a href="./forgotPassword.html"> Forgot password? </a>
                 </p>
                 <p>
                   <span> Don't have an account? </span>
@@ -137,7 +121,7 @@
             <h2>Welcome</h2>
           </div>
           <div class="img sign-in">
-            <img src="/images/icons8-starbucks-300.png" alt="Your Image" />
+            <img src="./images/icons8-starbucks-300.png" alt="Your Image" />
           </div>
         </div>
         <!-- END SIGN IN CONTENT -->
@@ -147,7 +131,7 @@
             <h2>Join with us</h2>
           </div>
           <div class="img sign-up">
-            <img src="/images/icons8-starbucks-300.png" alt="Your Image" />
+            <img src="./images/icons8-starbucks-300.png" alt="Your Image" />
           </div>
         </div>
         <!-- END SIGN UP CONTENT -->
@@ -155,8 +139,8 @@
       <!-- END CONTENT SECTION -->
     </div>
     <script type="module" src="../js/authentication.js"></script>
-    <script src="js/signIn_signUp.js"></script>
-    <script src="js/signupOTP.js"></script>
-    <script src="js/mainHome.js"></script>
+    <script src="./js/signIn_signUp.js"></script>
+    <script src="./js/signupOTP.js"></script>
+    <script src="./js/mainHome.js"></script>
   </body>
 </html>

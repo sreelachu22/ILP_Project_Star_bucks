@@ -2,7 +2,7 @@
 //Using fakeapi manually created an api which contains 12 data
 // (contains card number, card type, CV code and card owner).
 // Using the api checked whether the entered payment are already exist.
-//If exist then a payment successful popup will displayed.
+//If exist then a payment successful popup will displayed which contains a QR Code with payment details
 //else an alert message displayed
 document
   .getElementById("confirmPayment")
@@ -42,6 +42,7 @@ function confirmPayment() {
             ",\n";
           successMessage += "Card Owner: " + enteredCardOwner + ",\n";
           successMessage += "Amount Paid: " + paidAmount;
+          //QR code which contains payment details
           document.getElementById(
             "qrcode"
           ).src = `https://quickchart.io/qr?text=${successMessage}`;

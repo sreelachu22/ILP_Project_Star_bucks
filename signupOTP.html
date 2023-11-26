@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/signupOTP.css" />
-    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="./css/signupOTP.css" />
+    <link rel="stylesheet" href="./css/search.css" />
 
     <title>Starbucks</title>
-    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+    <link rel="icon" href="./images/icons8-starbucks-80.png" />
 
-    <link rel="stylesheet" href="css/styleHome.css" />
+    <link rel="stylesheet" href="./css/styleHome.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,22 +47,22 @@
       <nav>
         <ul>
           <li class="logo">
-            <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+            <img src="./images/icons8-starbucks-80.png" alt="Starbucks Icon" />
           </li>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="gift.html">Gift</a></li>
-          <li><a href="order.html">Order</a></li>
+          <li><a href=">/home.html">Home</a></li>
+          <li><a href="./gift.html">Gift</a></li>
+          <li><a href="./order.html">Order</a></li>
           <li>
-            <a href="pay.html">Pay</a>
+            <a href="./pay.html">Pay</a>
           </li>
-          <li><a href="store.html">Store</a></li>
-          <li><a href="careers.html">Careers</a></li>
+          <li><a href="./store.html">Store</a></li>
+          <li><a href="./careers.html">Careers</a></li>
           <li>
-            <a href="contact_pop.html">Contact Us</a>
+            <a href="./contact_pop.html">Contact Us</a>
           </li>
           <li class="search-bar">
             <div class="search-icon">
-              <img src="images/icons8-search-48.png" alt="" width="25px" />
+              <img src="./images/icons8-search-48.png" alt="" width="25px" />
             </div>
             <input
               type="text"
@@ -75,14 +75,15 @@
             </div>
           </li>
           <li class="profile-icon">
-            <a href="signIn_signUp.html"
-              ><div class="user-icon">
+            <a href="#" id="userDetails">
+              <div class="user-icon">
                 <img
-                  src="images/icons8-customer-80.png"
+                  src="./images/icons8-customer-80.png"
                   alt=""
                   width="40px"
-                /></div
-            ></a>
+                />
+              </div>
+            </a>
           </li>
         </ul>
       </nav>
@@ -91,12 +92,11 @@
     <main class="container mt-4">
       <div id="signup2-inner-container">
         <p class="home-nav" style="color: black">
-          <a href="home.html">Home</a> ->
-          <a href="signupOTP.html">Verification</a>
+          <a href="./home.html">Home</a> ->
+          <a href="./signupOTP.html">Verification</a>
         </p>
         <div class="otpHead">
           <h3>OTP Verification</h3>
-          <!-- <p>Please enter the OTP you have received on your registered Email</p> -->
         </div>
         <div class="otpMobile">
           <input type="text" id="number" placeholder="Enter mobile number(+91...)" />
@@ -135,7 +135,7 @@
           />
           <br />
           <a
-            href="signupOTP.html"
+            href="./signupOTP.html"
             onclick="phoneAuth();"
             class="green"
             id="resendotp"
@@ -167,14 +167,8 @@
     </main>
   </body>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
-  <!-- <script type="module" src="js/authentication.js"></script> -->
-  <script src="js/mainHome.js"></script>
-  <script src="js/signupOTP.js"></script>
-
-  <script>
-    // window.onload = function () {
-    //   sendOTP();
-    // };
-  </script>
-  <script src="js/search.js"></script>
+  <script src="./js/mainHome.js"></script>
+  <script src="./js/signupOTP.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/cookie_setting.js"></script>
 </html>
