@@ -1,7 +1,10 @@
+header {
+  padding: 0px;
+}
 video {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 }
@@ -37,13 +40,15 @@ video {
 }
 .footerPay {
   z-index: 2;
-  margin-top: -5px;
+  margin-top: 2px;
 }
 .p {
-  position: absolute;
-  margin-top: -45px;
+  position: relative;
+  bottom: 135px;
   width: 250px;
-  margin-left: 1100px;
+  margin-left: 0px;
+  margin-top: 0px;
+
   color: cadetblue;
   background-color: rgb(5, 61, 29);
 }
