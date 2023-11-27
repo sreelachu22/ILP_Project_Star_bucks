@@ -148,15 +148,13 @@ async function loginWithGoogle(){
   //     window.location.href = 'home.html'
   // })
   //   console.log(result)
+
   // Extract user information
   const user = result.user;
   const email = user.email;
-  // Extract name and username from the profile (adjust the property names as needed)
   const name = profile.name;
   const username = profile.username;
-  // Do something with the email, such as setting a cookie
   setEmailCookie(email);
-  // Redirect to home page
   window.location.href = 'home.html';
   console.log(result);
   }catch(err){

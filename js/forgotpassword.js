@@ -19,8 +19,6 @@ let forgotPassword = () => {
     .auth()
     .sendPasswordResetEmail(forgotPasswordEmail.value)
   .then(() => {
-    // Password reset email sent!
-    // ..
     alert(`Password reset link send to ${forgotPasswordEmail.value}`)
     window.location.href = '/home.html';
   })
