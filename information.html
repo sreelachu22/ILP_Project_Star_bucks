@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starbucks</title>
+    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+
+    <link rel="stylesheet" href="css/styleInformation.css" />
+    <link rel="stylesheet" href="css/search.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <video
+              class="logo"
+              src="/images/Starbucks Logo Animation.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              height="70px"
+              width="auto"
+            ></video>
+          </li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="gift.html">Gift</a></li>
+          <li><a href="order.html">Order</a></li>
+          <li>
+            <a href="pay.html">Pay</a>
+          </li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li>
+            <a href="contact_pop.html">Contact Us</a>
+          </li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
+          </li>
+          <li class="profile-icon">
+            <a href="#" id="userDetails">
+              <div class="user-icon">
+                <img
+                  src="./images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="navigation">
+      <p class="nav-p" style="font-size: 15px">
+        <a href="home.html">Home</a> > Coffee Culture
+      </p>
+    </div>
+    <div>
+      <img
+        src="images/coffee_culture_blog_web1_c6e691b286.jpg"
+        alt=""
+        width="100%"
+      />
+      <div id="coffee-heading">
+        <h1>How Coffee Stirred Revels & Rebels</h1>
+        <p>
+          <span id="coffee-small">coffee culture</span><br /><br />
+          <img src="images/articles_author_placeholder.svg" alt="" />
+          <span id="star1">Starbucks</span>
+          . <span id="star2">2 minutes read</span>
+        </p>
+      </div>
+      <p id="para">
+        Did you know? The Dutch were the first to transport and cultivate coffee
+        commercially…all because they smuggled a coffee plant out of the
+        unyielding Arab port in 1690! With this single act of rebellion, they
+        grew coffee in large amounts and helped cement a trading center in
+        Amsterdam. They soon became known among the European royals for their
+        coffee gifts. One such recipient was Louis XIV who planted and
+        cultivated his “Noble Tree” in the royal gardens in 1714. High-spirited
+        and full of flavor, the jovial nature of coffee inspired others to
+        spread the joy (even at the risk of rebelling!) While on leave in Paris,
+        a naval officer stole a sprout and transported it back to Martinique.
+        This one particular tree is believed to be the father of many Coffea
+        arabica trees alive today in the former French colonies of Central and
+        Latin America. In 1727, an opportunity arose when Brazilian Lieutenant
+        Colonel Francisco de Melo Palheta was sent to resolve a conflict between
+        the French and Dutch colonies in Guiana. Amidst his affair with the wife
+        of French Guiana’s governor, she presented M. Palheta with a farewell
+        bouquet where she concealed fertile seeds of coffee. These seeds would
+        turn Brazil into one of the world’s largest coffee-producing countries!
+        Coffee now became a drink of the people. This was the first step that
+        helped bring coffee to us, to you, and the world. As you sip on your
+        beloved brew in your signature Starbucks cup, you appreciate the value
+        of a good cup of coffee — but you don’t always get the opportunity to
+        reflect on everything that went into bringing that to you. That’s what
+        we’re hoping to change with this mini-series.
+      </p>
+    </div>
+  </body>
+  <script src="js/search.js"></script>
+  <script src="./js/cookie_setting.js"></script>
+</html>

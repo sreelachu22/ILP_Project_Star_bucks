@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* .main2{
+    display: flex;
+}  */
+.frap{
+    display: flex;
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+    /* padding-right: 0px; */
+    border: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;;
+    background-color: #f9f9f9;
+    margin-left: 100px;
+    margin-top: 30px;
+    /* min-width: 100%;
+    min-height: 232px; */
+}
+.frap:hover{
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+}
+.frap2{
+    margin-top: 47px;
+}
+.frap1 img{
+    width: 93px;
+    height: 88px;
+    border-radius: 60px;
+    margin-left: 30px;
+    margin-top: 40px;
+}
+.frap2{
+    margin-left: 30px;
+}
+.frap2 img{
+    margin-left: 2px;
+    margin-top: 50px;
+    width: 20px;
+    height: 20px;
+}
+#pp{
+    color: #a7a7a7;
+    font-family: Pike_Regular,Helvetica,sans-serif;
+    margin: 0;
+    font-size: 12px;
+}
+.frap2 .tall{
+    margin-top: -17px;
+}
+/* .button1{
+    border: 2px solid gray;
+    background-color: gray;
+    border-radius: 23px;
+    cursor: pointer;
+    text-decoration: none;
+    color: lightgrey;
+    margin-left: 61px;
+    margin-top: 25px;
+    width: 56px;
+    font-size: 13px;
+    height: 33px;
+} */
+.frap2 h3{
+    margin-top: 30px;
+    margin-bottom: 13px;
+    font-size: 17px;
+}
+.tall{
+    color: gray;
+    font-size: 12px;
+}
+.frap2 h4{
+    margin-top: -11px;
+}
+.money{
+    display: flex;
+}
+.card{
+    border: 1px solid;
+    display: flex;
+    width: fit-content;
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #f9f9f9;
+    margin-left: 100px;
+    margin-top: 70px;
+}

@@ -3,19 +3,267 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Star Bucks</title>
+    <title>Starbucks</title>
+    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+
+    <link rel="stylesheet" href="css/search.css" />
+    <link rel="stylesheet" href="css/styleHome.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
   </head>
   <body>
+    <!-- navbar -->
     <header>
       <nav>
         <ul>
+          <li class="logo">
+            <!-- <img src="images/icons8-starbucks-80.png" alt="Starbucks Icon" /> -->
+            <video
+              class="logo"
+              src="/images/Starbucks Logo Animation.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              height="70px"
+              width="auto"
+            ></video>
+          </li>
           <li><a href="home.html">Home</a></li>
           <li><a href="gift.html">Gift</a></li>
           <li><a href="order.html">Order</a></li>
-          <li><a href="pay.html">Pay</a></li>
+          <li>
+            <a href="pay.html">Pay</a>
+          </li>
           <li><a href="store.html">Store</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li>
+            <a href="contact_pop.html">Contact Us</a>
+          </li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
+          </li>
+          <li class="profile-icon">
+            <a href="#" id="userDetails">
+              <div class="user-icon">
+                <img
+                  src="./images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                />
+              </div>
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
+    <main>
+      <!-- signup -->
+      <section id="rewards" class="green-section">
+        <div class="left-content">
+          <a href="signup.html"
+            ><p>A world of rewards awaits you! Sign up now.</p></a
+          >
+        </div>
+        <div class="right-content">
+          <a href="#" id="userDetails" class="know-more-button">Know More</a>
+        </div>
+      </section>
+
+      <!-- Handcrafted Curations -->
+      <section id="curations">
+        <h2>Handcrafted Curations</h2>
+        <div class="dish-container">
+          <div class="dish">
+            <a href="order.html"
+              ><img src="images/Bestseller.jpg" alt="Bestseller"
+            /></a>
+            <p>Bestseller</p>
+          </div>
+          <div class="dish">
+            <a href="drinks.html"
+              ><img src="images/Drinks.jpg" alt="Drinks"
+            /></a>
+            <p>Drinks</p>
+          </div>
+          <div class="dish">
+            <a href="food.html"><img src="images/Food.jpg" alt="Food" /></a>
+            <p>Food</p>
+          </div>
+          <div class="dish">
+            <a href="merchendise.html"
+              ><img src="images/Merchandise.jpg" alt="Merchandise"
+            /></a>
+            <p>Merchandise</p>
+          </div>
+          <div class="dish">
+            <a href="coffee.html"
+              ><img src="images/CoffeeAtHome.jpg" alt="CoffeeAtHome"
+            /></a>
+            <p>Coffee At Home</p>
+          </div>
+          <div class="dish">
+            <a href="ready.html"
+              ><img src="images/ReadyToEat.jpg" alt="Ready To Eat"
+            /></a>
+            <p>Ready To Eat</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offer card -->
+      <section id="card-section">
+        <div class="card-container">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-description">
+                <p>Score Big Savings With</p>
+                <h3>STARBUCKS125</h3>
+                <p>
+                  Get your exclusive delivery discount - "STARBUCKS125" - for a
+                  FLAT ₹125 on Swiggy & <br />
+                  Zomato. <br /><br />Flat <br /><span id="rupees">₹125</span>
+                </p>
+              </div>
+              <div class="card-know-more">
+                <a href="#" class="know-more-button2">Know More</a>
+              </div>
+              <img
+                src="images/Worldcup_Banner_Icon_4_679f6ef3e8.png"
+                alt="flag"
+                id="flag"
+              />
+            </div>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+        <button class="arrow left-arrow">
+          <img src="images/icons8-left-arrow-30.png" alt="" />
+        </button>
+        <button class="arrow right-arrow">
+          <img src="images/icons8-right-arrow-30.png" alt="" />
+        </button>
+      </section>
+
+      <!-- Latest Offerings -->
+      <section id="latest-offerings">
+        <h2>Latest Offerings</h2>
+        <div class="item-container" id="item-container"></div>
+      </section>
+
+      <!-- Barista Recommends -->
+      <section id="barista-recommends">
+        <h2>Barista Recommends</h2>
+        <div class="barista-container"></div>
+      </section>
+
+      <!-- World Of Coffee -->
+      <section id="coffee">
+        <h2 id="coffee-head">Learn more about the world of coffee!</h2>
+        <div id="coffee-story">
+          <div class="coffee-story-content">
+            <h1>How Coffee Stirred Revels & Rebels</h1>
+            <p>
+              Delighted by the jovial character of coffee, everyone was inspired
+              to bring it home - leading to some of the most crucial firsts.
+            </p>
+            <a href="information.html" class="learn-more-button">Learn More</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="popupchat"></div>
+    <!-- Footer -->
+    <footer class="footer">
+      <section class="top-footer">
+        <div class="logo-footer">
+          <a href="home.html"
+            ><img src="images/icons8-starbucks-80.png" alt="starbucks!!"
+          /></a>
+        </div>
+        <div class="about-us">
+          <h3>About Us</h3>
+          <ul class="about-us-ul">
+            <li><a href="">Coffeehouse</a></li>
+            <li><a href="">Our Heritage</a></li>
+            <li><a href="">Our Company</a></li>
+          </ul>
+        </div>
+        <div class="responsibility">
+          <h3>Responsibility</h3>
+          <ul class="response-ul">
+            <li><a href="">Community</a></li>
+            <li><a href="">Ethical Sourcing</a></li>
+            <li><a href="">Environmental Stewardship</a></li>
+            <li><a href="">Diversity</a></li>
+          </ul>
+        </div>
+        <div class="quick-links">
+          <h3>Quick Links</h3>
+          <ul class="quick-links-ul">
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Starbucks Rewards Day Offer</a></li>
+            <li><a href="">Delivery</a></li>
+            <li><a href="">Season's Gifting</a></li>
+            <li><a href="">Careers</a></li>
+            <li><a href="">Customer Service</a></li>
+            <li><a href="">FAQs</a></li>
+            <li>
+              <a href="">Offer for Beverage Subscription at Starbucks.</a>
+            </li>
+            <li><a href="">Terms and Conditions</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <h3>SOCIAL MEDIA</h3>
+          <a href=""><img src="images/instagram.svg" alt="" /></a>
+          <a href=""><img src="images/facebook.svg" alt="" /></a>
+          <a href=""><img src="images/twitter.svg" alt="" /></a>
+        </div>
+        <div class="download">
+          <a href=""><img src="images/appstoreiOS.png" alt="" /></a><br />
+          <a href=""><img src="images/appstoreAndroid.png" alt="" /></a>
+        </div>
+      </section>
+      <hr />
+      <section class="bottom-footer">
+        <div class="bottom-footer-left">
+          <p>
+            <a href="">Web Accessibility</a> |
+            <a href="">Privacy Statement</a> | <a href="">Terms of Use</a> |
+            <a href="">Contact Us</a>
+          </p>
+        </div>
+        <div class="bottom-footer-right">
+          <a href="home.html"
+            >© 2023 Starbucks Coffee Company. All rights reserved.</a
+          >
+        </div>
+      </section>
+    </footer>
   </body>
+  <script src="./js/cookie_setting.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/mainHome.js"></script>
+  <script src="js/search.js"></script>
 </html>

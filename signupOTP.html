@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/signupOTP.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+
+    <title>Starbucks</title>
+    <link rel="icon" href="./images/icons8-starbucks-80.png" />
+
+    <link rel="stylesheet" href="./css/styleHome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <img src="./images/icons8-starbucks-80.png" alt="Starbucks Icon" />
+          </li>
+          <li><a href=">/home.html">Home</a></li>
+          <li><a href="./gift.html">Gift</a></li>
+          <li><a href="./order.html">Order</a></li>
+          <li>
+            <a href="./pay.html">Pay</a>
+          </li>
+          <li><a href="./store.html">Store</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li>
+            <a href="./contact_pop.html">Contact Us</a>
+          </li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="./images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
+          </li>
+          <li class="profile-icon">
+            <a href="#" id="userDetails">
+              <div class="user-icon">
+                <img
+                  src="./images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mt-4">
+      <div id="signup2-inner-container">
+        <p class="home-nav" style="color: black">
+          <a href="./home.html">Home</a> ->
+          <a href="./signupOTP.html">Verification</a>
+        </p>
+        <div class="otpHead">
+          <h3>OTP Verification</h3>
+        </div>
+        <div class="otpMobile">
+          <input type="text" id="number" placeholder="Enter mobile number(+91...)" />
+          <div id="recaptcha-container"></div>
+          <input type="button" id="send" value="Send" onclick="phoneAuth();" />
+        </div>
+
+        <div class="enterOTPbody">
+          <h3 class="enterOTP">Enter OTP</h3>
+          <!-- OTP boxes. -->
+          <!-- Each box only contains 1 digit. -->
+
+          <div class="otp-box">
+            <input type="text" class="otp-input" id="otp1" maxlength="1" />
+            <input type="text" class="otp-input" id="otp2" maxlength="1" />
+            <input type="text" class="otp-input" id="otp3" maxlength="1" />
+            <input type="text" class="otp-input" id="otp4" maxlength="1" />
+            <input type="text" class="otp-input" id="otp5" maxlength="1" />
+            <input type="text" class="otp-input" id="otp6" maxlength="1" />
+          </div>
+
+          <!-- validateOTP function will validate that each otp box is not empty -->
+          <!-- <button
+          id="nextButton"
+          type="button"
+          class="btn btn-primary trigger-btn"
+          onclick="validateOTP();"
+          >
+          Confirm
+          </button> -->
+          <input
+            type="button"
+            id="verify"
+            value="Verify"
+            onclick="codeverify();"
+          />
+          <br />
+          <a
+            href="./signupOTP.html"
+            onclick="phoneAuth();"
+            class="green"
+            id="resendotp"
+            >Resend OTP</a
+          >
+        </div>
+      </div>
+      <!-- Modal HTML -->
+      <div id="myModal" class="modal fade">
+        <div class="modal-dialog modal-confirm">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="icon-box">
+                <i class="material-icons">&#xE876;</i>
+              </div>
+              <h4 class="modal-title">Awesome!</h4>
+            </div>
+            <div class="modal-body">
+              <p class="text-center">Account Created Successfully.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-success btn-block" data-dismiss="modal">
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+  <script src="./js/mainHome.js"></script>
+  <script src="./js/signupOTP.js"></script>
+  <script src="./js/search.js"></script>
+  <script src="./js/cookie_setting.js"></script>
+</html>

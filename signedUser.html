@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signed In User Page</title>
+    <link rel="icon" href="/images/icons8-starbucks-80.png" />
+    <link rel="stylesheet" href="./css/styleHome.css" />
+    <link rel="stylesheet" href="./css/signedUser.css" />
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script src="./js/signedUser.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">
+            <video
+              class="logo"
+              src="./images/Starbucks Logo Animation.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              height="70px"
+              width="auto"
+            ></video>
+          </li>
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./gift.html">Gift</a></li>
+          <li><a href="./order.html">Order</a></li>
+          <li>
+            <a href="./pay.html">Pay</a>
+          </li>
+          <li><a href="./store.html">Store</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li>
+            <a href="./contact_pop.html">Contact Us</a>
+          </li>
+          <li class="search-bar">
+            <div class="search-icon">
+              <img src="./images/icons8-search-48.png" alt="" width="25px" />
+            </div>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Looking for something specific?"
+              oninput="searchFunction()"
+            />
+            <div id="searchResults">
+              <div id="searchDropdown"></div>
+            </div>
+          </li>
+          <li class="profile-icon">
+            <a href="#" id="userDetails">
+              <div class="user-icon">
+                <img
+                  src="./images/icons8-customer-80.png"
+                  alt=""
+                  width="40px"
+                />
+              </div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mt-5">
+      <h1>Welcome, <span id="displayName"></span>!</h1>
+      <p>Username: <span id="username"></span></p>
+      <p>Email: <span id="displayEmail"></span></p>
+      <!-- <img src="" alt="Profile picture" id="profilePic" /> -->
+      <button onclick="signOut()" id="signoutButton">Sign Out</button>
+    </main>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script type="module" src="./js/authentication.js"></script>
+</html>

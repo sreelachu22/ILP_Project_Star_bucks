@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // Choose the highest target version you need
+    "lib": [
+      "es2020",
+      "dom"
+    ], // Adjust the library versions as needed
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "jsx": "react",
+    "emitDeclarationOnly": true,
+    "declaration": true,
+    "allowImportingTsExtensions": true,
+    "strictNullChecks": true,
+    "strict": true,
+    "strictFunctionTypes": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "types": [
+      "jquery"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "**/node_modules/*"
+  ]
+}

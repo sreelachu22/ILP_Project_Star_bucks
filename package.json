@@ -1,0 +1,29 @@
+{
+  "name": "ilp_project_star_bucks",
+  "description": "Star bucks website clone (Use default web browser zoom 90%)\r ## Home Page\r ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/ba1ff91a-cce5-4492-9b2e-d1dee7815a97)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/leaflet": "^1.9.8",
+    "firebase": "^10.6.0",
+    "leaflet": "^1.9.4",
+    "typescript": "^5.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@types/bootstrap": "^5.2.10",
+    "@types/firebase": "^3.2.1",
+    "@types/jquery": "^3.5.29",
+    "@types/node": "^20.9.4",
+    "babel-loader": "^9.1.3",
+    "typescript": "^5.3.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
