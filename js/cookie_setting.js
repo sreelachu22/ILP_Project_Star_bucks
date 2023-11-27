@@ -1,23 +1,8 @@
-// var login_status = true; 
-var email = getUserNameFromCookie();
-
-
+let email = getUserNameFromCookie();
 
 document.addEventListener("DOMContentLoaded", function() {
-    // setUserNameCookie("");
-    // setUserNameCookie("Sourav");
-    // email = getUserNameFromCookie();
-    
-    // if (email) {
-    //     document.getElementById("email").innerHTML = email;
-    // } 
-    // else {
-    //     // window.location.href = "../signIn_signUp.html";
-    // }
     document.getElementById("userDetails").addEventListener("click", function(event) {
         event.preventDefault();
-        // email = null;
-        // email = "souravak211@gmail.com";
         if (email) {
             window.location.href = "../signedUser.html";
         } else {

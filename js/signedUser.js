@@ -29,7 +29,6 @@ database.collection(collectionName).get()
         console.log(data.name);
         document.getElementById("displayName").innerHTML = data.name;
         document.getElementById("username").innerHTML = data.username;
-        // You can handle each retrieved document data here
     });
 })
 .catch((error) => {

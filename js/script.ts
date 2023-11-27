@@ -1,13 +1,13 @@
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbyPMR-lSqrbGtOTCiymHyX14Uro2gVID3EzGPdwhF6_1aIIdK28HKR9cdDw09AGRF4/exec";
 
-  const form = document.getElementById("applicationForm") as HTMLFormElement;
-  form.addEventListener("submit", (e) => {
+const form = document.getElementById("applicationForm") as HTMLFormElement;
+form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (form.checkValidity()) {
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => {
-        // alert("Thank you! your form is submitted successfully.");
+        alert("Thank you! your form is submitted successfully.");
       })
       .then(() => {
         window.location.reload();
@@ -15,13 +15,11 @@ const scriptURL =
       .catch((error) => console.error("Error!", error.message));
     form.reset();
     (<any>$("#applicationModal")).modal("hide");
-
   } else {
     form.classList.add("was-validated");
   }
 });
 
-// Modify the fetchData function to accept a callback function
 async function fetchData(callback: () => void) {
   try {
     const response = await fetch(
@@ -53,11 +51,12 @@ async function fetchData(callback: () => void) {
       const jobDesc = document.createElement("p");
       jobDesc.textContent = `${course[randomId[i]].Description}`;
       const salary = document.createElement("p");
-      salary.textContent = `Monthly Compensation: ₹ ${course[randomId[i]].Salary}`;
+      salary.textContent = `Monthly Compensation: ₹ ${
+        course[randomId[i]].Salary
+      }`;
       const applyNow = document.createElement("button");
       if (applyNow) {
-        applyNow.className =
-          "applyNow section-btn btn btn-primary btn-block";
+        applyNow.className = "applyNow section-btn btn btn-primary btn-block";
         applyNow.setAttribute("data-toggle", "modal");
         applyNow.setAttribute("data-target", "#applicationModal");
       }
@@ -71,7 +70,6 @@ async function fetchData(callback: () => void) {
 
     coursesContainer.appendChild(row);
 
-    // Execute the callback function after fetching data
     if (callback) {
       callback();
     }
@@ -80,12 +78,6 @@ async function fetchData(callback: () => void) {
   }
 }
 
-// Pass the callback function when calling fetchData
 fetchData(() => {
-  // This is your callback function, you can do something after fetching data here
   console.log("Data fetched successfully!");
 });
-
-
-
-

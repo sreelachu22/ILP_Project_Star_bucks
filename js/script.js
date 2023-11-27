@@ -41,7 +41,7 @@ form.addEventListener("submit", function (e) {
     if (form.checkValidity()) {
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
             .then(function (response) {
-            // alert("Thank you! your form is submitted successfully.");
+            alert("Thank you! your form is submitted successfully.");
         })
             .then(function () {
             window.location.reload();
@@ -54,7 +54,6 @@ form.addEventListener("submit", function (e) {
         form.classList.add("was-validated");
     }
 });
-// Modify the fetchData function to accept a callback function
 function fetchData(callback) {
     return __awaiter(this, void 0, void 0, function () {
         var response, data, course, randomId, coursesContainer, row, i, courseElement, jobTitle, jobDesc, salary, applyNow, error_1;
@@ -89,8 +88,7 @@ function fetchData(callback) {
                         salary.textContent = "Monthly Compensation: \u20B9 ".concat(course[randomId[i]].Salary);
                         applyNow = document.createElement("button");
                         if (applyNow) {
-                            applyNow.className =
-                                "applyNow section-btn btn btn-primary btn-block";
+                            applyNow.className = "applyNow section-btn btn btn-primary btn-block";
                             applyNow.setAttribute("data-toggle", "modal");
                             applyNow.setAttribute("data-target", "#applicationModal");
                         }
@@ -102,7 +100,6 @@ function fetchData(callback) {
                         row.appendChild(courseElement);
                     }
                     coursesContainer.appendChild(row);
-                    // Execute the callback function after fetching data
                     if (callback) {
                         callback();
                     }
@@ -116,8 +113,6 @@ function fetchData(callback) {
         });
     });
 }
-// Pass the callback function when calling fetchData
 fetchData(function () {
-    // This is your callback function, you can do something after fetching data here
     console.log("Data fetched successfully!");
 });
