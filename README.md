@@ -13,7 +13,8 @@ Star bucks website clone (Use default web browser zoom 90%)
 
 ## Sign in and Sign up
 Sign in Page
-![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/ac5889ab-f813-4c4b-86d3-9d127e51da2b)
+![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/5e04bef2-825d-4667-8552-4981ee9db7ac)
+
 ![image](https://github.com/sreelachu22/ILP_Project_Star_bucks/assets/71555915/af2a0f99-66ed-41c2-8cfd-6af64792f7dc)
 
 Forgot Password Page
